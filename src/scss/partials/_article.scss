@@ -19,17 +19,15 @@ article {
     position: relative;
     height: 20vw;
     overflow: hidden;
+    transform: translate3d(0,0,0);
     transition: all .5s ease-out;
-
-    img {
-      position: absolute;
-    }
 
     .copy {
       width: 100%;
       text-align: center;
       color: $white;
       z-index: 1;
+      transition: all .5s ease-out;
       @extend .align-both;
 
       a {
@@ -37,13 +35,19 @@ article {
       }
     }
 
+    img {
+      position: relative;
+    }
+
     &:after {
       content: '';
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background-color: rgba($black, .6);
-      z-index: auto;
+      transition: all .5s ease-out;
     }
   }
 }
@@ -54,7 +58,7 @@ article {
 
   article > img {
     opacity: 0;
-    transition: all .3s ease-out;
+    transition: all .5s ease-out;
   }
 
   .content {
@@ -68,16 +72,13 @@ article {
     height: auto;
 
     .copy {
-      display: none;
+      opacity: 0;
     }
 
     &:after {
-      display: none;
+      opacity: 0;
     }
 
-    img {
-      position: relative;
-    }
   }
 }
 
@@ -90,6 +91,10 @@ article {
     > .copy {
       animation: scaleUpIn .25s ease-out;
     }
+  }
+
+  .next {
+    animation: scaleUpIn .25s ease-out;
   }
 }
 

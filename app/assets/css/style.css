@@ -436,45 +436,49 @@ article .next {
   position: relative;
   height: 20vw;
   overflow: hidden;
+  transform: translate3d(0, 0, 0);
   transition: all .5s ease-out; }
-  article .next img {
-    position: absolute; }
   article .next .copy {
     width: 100%;
     text-align: center;
     color: #fff;
-    z-index: 1; }
+    z-index: 1;
+    transition: all .5s ease-out; }
     article .next .copy a {
       font-size: 20px; }
+  article .next img {
+    position: relative; }
   article .next:after {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: auto; }
+    transition: all .5s ease-out; }
 
 .transition-out {
   opacity: 0;
   transition: all 1s ease-out; }
   .transition-out article > img {
     opacity: 0;
-    transition: all .3s ease-out; }
+    transition: all .5s ease-out; }
   .transition-out .content > .copy {
     animation: scaleDownOut .25s ease-out forwards; }
   .transition-out .next {
     height: auto; }
     .transition-out .next .copy {
-      display: none; }
+      opacity: 0; }
     .transition-out .next:after {
-      display: none; }
-    .transition-out .next img {
-      position: relative; }
+      opacity: 0; }
 
 .transition-in {
   opacity: 0;
   transition: all 1s ease-out; }
   .transition-in .content > .copy {
+    animation: scaleUpIn .25s ease-out; }
+  .transition-in .next {
     animation: scaleUpIn .25s ease-out; }
 
 @keyframes scaleUpIn {
