@@ -467,7 +467,8 @@ article .next {
   .transition-out .content > .copy {
     animation: scaleDownOut .25s ease-out forwards; }
   .transition-out .next {
-    height: auto; }
+    height: auto;
+    overflow: visible; }
     .transition-out .next .copy {
       opacity: 0; }
     .transition-out .next:after {

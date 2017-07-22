@@ -11,7 +11,7 @@ var transition = Barba.BaseTransition.extend({
 
     setTimeout(function() {
       $('html, body').animate({ scrollTop: 0 }, speed / 2);
-    }, speed / 2)
+    }, speed / 3)
   },
 
   fadeOut: function() {
