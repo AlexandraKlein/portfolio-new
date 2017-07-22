@@ -19,6 +19,7 @@ article {
     position: relative;
     height: 20vw;
     overflow: hidden;
+    transition: all .5s ease-out;
 
     img {
       position: absolute;
@@ -44,5 +45,72 @@ article {
       background-color: rgba($black, .6);
       z-index: auto;
     }
+  }
+}
+
+.transition-out {
+  opacity: 0;
+  transition: all 1s ease-out;
+
+  article > img {
+    opacity: 0;
+    transition: all .3s ease-out;
+  }
+
+  .content {
+
+    > .copy {
+      animation: scaleDownOut .25s ease-out forwards;
+    }
+  }
+
+  .next {
+    height: auto;
+
+    .copy {
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    img {
+      position: relative;
+    }
+  }
+}
+
+.transition-in {
+  opacity: 0;
+  transition: all 1s ease-out;
+
+  .content {
+
+    > .copy {
+      animation: scaleUpIn .25s ease-out;
+    }
+  }
+}
+
+@keyframes scaleUpIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleDownOut {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) translate3d(0, -10%, 0);
+    opacity: 0;
   }
 }

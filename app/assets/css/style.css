@@ -435,7 +435,8 @@ article .copy {
 article .next {
   position: relative;
   height: 20vw;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all .5s ease-out; }
   article .next img {
     position: absolute; }
   article .next .copy {
@@ -452,6 +453,45 @@ article .next {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: auto; }
+
+.transition-out {
+  opacity: 0;
+  transition: all 1s ease-out; }
+  .transition-out article > img {
+    opacity: 0;
+    transition: all .3s ease-out; }
+  .transition-out .content > .copy {
+    animation: scaleDownOut .25s ease-out forwards; }
+  .transition-out .next {
+    height: auto; }
+    .transition-out .next .copy {
+      display: none; }
+    .transition-out .next:after {
+      display: none; }
+    .transition-out .next img {
+      position: relative; }
+
+.transition-in {
+  opacity: 0;
+  transition: all 1s ease-out; }
+  .transition-in .content > .copy {
+    animation: scaleUpIn .25s ease-out; }
+
+@keyframes scaleUpIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+@keyframes scaleDownOut {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1; }
+  100% {
+    transform: scale(0.8) translate3d(0, -10%, 0);
+    opacity: 0; } }
 
 @font-face {
   font-family: 'Font-Name';
