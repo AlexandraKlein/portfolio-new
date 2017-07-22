@@ -1,0 +1,48 @@
+article {
+  img {
+    width: 100%;
+  }
+
+  .copy {
+    padding: 10% 20%;
+
+    h2 {
+      font-size: 38px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  .next {
+    position: relative;
+    height: 20vw;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+    }
+
+    .copy {
+      width: 100%;
+      text-align: center;
+      color: $white;
+      z-index: 1;
+      @extend .align-both;
+
+      a {
+        font-size: 20px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($black, .6);
+      z-index: auto;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 16px 'Helvetica Neue', Helvetica, Arial;
+}
+
+a {
+  color: $white;
+}
