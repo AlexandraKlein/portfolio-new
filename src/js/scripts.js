@@ -34,8 +34,7 @@ var transition = Barba.BaseTransition.extend({
     $(this.oldContainer).hide();
 
     $elNew.css({
-      visibility : 'visible',
-      opacity : 1
+      visibility : 'visible'
     });
 
     $elNew.animate(
