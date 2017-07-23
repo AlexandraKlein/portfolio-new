@@ -1,6 +1,7 @@
 $duration: 1s;
 
 article {
+
   img {
     width: 100%;
   }
@@ -8,8 +9,13 @@ article {
   .copy {
     padding: 10% 20%;
 
+    @include mobile {
+      padding: 5%;
+    }
+
     h2 {
       font-size: 38px;
+      line-height: 1;
     }
 
     p {
@@ -23,6 +29,10 @@ article {
     overflow: hidden;
     transform: translate3d(0,0,0);
     transition: all $duration/2 ease-out;
+
+    @include mobile {
+      height: 200px;
+    }
 
     .copy {
       width: 100%;

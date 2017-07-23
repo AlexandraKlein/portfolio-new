@@ -427,8 +427,12 @@ article img {
 
 article .copy {
   padding: 10% 20%; }
+  @media (max-width: 767px) {
+    article .copy {
+      padding: 5%; } }
   article .copy h2 {
-    font-size: 38px; }
+    font-size: 38px;
+    line-height: 1; }
   article .copy p {
     line-height: 1.5; }
 
@@ -438,6 +442,9 @@ article .next {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   transition: all 0.5s ease-out; }
+  @media (max-width: 767px) {
+    article .next {
+      height: 200px; } }
   article .next .copy {
     width: 100%;
     text-align: center;
