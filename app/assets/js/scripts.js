@@ -17,16 +17,17 @@ var transition = Barba.BaseTransition.extend({
       .all([this.newContainerLoading, this.fadeOut()])
       .then(this.fadeIn.bind(this));
 
+    //window.scrollTo(0, 0);
+
     setTimeout(function() {
       $('html, body').animate({ scrollTop: 0 }, speed / 2);
-    }, speed / 3)
+    }, speed / 4)
   },
 
   fadeOut: function() {
     var $elOld = $(this.oldContainer);
     var $nextArticle = $elOld.find('.next');
-    var height = $nextArticle.height();
-    var translationValue = $nextArticle.offset().top + (height / 2);
+    var translationValue = $nextArticle.offset().top;
 
     $elOld.removeClass('transition-in')
       .addClass('transition-out')

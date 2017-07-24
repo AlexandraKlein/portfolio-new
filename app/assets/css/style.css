@@ -441,7 +441,7 @@ article .next {
   height: 20vw;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  transition: all 0.5s ease-out; }
+  transition: all 0.33333s ease-out; }
   @media (max-width: 767px) {
     article .next {
       height: 200px; } }

@@ -28,7 +28,7 @@ article {
     height: 20vw;
     overflow: hidden;
     transform: translate3d(0,0,0);
-    transition: all $duration/2 ease-out;
+    transition: all $duration/3 ease-out;
 
     @include mobile {
       height: 200px;
