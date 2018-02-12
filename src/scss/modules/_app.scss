@@ -1,0 +1,14 @@
+$duration: 1s;
+
+.barba-container {
+  opacity: 1;
+}
+
+.transition-out {
+  animation: fadeOut $duration ease-out forwards;
+}
+
+.transition-in {
+  opacity: 0;
+  animation: fadeIn $duration ease-out forwards $duration;
+}

@@ -3,25 +3,12 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
     jshint = require('gulp-jshint'),
-    header  = require('gulp-header'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
-    sourcemaps = require('gulp-sourcemaps'),
-    package = require('./package.json');
+    sourcemaps = require('gulp-sourcemaps');
 
-
-var banner = [
-  '/*!\n' +
-  ' * <%= package.name %>\n' +
-  ' * <%= package.title %>\n' +
-  ' * <%= package.url %>\n' +
-  ' * @author <%= package.author %>\n' +
-  ' * @version <%= package.version %>\n' +
-  ' * Copyright ' + new Date().getFullYear() + '. <%= package.license %> licensed.\n' +
-  ' */',
-  '\n'
-].join('');
 
 gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
@@ -31,21 +18,19 @@ gulp.task('css', function () {
     .pipe(gulp.dest('app/assets/css'))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(header(banner, { package : package }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('js',function(){
-  gulp.src('src/js/scripts.js')
+  gulp.src('src/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
-    .pipe(header(banner, { package : package }))
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('app/assets/js'))
     .pipe(uglify())
-    .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/js'))
