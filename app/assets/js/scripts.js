@@ -70,7 +70,7 @@ var pageTransitions = function() {
   Barba.Pjax.start();
   Barba.Prefetch.init();
 
-  var speed = 750;
+  var speed = 1000;
 
   var transition = Barba.BaseTransition.extend({
     start: function start() {

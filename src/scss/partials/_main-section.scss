@@ -1,20 +1,22 @@
 .main-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: $gainsboro;
+  background-color: transparent;
   transition: all $ease $duration;
 
   .circle {
-    opacity: 0;
     @extend .align-both;
     width: 80vh;
     height: 80vh;
     border-radius: 100%;
     margin: auto;
-    background-color: $purple;
+    background-color: $rosy-brown;
     overflow: hidden;
     animation: circleIn $duration $ease forwards $duration/1.5;
-    transition: all $ease $duration;
 
     video {
       position: relative;
@@ -23,32 +25,39 @@
   }
 
   a {
-    position: absolute;
-    bottom: 5vmax;
     opacity: 0;
     font-family: $header-font;
     font-size: 10vw;
-    @extend .horizontal-align;
+    @extend .align-both;
     animation: fadeIn $duration/2 $ease forwards $duration/2;
-  }
-}
-
-.transition-out {
-  .circle {
-    animation: circleOut $duration $ease forwards;
+    transition: all $ease $duration;
   }
 
-  a {
-    animation: fadeOut $duration/2 $ease forwards;
+  &.transition-out {
+    .circle {
+      animation: circleOut $duration $ease forwards;
+    }
+
+    a {
+      animation: fadeOut $duration/2 $ease forwards;
+    }
   }
 }
 
 #home {
   .main-section {
-    background-color: $base;
 
-    a {
-      color: $white;
-    }
+  }
+}
+
+#about {
+  .main-section {
+
+  }
+}
+
+#projects {
+  .main-section {
+
   }
 }

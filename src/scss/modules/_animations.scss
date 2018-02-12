@@ -41,13 +41,11 @@
 
 @keyframes circleIn {
   0% {
-    opacity: 0;
     width: 200vmax;
     height: 200vmax;
   }
 
   100% {
-    opacity: 1;
     width: 80vmin;
     height: 80vmin;
   }
@@ -56,13 +54,11 @@
 
 @keyframes circleOut {
   0% {
-    opacity: 1;
     width: 80vmin;
     height: 80vmin;
   }
 
   100% {
-    opacity: 0;
     width: 200vmax;
     height: 200vmax;
   }
