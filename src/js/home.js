@@ -1,7 +1,3 @@
-'use strict';
-
-var $document = $(document);
-
 var homePage = function() {
 
   $document.on('homepageOnEnter', function() {

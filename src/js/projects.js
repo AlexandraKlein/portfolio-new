@@ -1,7 +1,3 @@
-'use strict';
-
-var $document = $(document);
-
 var projects = function() {
 
   $document.on('projectsOnEnter', function() {

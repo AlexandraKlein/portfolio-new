@@ -1,87 +1,6 @@
 'use strict';
 
 var $document = $(document);
-
-var about = function() {
-
-  $document.on('aboutOnEnter', function() {
-    console.log('aboutOnEnter');
-  });
-
-  $document.on('aboutOnEnterCompleted', function() {
-    console.log('aboutOnEnterCompleted');
-  });
-
-  $document.on('aboutOnLeave', function() {
-    console.log('aboutOnLeave');
-  });
-
-  $document.on('aboutOnLeaveCompleted', function() {
-    console.log('aboutOnLeaveCompleted');
-  });
-};
-
-$(function () {
-  return about();
-});
-
-'use strict';
-
-var $document = $(document);
-
-var homePage = function() {
-
-  $document.on('homepageOnEnter', function() {
-    console.log('homepageOnEnter');
-  });
-
-  $document.on('homepageOnEnterCompleted', function() {
-    console.log('homepageOnEnterCompleted');
-  });
-
-  $document.on('homepageOnLeave', function() {
-    console.log('homepageOnLeave');
-  });
-
-  $document.on('homepageOnLeaveCompleted', function() {
-    console.log('homepageOnLeaveCompleted');
-  });
-};
-
-$(function () {
-  return homePage();
-});
-
-'use strict';
-
-var $document = $(document);
-
-var projects = function() {
-
-  $document.on('projectsOnEnter', function() {
-    console.log('projectsOnEnter');
-  });
-
-  $document.on('projectsOnEnterCompleted', function() {
-    console.log('projectsOnEnterCompleted');
-  });
-
-  $document.on('projectsOnLeave', function() {
-    console.log('projectsOnLeave');
-  });
-
-  $document.on('projectsOnLeaveCompleted', function() {
-    console.log('projectsOnLeaveCompleted');
-  });
-};
-
-$(function () {
-  return projects();
-});
-
-'use strict';
-
-var $document = $(document);
 var $body = $('body');
 var $barbaWrapper = $('#barba-wrapper');
 
@@ -221,4 +140,73 @@ var pageTransitions = function() {
 
 $(function () {
   return pageTransitions();
+});
+
+var about = function() {
+
+  $document.on('aboutOnEnter', function() {
+    console.log('aboutOnEnter');
+  });
+
+  $document.on('aboutOnEnterCompleted', function() {
+    console.log('aboutOnEnterCompleted');
+  });
+
+  $document.on('aboutOnLeave', function() {
+    console.log('aboutOnLeave');
+  });
+
+  $document.on('aboutOnLeaveCompleted', function() {
+    console.log('aboutOnLeaveCompleted');
+  });
+};
+
+$(function () {
+  return about();
+});
+
+var homePage = function() {
+
+  $document.on('homepageOnEnter', function() {
+    console.log('homepageOnEnter');
+  });
+
+  $document.on('homepageOnEnterCompleted', function() {
+    console.log('homepageOnEnterCompleted');
+  });
+
+  $document.on('homepageOnLeave', function() {
+    console.log('homepageOnLeave');
+  });
+
+  $document.on('homepageOnLeaveCompleted', function() {
+    console.log('homepageOnLeaveCompleted');
+  });
+};
+
+$(function () {
+  return homePage();
+});
+
+var projects = function() {
+
+  $document.on('projectsOnEnter', function() {
+    console.log('projectsOnEnter');
+  });
+
+  $document.on('projectsOnEnterCompleted', function() {
+    console.log('projectsOnEnterCompleted');
+  });
+
+  $document.on('projectsOnLeave', function() {
+    console.log('projectsOnLeave');
+  });
+
+  $document.on('projectsOnLeaveCompleted', function() {
+    console.log('projectsOnLeaveCompleted');
+  });
+};
+
+$(function () {
+  return projects();
 });

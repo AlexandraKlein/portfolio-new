@@ -1,7 +1,3 @@
-'use strict';
-
-var $document = $(document);
-
 var about = function() {
 
   $document.on('aboutOnEnter', function() {
