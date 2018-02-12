@@ -1,0 +1,54 @@
+.main-section {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $gainsboro;
+  transition: all $ease $duration;
+
+  .circle {
+    opacity: 0;
+    @extend .align-both;
+    width: 80vh;
+    height: 80vh;
+    border-radius: 100%;
+    margin: auto;
+    background-color: $purple;
+    overflow: hidden;
+    animation: circleIn $duration $ease forwards $duration/1.5;
+    transition: all $ease $duration;
+
+    video {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  a {
+    position: absolute;
+    bottom: 5vmax;
+    opacity: 0;
+    font-family: $header-font;
+    font-size: 10vw;
+    @extend .horizontal-align;
+    animation: fadeIn $duration/2 $ease forwards $duration/2;
+  }
+}
+
+.transition-out {
+  .circle {
+    animation: circleOut $duration $ease forwards;
+  }
+
+  a {
+    animation: fadeOut $duration/2 $ease forwards;
+  }
+}
+
+#home {
+  .main-section {
+    background-color: $base;
+
+    a {
+      color: $white;
+    }
+  }
+}

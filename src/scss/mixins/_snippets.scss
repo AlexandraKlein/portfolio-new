@@ -19,6 +19,12 @@
   transform: translateY(-50%);
 }
 
+.horizontal-align {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .align-both {
   position: absolute;
   top: 50%;

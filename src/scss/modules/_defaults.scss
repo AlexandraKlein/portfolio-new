@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Passion+One:900');
+
 * {
   box-sizing: border-box;
   font-smoothing: antialiased;
@@ -11,6 +13,15 @@ body {
   font: 300 16px 'Helvetica Neue', Helvetica, Arial;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5{
+  font-family: $header-font;
+}
+
 a {
-  color: $black;
+  color: $gainsboro;
+  text-decoration: none;
 }

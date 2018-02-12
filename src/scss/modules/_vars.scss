@@ -1,6 +1,17 @@
-$base : #f79e3e;
+$purple: #413557;
+$rosy-brown: #A57E88;
+$light-rosy-brow: #C49892;
+$tan: #D5B2AD;
+$gainsboro: #E8DEDB;
+
+$base : $rosy-brown;
 $darken : darken($base , 20%);
 $back: darken($base, 30%);
 
 $white: #fff;
 $black: #000;
+
+$header-font: 'Passion One', cursive;
+
+$duration: 1s;
+$ease: cubic-bezier(1, 0, 0.5, 1);
