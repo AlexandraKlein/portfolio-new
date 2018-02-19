@@ -20,7 +20,8 @@
   .copy {
     position: absolute;
     width: 100%;
-    top: 7vw;
+    top: 15vw;
+    right: 25vw;
     color: $white;
 
     h1,
@@ -30,10 +31,8 @@
       opacity: 0;
       color: $white;
       font-family: $header-font;
-      text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.15);
+      text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.2);
       font-size: 10vw;
-      top: 7vw;
-      right: 30vw;
       width: 50vw;
       animation: fadeIn $duration/2 $ease forwards $duration/2;
     }
@@ -44,7 +43,7 @@
     }
 
     h2 {
-      font-size: 5.2vw;
+      font-size: 5vw;
       top: 8vw;
     }
   }
@@ -55,8 +54,9 @@
     opacity: 0;
     color: $white;
     font-family: $header-font;
-    text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.15);
+    text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.2);
     font-size: 10vw;
+    line-height: .75;
     top: 7vw;
     right: calc(100% - 15vw);
     animation: fadeIn $duration/2 $ease forwards $duration/2;

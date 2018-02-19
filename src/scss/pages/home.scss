@@ -1,4 +1,15 @@
 .home {
+
+  .circle {
+    position: relative;
+
+    .me {
+      position: absolute;
+      width: 100%;
+      right: -1px;
+      bottom: -1px;
+    }
+  }
   .carousel {
     position: absolute;
     width: 100%;
@@ -26,6 +37,7 @@
       outline: 0;
       background: transparent;
       @extend .vertical-align;
+      z-index: 2;
 
       &.slick-prev {
         left: 10vmin;
@@ -36,4 +48,46 @@
       }
     }
   }
+}
+
+.main-section.projects {
+
+  .circle {
+    //cursor: url(http://chrishawkins.us/blank.cur), none;
+    background-color: #ccc;
+  }
+
+  .devices {
+    position: relative;
+    display: flex;
+    height: 100%;
+
+    img {
+      position: absolute;
+    }
+
+    .desktop {
+      width: 80%;
+      top: 20%;
+      left: 10%;
+    }
+
+    .laptop {
+      width: 60%;
+      left: -10%;
+      bottom: 10%;
+    }
+
+    .mobile {
+      width: 20%;
+      right: 0;
+      bottom: 15%;
+    }
+  }
+}
+
+
+.custom-cursor {
+  position: absolute;
+  cursor: none;
 }
