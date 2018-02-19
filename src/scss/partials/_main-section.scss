@@ -1,4 +1,5 @@
 .main-section {
+  position: relative;
   height: 100vh;
   overflow: hidden;
   background-color: $white;
@@ -11,7 +12,7 @@
     height: 80vmin;
     border-radius: 100%;
     margin: auto;
-    background-color: $purple;
+    background-color: $rosy-brown;
     animation: circleIn $duration $ease forwards $duration/1.5;
     transition: all $ease $duration;
   }
@@ -32,22 +33,19 @@
       text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.15);
       font-size: 10vw;
       top: 7vw;
-      right: calc(100% - 15vw);
+      right: 30vw;
+      width: 50vw;
       animation: fadeIn $duration/2 $ease forwards $duration/2;
     }
 
     h1 {
       font-size: 10vw;
       top: -3vw;
-      width: 50vw;
-      right: 3.5vw;
     }
 
     h2 {
       font-size: 5.2vw;
       top: 8vw;
-      width: 50vw;
-      right: 3.5vw;
     }
   }
 

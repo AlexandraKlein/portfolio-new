@@ -1,0 +1,39 @@
+.home {
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    .slide {
+      position:relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .circle {
+
+    }
+
+    .slick-slide {
+      outline: 0;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      border: none;
+      outline: 0;
+      background: transparent;
+      @extend .vertical-align;
+
+      &.slick-prev {
+        left: 10vmin;
+      }
+
+      &.slick-next {
+        right: 10vmin;
+      }
+    }
+  }
+}
