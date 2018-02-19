@@ -1,34 +1,66 @@
 .main-section {
   height: 100vh;
   overflow: hidden;
-  background-color: $gainsboro;
+  background-color: $white;
   transition: all $ease $duration;
 
   .circle {
-    opacity: 0;
-    @extend .align-both;
-    width: 80vh;
-    height: 80vh;
+    @extend .vertical-align;
+    left: 20vw;
+    width: 80vmin;
+    height: 80vmin;
     border-radius: 100%;
     margin: auto;
     background-color: $purple;
-    overflow: hidden;
     animation: circleIn $duration $ease forwards $duration/1.5;
     transition: all $ease $duration;
+  }
 
-    video {
-      position: relative;
-      width: 100%;
+  .copy {
+    position: absolute;
+    width: 100%;
+    top: 7vw;
+    color: $white;
+
+    h1,
+    h2 {
+      display: inline-table;
+      position: absolute;
+      opacity: 0;
+      color: $white;
+      font-family: $header-font;
+      text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.15);
+      font-size: 10vw;
+      top: 7vw;
+      right: calc(100% - 15vw);
+      animation: fadeIn $duration/2 $ease forwards $duration/2;
+    }
+
+    h1 {
+      font-size: 10vw;
+      top: -3vw;
+      width: 50vw;
+      right: 3.5vw;
+    }
+
+    h2 {
+      font-size: 5.2vw;
+      top: 8vw;
+      width: 50vw;
+      right: 3.5vw;
     }
   }
 
   a {
+    display: inline-table;
     position: absolute;
-    bottom: 5vmax;
     opacity: 0;
+    color: $white;
     font-family: $header-font;
+    text-shadow:  -9px 12px 27px rgba(0, 0, 0, 0.15);
     font-size: 10vw;
-    @extend .horizontal-align;
+    top: 7vw;
+    right: calc(100% - 15vw);
     animation: fadeIn $duration/2 $ease forwards $duration/2;
   }
 }
@@ -36,6 +68,10 @@
 .transition-out {
   .circle {
     animation: circleOut $duration $ease forwards;
+
+    video {
+      animation: fadeOut $duration/2 $ease forwards;
+    }
   }
 
   a {
@@ -43,12 +79,3 @@
   }
 }
 
-#home {
-  .main-section {
-    background-color: $base;
-
-    a {
-      color: $white;
-    }
-  }
-}
