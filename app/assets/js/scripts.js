@@ -173,8 +173,6 @@ var slickOptions = {
 
 $(document).on('homepageOnEnterCompleted', function() {
   $('.carousel').slick(slickOptions);
-
-  console.log('should slick')
 });
 
 var homePage = function() {
