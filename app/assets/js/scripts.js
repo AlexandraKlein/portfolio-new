@@ -165,14 +165,14 @@ $(function () {
   return about();
 });
 
-var slickOptions = {
-  infinite: true,
-  variableWidth: true,
-  slidesToShow: 1
-};
-
 $(document).on('homepageOnEnterCompleted', function() {
-  $('.carousel').slick(slickOptions);
+  $('.carousel').slick({
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next')
+  });
 });
 
 var homePage = function() {
@@ -305,20 +305,20 @@ var settings = {
   overflowScroll: true,
   updateHash: false,
   touchScroll: true,
-  before:function(index) {
-    $('.scroll-section').eq(index)
+  before:function(i, panels) {
+    $('.scroll-section').eq(i)
       .removeClass('active previous next')
       .addClass('active')
       .siblings('.scroll-section')
       .removeClass('active');
 
-    $('.scroll-section').eq(index - 1)
+    $('.scroll-section').eq(i - 1)
       .removeClass('active previous next')
       .addClass('previous')
       .siblings('.scroll-section')
       .removeClass('previous');
 
-    $('.scroll-section').eq(index + 1)
+    $('.scroll-section').eq(i + 1)
       .removeClass('active previous next')
       .addClass('next')
       .siblings('.scroll-section')

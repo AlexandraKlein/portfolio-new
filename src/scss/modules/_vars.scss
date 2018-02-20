@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
 $purple: #413557;
 $rosy-brown: #A57E88;
 $light-rosy-brow: #C49892;
@@ -11,7 +13,7 @@ $back: darken($base, 30%);
 $white: #fff;
 $black: #000;
 
-$header-font: 'Passion One', cursive;
+$header-font: 'Anton', sans-serif;
 
 $duration: 1s;
 $ease: cubic-bezier(1, 0, 0.5, 1);
