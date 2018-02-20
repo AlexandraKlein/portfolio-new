@@ -472,6 +472,47 @@ textarea {
     width: 200vmax;
     height: 200vmax; } }
 
+.flex-both-align {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.flex-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start; }
+
+.vertical-align, .main-section .circle, .home .arrows {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+.horizontal-align {
+  position: relative;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
+.align-both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
 .main-section {
   position: relative;
   height: 100vh;
@@ -499,7 +540,7 @@ textarea {
       opacity: 0;
       color: #fff;
       font-family: "Anton", sans-serif;
-      text-shadow: -9px 12px 27px rgba(0, 0, 0, 0.3);
+      text-shadow: -10px 15px 25px rgba(0, 0, 0, 0.3);
       line-height: 1;
       animation: fadeIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 0.5s; }
     .main-section .copy h1 {
@@ -514,7 +555,7 @@ textarea {
     opacity: 0;
     color: #fff;
     font-family: "Anton", sans-serif;
-    text-shadow: -9px 12px 27px rgba(0, 0, 0, 0.3);
+    text-shadow: -10px 15px 25px rgba(0, 0, 0, 0.3);
     font-size: 10vw;
     line-height: .95;
     top: 7vw;
@@ -562,10 +603,12 @@ textarea {
 .home .circle {
   position: relative; }
   .home .circle .me {
+    opacity: 0;
     position: absolute;
     width: 100%;
     right: -1px;
-    bottom: -1px; }
+    bottom: -1px;
+    animation: fadeIn .2s ease-in .2s; }
 
 .home .carousel {
   position: absolute;
@@ -582,7 +625,7 @@ textarea {
     top: 10vw;
     left: -25vw;
     color: #fff;
-    text-shadow: -9px 12px 27px rgba(0, 0, 0, 0.3); }
+    text-shadow: -10px 15px 25px rgba(0, 0, 0, 0.3); }
     .home .carousel .titles > * {
       margin: 0;
       line-height: 1; }
@@ -604,7 +647,7 @@ textarea {
   .home .arrows li {
     list-style: none;
     position: absolute;
-    width: 5vw;
+    width: 3vw;
     cursor: pointer; }
     .home .arrows li img {
       width: 100%; }
@@ -613,25 +656,25 @@ textarea {
   .home .arrows .next {
     right: 5vmin; }
 
-.main-section.projects .circle {
+.home .main-section.projects .circle {
   background-color: #ccc; }
 
-.main-section.projects .devices {
+.home .main-section.projects .devices {
   position: relative;
   display: -ms-flexbox;
   display: flex;
   height: 100%; }
-  .main-section.projects .devices img {
+  .home .main-section.projects .devices img {
     position: absolute; }
-  .main-section.projects .devices .desktop {
+  .home .main-section.projects .devices .desktop {
     width: 80%;
     top: 20%;
     left: 10%; }
-  .main-section.projects .devices .laptop {
+  .home .main-section.projects .devices .laptop {
     width: 60%;
     left: -10%;
     bottom: 10%; }
-  .main-section.projects .devices .mobile {
+  .home .main-section.projects .devices .mobile {
     width: 20%;
     right: 0;
     bottom: 15%; }

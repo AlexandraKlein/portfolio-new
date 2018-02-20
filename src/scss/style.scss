@@ -14,6 +14,15 @@
 @import 'modules/defaults';
 @import 'modules/normalize';
 @import 'modules/animations';
+
+//----------------------------------*\
+// MIXINS/SNIPPETS
+//----------------------------------*/
+
+@import 'mixins/breakpoints';
+@import 'mixins/mixins';
+@import 'mixins/snippets';
+
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
@@ -34,7 +43,9 @@
 // PAGES
 //----------------------------------*/
 
-@import 'pages/home';
+@import 'pages/home/intro';
+@import 'pages/home/scroll-sections';
+@import 'pages/home/carousel';
 
 //----------------------------------*\
 // VENDOR

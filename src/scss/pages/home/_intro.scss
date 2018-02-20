@@ -1,0 +1,15 @@
+.home {
+
+  .circle {
+    position: relative;
+
+    .me {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      right: -1px;
+      bottom: -1px;
+      animation: fadeIn .2s ease-in .2s;
+    }
+  }
+}

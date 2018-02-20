@@ -1,15 +1,4 @@
 .home {
-
-  .circle {
-    position: relative;
-
-    .me {
-      position: absolute;
-      width: 100%;
-      right: -1px;
-      bottom: -1px;
-    }
-  }
   .carousel {
     position: absolute;
     width: 100%;
@@ -28,7 +17,7 @@
       top: 10vw;
       left: -25vw;
       color: $white;
-      text-shadow:  -9px 12px 27px rgba($black, 0.3);
+      @include textShadow($black, .3);
 
       > * {
         margin: 0;
@@ -62,7 +51,7 @@
     li {
       list-style: none;
       position: absolute;
-      width: 5vw;
+      width: 3vw;
       cursor: pointer;
 
       img {
@@ -78,44 +67,43 @@
       right: 5vmin;
     }
   }
-}
 
-.main-section.projects {
+  .main-section.projects {
 
-  .circle {
-    //cursor: url(http://chrishawkins.us/blank.cur), none;
-    background-color: #ccc;
+    .circle {
+      //cursor: url(http://chrishawkins.us/blank.cur), none;
+      background-color: #ccc;
+    }
+
+    .devices {
+      position: relative;
+      display: flex;
+      height: 100%;
+
+      img {
+        position: absolute;
+      }
+
+      .desktop {
+        width: 80%;
+        top: 20%;
+        left: 10%;
+      }
+
+      .laptop {
+        width: 60%;
+        left: -10%;
+        bottom: 10%;
+      }
+
+      .mobile {
+        width: 20%;
+        right: 0;
+        bottom: 15%;
+      }
+    }
   }
-
-  .devices {
-    position: relative;
-    display: flex;
-    height: 100%;
-
-    img {
-      position: absolute;
-    }
-
-    .desktop {
-      width: 80%;
-      top: 20%;
-      left: 10%;
-    }
-
-    .laptop {
-      width: 60%;
-      left: -10%;
-      bottom: 10%;
-    }
-
-    .mobile {
-      width: 20%;
-      right: 0;
-      bottom: 15%;
-    }
-  }
 }
-
 
 .custom-cursor {
   position: absolute;
