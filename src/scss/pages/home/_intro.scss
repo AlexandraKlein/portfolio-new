@@ -9,7 +9,7 @@
       width: 100%;
       right: -1px;
       bottom: -1px;
-      animation: fadeIn .2s ease-in .2s;
+      animation: fadeIn .2s ease-in forwards 1.5s;
     }
   }
 }
