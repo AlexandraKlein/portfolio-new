@@ -111,6 +111,8 @@ var pageTransitions = function() {
 
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus) {
 
+    $($document).trigger('allPagesEnter');
+
     switch (true) {
 
       case oldStatus.namespace === 'projects' && currentStatus.namespace === 'projects':

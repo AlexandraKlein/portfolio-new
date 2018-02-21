@@ -19,7 +19,8 @@
       color: $white;
       @include textShadow($black, .3);
 
-      > * {
+      h2,
+      h4 {
         margin: 0;
         line-height: 1;
       }
@@ -32,8 +33,7 @@
         font-size: 5vw;
       }
 
-      .button {
-        margin-top: 30px;
+      .btn {
         @include button($purple);
       }
     }
@@ -67,7 +67,7 @@
 
     .circle {
       //cursor: url(http://chrishawkins.us/blank.cur), none;
-      background-color: #ccc;
+      background-color: $purple;
     }
 
     .devices {

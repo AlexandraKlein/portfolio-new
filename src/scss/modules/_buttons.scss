@@ -1,88 +1,52 @@
-$anim-text-offset: 1em;
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$btn-full: $btn-height+$btn-width !default;
+$btn-half: $btn-full/2 !default;
+$bg-color: #eeeeee !default;
 
-@mixin textShadow($color, $opacity) {
-  text-shadow: -10px 15px 25px rgba($color, $opacity);
-}
-
-@mixin button($button-color) {
-  touch-callout: none;
-  user-select: none;
-  display: inline-block;
-  border: .2em solid;
+@mixin button($btn-color) {
+  box-sizing: border-box;
+  line-height: $btn-height;
   position: relative;
-  cursor: pointer;
+  display: block;
   overflow: hidden;
-  opacity: 0.6;
-  color: $button-color;
-  &__text{
-    display: block;
-    padding:1em 2em;
-    text-transform: uppercase;
-    font-weight: bold;
-    &:before{
-      content: attr(title);
-    }
-    &--bis{
-      display: block;
-      position: absolute;
-      top: 0; left:0; right: 0; bottom: 0;
-      transform: translateX(-1 * $anim-text-offset);
-      opacity: 0;
-    }
-  }
-  &__mask{
-    display: block;
+  max-width: $btn-width;
+  width: 100%;
+  height: $btn-height;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $btn-color;
+  color: $btn-color;
+  transition: color 0.4s ease-in-out;
+
+  span {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: $button-color;;
-    transform: translateX(-100%) rotate(45deg);
-    transition: all 0.3s;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: $btn-color;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
-}
 
-.button:hover{
-  opacity: 1;
-  .button__text{
-    animation: fx-text .3s ease-out;
-    &--bis{
-      animation: fx-text-bis .3s ease-out;
+  &:hover {
+    color: lighten($btn-color, 75%);
+
+    span {
+      width: 225%;
+      height: 562.5px;
     }
   }
-  .button__mask{
-    animation: fx-mask .3s ease-out;
+
+  &:active {
+    background-color: $btn-color;
   }
 }
 
-.button {
+.btn {
   @include button($rosy-brown);
-}
-
-@keyframes fx-mask {
-  0%{
-    transform: translateX(-100%) rotate(45deg);
-  }
-  100%{
-    transform: translateX(100%) rotate(45deg);
-  }
-}
-
-@keyframes fx-text {
-  0%{
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100%{
-    transform: translateX($anim-text-offset);
-    opacity: 0;
-  }
-}
-@keyframes fx-text-bis {
-  0%{
-    transform: translateX(-1 * $anim-text-offset);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0);
-    opacity: 1;
-  }
 }

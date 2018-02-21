@@ -111,6 +111,8 @@ var pageTransitions = function() {
 
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus) {
 
+    $($document).trigger('allPagesEnter');
+
     switch (true) {
 
       case oldStatus.namespace === 'projects' && currentStatus.namespace === 'projects':
@@ -163,6 +165,28 @@ var about = function() {
 
 $(function () {
   return about();
+});
+
+function directionAwareButton() {
+  $('.btn')
+    .on('mouseenter', function(e) {
+      var parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top:relY, left:relX})
+    })
+    .on('mouseout', function(e) {
+      var parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top:relY, left:relX})
+    });
+}
+
+directionAwareButton();
+
+$($document).on('allPagesEnter', function() {
+  directionAwareButton();
 });
 
 $(document).on('homepageOnEnterCompleted', function() {
