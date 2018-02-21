@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400");
 .flex-both-align {
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +22,7 @@
   -ms-flex-align: start;
       align-items: flex-start; }
 
-.vertical-align, .main-section .circle, .home .arrows {
+.vertical-align, .main-section .circle, .home .arrow {
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -49,7 +50,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 300 16px 'Helvetica Neue', Helvetica, Arial; }
+  font: 300 16px "Work Sans", sans-serif; }
 
 h1,
 h2,
@@ -494,7 +495,7 @@ textarea {
   -ms-flex-align: start;
       align-items: flex-start; }
 
-.vertical-align, .main-section .circle, .home .arrows {
+.vertical-align, .main-section .circle, .home .arrow {
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -530,13 +531,22 @@ textarea {
     transition: all cubic-bezier(1, 0, 0.5, 1) 1s; }
   .main-section .copy {
     position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center;
     width: 100%;
-    top: 15vw;
+    top: 20vw;
     right: 25vw; }
     .main-section .copy h1,
     .main-section .copy h2 {
       display: inline-table;
-      position: absolute;
+      position: relative;
+      margin: 0;
       opacity: 0;
       color: #fff;
       font-family: "Anton", sans-serif;
@@ -544,23 +554,12 @@ textarea {
       line-height: 1;
       animation: fadeIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 0.5s; }
     .main-section .copy h1 {
-      font-size: 13vw;
-      top: -3vw; }
+      font-size: 13vw; }
     .main-section .copy h2 {
-      font-size: 5.1vw;
-      top: 14vw; }
-  .main-section a {
-    display: inline-table;
-    position: absolute;
-    opacity: 0;
-    color: #fff;
-    font-family: "Anton", sans-serif;
-    text-shadow: -10px 15px 25px rgba(0, 0, 0, 0.3);
-    font-size: 10vw;
-    line-height: .95;
-    top: 7vw;
-    right: calc(100% - 15vw);
-    animation: fadeIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 0.5s; }
+      font-size: 5.1vw; }
+    .main-section .copy a {
+      margin-top: 30px;
+      display: block; }
 
 .transition-out .circle {
   animation: circleOut 1s cubic-bezier(1, 0, 0.5, 1) forwards; }
@@ -569,6 +568,79 @@ textarea {
 
 .transition-out a {
   animation: fadeOut 0.5s cubic-bezier(1, 0, 0.5, 1) forwards; }
+
+.button:hover {
+  opacity: 1; }
+  .button:hover .button__text {
+    animation: fx-text .3s ease-out; }
+    .button:hover .button__text--bis {
+      animation: fx-text-bis .3s ease-out; }
+  .button:hover .button__mask {
+    animation: fx-mask .3s ease-out; }
+
+.button {
+  touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  border: .2em solid;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.6;
+  color: #A57E88; }
+  .button__text {
+    display: block;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .button__text:before {
+      content: attr(title); }
+    .button__text--bis {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -ms-transform: translateX(-1em);
+          transform: translateX(-1em);
+      opacity: 0; }
+  .button__mask {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #A57E88;
+    -ms-transform: translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s; }
+
+@keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg); }
+  100% {
+    transform: translateX(100%) rotate(45deg); } }
+
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    transform: translateX(1em);
+    opacity: 0; } }
+
+@keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
 
 @font-face {
   font-family: 'Font-Name';
@@ -633,28 +705,64 @@ textarea {
       font-size: 10vw; }
     .home .carousel .titles h4 {
       font-size: 5vw; }
+    .home .carousel .titles .button {
+      margin-top: 30px;
+      touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      display: inline-block;
+      border: .2em solid;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      opacity: 0.6;
+      color: #413557; }
+      .home .carousel .titles .button__text {
+        display: block;
+        padding: 1em 2em;
+        text-transform: uppercase;
+        font-weight: bold; }
+        .home .carousel .titles .button__text:before {
+          content: attr(title); }
+        .home .carousel .titles .button__text--bis {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          -ms-transform: translateX(-1em);
+              transform: translateX(-1em);
+          opacity: 0; }
+      .home .carousel .titles .button__mask {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #413557;
+        -ms-transform: translateX(-100%) rotate(45deg);
+            transform: translateX(-100%) rotate(45deg);
+        transition: all 0.3s; }
   .home .carousel .slick-slide {
     outline: 0; }
 
-.home .arrows {
+.home .arrow {
   position: absolute;
-  width: 100%;
-  height: 5vw;
-  border: none;
-  outline: 0;
-  background: transparent;
+  width: 3vw;
+  cursor: pointer;
   z-index: 2; }
-  .home .arrows li {
-    list-style: none;
-    position: absolute;
-    width: 3vw;
-    cursor: pointer; }
-    .home .arrows li img {
-      width: 100%; }
-  .home .arrows .prev {
-    left: 5vmin; }
-  .home .arrows .next {
-    right: 5vmin; }
+  .home .arrow img {
+    width: 100%; }
+
+.home .prev {
+  left: 5vmin; }
+
+.home .next {
+  right: 5vmin; }
 
 .home .main-section.projects .circle {
   background-color: #ccc; }
