@@ -6,4 +6,8 @@ $(document).on('homepageOnEnterCompleted', function() {
     prevArrow: $('.prev'),
     nextArrow: $('.next')
   });
+
+  $('.btn').click(function() {
+    $(this).closest('.circle').addClass('active');
+  })
 });

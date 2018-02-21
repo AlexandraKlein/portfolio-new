@@ -98,9 +98,20 @@
       }
     }
   }
+
+  .transition-out {
+
+    .circle {
+      .devices {
+        transition: opacity .2s ease-out;
+        opacity: 0;
+      }
+    }
+  }
 }
 
-.custom-cursor {
-  position: absolute;
-  cursor: none;
-}
+
+//.custom-cursor {
+//  position: absolute;
+//  cursor: none;
+//}

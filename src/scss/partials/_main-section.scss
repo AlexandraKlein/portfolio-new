@@ -53,19 +53,35 @@
       display: block;
     }
   }
+
+  .copy,
+  .titles,
+  .btn {
+    opacity: 0;
+    animation: fadeIn $duration/2 $ease forwards $duration;
+  }
 }
 
 .transition-out {
-  .circle {
-    animation: circleOut $duration $ease forwards;
 
-    video {
-      animation: fadeOut $duration/2 $ease forwards;
+  section:not(.projects) {
+    .circle {
+      animation: circleOut $duration $ease forwards;
     }
   }
 
-  a {
-    animation: fadeOut $duration/2 $ease forwards;
+  section.projects {
+    .circle.active {
+      background-color: $rosy-brown;
+      animation: circleOut $duration $ease forwards;
+    }
+  }
+
+  .main-section {
+    .copy,
+    .titles,
+    .btn {
+      animation: fadeOut $duration/2 $ease forwards;
+    }
   }
 }
-
