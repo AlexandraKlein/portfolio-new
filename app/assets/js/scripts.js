@@ -226,15 +226,15 @@ $(function () {
   return homePage();
 });
 
-var bod = $('body');
-var tog = $('.nav');
+var $body = $('body');
+var $navToggle = $('.nav, nav ul li a');
 
-tog.on("click", function() {
+$navToggle.on('click', function() {
   $(this).toggleClass('is-closed');
   if(!$(this).hasClass('is-closed')) {
-    bod.addClass('is-open');
+    $body.addClass('is-open');
   } else {
-    bod.removeClass('is-open');
+    $body.removeClass('is-open');
   }
 });
 
