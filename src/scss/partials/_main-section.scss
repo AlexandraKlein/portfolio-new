@@ -5,6 +5,12 @@
   background-color: $white;
   transition: all $ease $duration;
 
+  &.intro {
+    .copy {
+      top: 20vw;
+    }
+  }
+
   .circle {
     @extend .vertical-align;
     left: 20vw;
@@ -24,7 +30,7 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    top: 20vw;
+    top: 10vw;
     right: 25vw;
 
     h1,

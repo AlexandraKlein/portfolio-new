@@ -663,6 +663,8 @@ ul {
   overflow: hidden;
   background-color: #fff;
   transition: all cubic-bezier(1, 0, 0.5, 1) 1s; }
+  .main-section.intro .copy {
+    top: 20vw; }
   .main-section .circle {
     left: 20vw;
     width: 80vmin;
@@ -683,7 +685,7 @@ ul {
     -ms-flex-pack: center;
         justify-content: center;
     width: 100%;
-    top: 20vw;
+    top: 10vw;
     right: 25vw; }
     .main-section .copy h1,
     .main-section .copy h2 {
