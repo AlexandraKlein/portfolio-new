@@ -12,4 +12,11 @@
       animation: fadeIn .2s ease-in forwards 1.5s;
     }
   }
+
+  .transition-out {
+
+    .circle .me {
+      animation: fadeOut .2s ease-in forwards;
+    }
+  }
 }

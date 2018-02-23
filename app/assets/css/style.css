@@ -618,10 +618,10 @@ ul {
   outline: none;
   cursor: pointer;
   opacity: 0;
-  transition: opacity .2s ease-out;
+  transition: opacity .2s .1s ease-out, transform .4s .1s ease-out;
   z-index: 3; }
   .nav:before, .nav:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -639,8 +639,8 @@ ul {
         transform: rotate(-45deg); }
   .is-open .nav {
     opacity: 1;
-    -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
     transition: opacity .2s .1s ease-out, transform .4s .1s ease-out; }
 
 @keyframes bounce-in {
@@ -794,6 +794,9 @@ ul {
     right: -1px;
     bottom: -1px;
     animation: fadeIn .2s ease-in forwards 1.5s; }
+
+.home .transition-out .circle .me {
+  animation: fadeOut .2s ease-in forwards; }
 
 .home .carousel {
   position: absolute;
