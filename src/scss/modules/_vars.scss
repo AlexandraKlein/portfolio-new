@@ -7,11 +7,17 @@ $light-rosy-brown: #C49892;
 $tan: #D5B2AD;
 $gainsboro: #E8DEDB;
 
+$color1: #E8B4BC;
+$color2: #67597A;
+$color3: #A57E88;
+$color4: #413557;
+$color5: #EA526F;
+
 $base : $rosy-brown;
 $darken : darken($base , 20%);
 $back: darken($base, 30%);
 
-$white: #fff;
+$white: $color3;
 $black: #000;
 
 $header-font: 'Anton', sans-serif;

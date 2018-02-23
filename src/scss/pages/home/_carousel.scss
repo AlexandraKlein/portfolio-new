@@ -16,7 +16,7 @@
       position: absolute;
       top: 10vw;
       left: -25vw;
-      color: $white;
+      color: $color1;
       @include textShadow($black, .3);
 
       h2,
@@ -34,7 +34,7 @@
       }
 
       .btn {
-        @include button($purple);
+        @include button($color5);
       }
     }
 
@@ -67,7 +67,7 @@
 
     .circle {
       //cursor: url(http://chrishawkins.us/blank.cur), none;
-      background-color: $purple;
+      background-color: $color5;
     }
 
     .devices {
