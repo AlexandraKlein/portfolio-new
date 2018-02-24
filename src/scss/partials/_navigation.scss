@@ -1,7 +1,5 @@
 $font: $body-font;
-
-$color-body: $purple;
-$bg-menu: $purple;
+$bg-menu: $white;
 
 $padding: 24px;
 
@@ -17,7 +15,7 @@ nav {
   z-index: 1;
   .is-open & {
     height: 100%;
-    background-color: rgba($white, 0.8);
+    background-color: rgba($dark-gray-blue, 0.85);
     transition: background-color .2s ease-out;
     z-index: 2;
   }
@@ -57,9 +55,9 @@ ul {
       content: '';
       position: absolute;
       bottom: 5px; left: 0;
-      height: 4px;
+      height: 0;
       width: 0;
-      background-color: darken($rosy-brown, 20%);
+      background-color: $bg-menu;
       transition: width .2s ease-out;
     }
     &:nth-child(n+3) {
@@ -73,9 +71,10 @@ ul {
     &:hover {
 
       a {
-        color: darken($rosy-brown, 20%);
+        color: darken($bg-menu, 20%);
       }
       &:after {
+        height: 4px;
         width: 100%;
       }
     }

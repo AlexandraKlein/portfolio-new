@@ -33,9 +33,9 @@
         font-size: 5vw;
       }
 
-      .btn {
-        @include button($purple);
-      }
+      //.btn {
+      //  @include button($gray-blue);
+      //}
     }
 
     .slick-slide {
@@ -67,7 +67,7 @@
 
     .circle {
       //cursor: url(http://chrishawkins.us/blank.cur), none;
-      background-color: $purple;
+      background-color: $gray-blue;
     }
 
     .devices {

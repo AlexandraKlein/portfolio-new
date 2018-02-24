@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400');
 
-$purple: #413557;
-$rosy-brown: #A57E88;
-$light-rosy-brown: #C49892;
-$tan: #D5B2AD;
-$gainsboro: #E8DEDB;
+$gray-blue: #64718C;
+$dark-gray-blue: #374A67;
+$pink: #EFD0CA;
 
-$base : $rosy-brown;
-$darken : darken($base , 20%);
-$back: darken($base, 30%);
+$base: $dark-gray-blue;
 
 $white: #fff;
 $black: #000;

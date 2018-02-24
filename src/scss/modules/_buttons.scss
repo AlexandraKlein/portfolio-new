@@ -45,5 +45,5 @@ $btn-height: 80px !default;
 }
 
 .btn {
-  @include button($rosy-brown);
+  @include button(lighten($gray-blue, 20%));
 }

@@ -2,8 +2,9 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background-color: $white;
+  background-color: $base;
   transition: all $ease $duration;
+  border: 20px solid $white;
 
   &.intro {
     .copy {
@@ -14,11 +15,11 @@
   .circle {
     @extend .vertical-align;
     right: -12.5vw;
-    width: 80vmin;
-    height: 80vmin;
+    width: 50vw;
+    height: 50vw;
     border-radius: 100%;
     margin: auto;
-    background-color: $rosy-brown;
+    background-color: $pink;
     animation: circleIn $duration $ease forwards $duration/1.5;
     transition: all $ease $duration;
   }
@@ -78,7 +79,7 @@
 
   section.projects {
     .circle.active {
-      background-color: $rosy-brown;
+      background-color: $pink;
       animation: circleOut $duration $ease forwards;
     }
   }
