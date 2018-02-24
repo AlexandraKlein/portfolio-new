@@ -8,16 +8,20 @@
   left: 50px;
 
   div {
-    width: 2.5vw;
+    width: 5vw;
     cursor: pointer;
     margin-bottom: 20px;
+
+    &.arrow-down {
+      transform: rotate(180deg);
+    }
 
     &.disabled {
       opacity: .3;
       pointer-events: none;
     }
 
-    img {
+    svg {
       width: 100%;
     }
   }

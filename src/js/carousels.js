@@ -3,8 +3,8 @@ $(document).on('homepageOnEnterCompleted', function() {
     infinite: true,
     variableWidth: true,
     slidesToShow: 1,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next')
+    prevArrow: $('.arrow-prev'),
+    nextArrow: $('.arrow-next')
   });
 
   $('.btn').click(function() {

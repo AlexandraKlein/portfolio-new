@@ -4,9 +4,9 @@
 	 viewBox="156 -689 512 1045" style="enable-background:new 156 -689 512 1045;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
-	.st1{fill:none;stroke:#FFFFFF;stroke-width:8;stroke-miterlimit:10;}
 </style>
-<path class="st0" d="M244.6-237.1l4.2-7.2h-0.1L412-527.2l163.3,282.9h-0.2l4.2,7.2h85.5L412-674.9L159.2-237.1H244.6z M652.6-244.1
-	h-69.1L412-541.2L240.5-244.1h-69.2L412-660.9L652.6-244.1z"/>
-<line class="st1" x1="412" y1="-527.2" x2="412" y2="348.7"/>
+<g>
+	<path class="st0" d="M412-674.9L159.2-237.1h85.4l4.1-7.2h-0.1l159.3-276v868.9h8v-868.9l159.3,276h-0.2l4.2,7.2h85.5L412-674.9z
+		 M412-541.2L240.5-244.1h-69.2L412-660.9l240.6,416.8h-69.1L412-541.2z"/>
+</g>
 </svg>

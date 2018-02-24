@@ -809,13 +809,16 @@ nav ul {
   bottom: 50px;
   left: 50px; }
   .scrollify-arrows div {
-    width: 2.5vw;
+    width: 5vw;
     cursor: pointer;
     margin-bottom: 20px; }
+    .scrollify-arrows div.arrow-down {
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
     .scrollify-arrows div.disabled {
       opacity: .3;
       pointer-events: none; }
-    .scrollify-arrows div img {
+    .scrollify-arrows div svg {
       width: 100%; }
 
 .pagination {
@@ -859,12 +862,14 @@ nav ul {
 
 .home .arrow {
   position: absolute;
-  width: 3vw;
+  width: 5vw;
   cursor: pointer;
   z-index: 2; }
-  .home .arrow.prev {
-    left: 5vmin; }
-  .home .arrow.next {
+  .home .arrow.arrow-prev {
+    left: 5vmin;
+    -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+  .home .arrow.arrow-next {
     right: 5vmin; }
   .home .arrow img {
     width: 100%; }

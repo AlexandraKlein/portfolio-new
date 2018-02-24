@@ -60,22 +60,21 @@ function paginationArrowsMove() {
   });
 }
 
-paginationArrowsMove();
 
 if($('body').hasClass('home')) {
   $.scrollify(settings);
-  $.scrollify.move(0);
   window.scrollTo(0, 0);
+  $.scrollify.move(0);
 }
 
 $(document).on('homepageOnEnter', function() {
   window.scrollTo(0, 0);
   $.scrollify.move(0);
+  paginationArrowsMove();
 });
 
 $(document).on('homepageOnEnterCompleted', function() {
   $.scrollify(settings);
-  paginationArrowsMove();
 });
 
 $(document).on('homepageOnLeaveCompleted', function() {
