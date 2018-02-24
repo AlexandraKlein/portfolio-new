@@ -15,8 +15,8 @@
   .circle {
     @extend .vertical-align;
     right: -12.5vw;
-    width: 50vw;
-    height: 50vw;
+    width: 120vmax;
+    height: 120vmax;
     border-radius: 100%;
     margin: auto;
     background-color: $pink;

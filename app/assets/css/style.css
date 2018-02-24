@@ -672,8 +672,8 @@ nav ul {
     top: 20vw; }
   .main-section .circle {
     right: -12.5vw;
-    width: 50vw;
-    height: 50vw;
+    width: 120vmax;
+    height: 120vmax;
     border-radius: 100%;
     margin: auto;
     background-color: #EFD0CA;
@@ -871,7 +871,8 @@ nav ul {
   .home .arrow.arrow-prev {
     left: 5vmin;
     -ms-transform: rotate(180deg);
-        transform: rotate(180deg); }
+        transform: rotate(180deg);
+    top: calc(50% - 2.5vw); }
   .home .arrow.arrow-next {
     right: 5vmin; }
   .home .arrow svg {

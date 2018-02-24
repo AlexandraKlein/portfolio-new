@@ -53,6 +53,7 @@
     &.arrow-prev {
       left: 5vmin;
       transform: rotate(180deg);
+      top: calc(50% - 2.5vw);
     }
 
     &.arrow-next {

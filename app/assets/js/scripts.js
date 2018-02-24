@@ -425,26 +425,26 @@ var morphEls = function() {
     var path = s.select('path');
 
     var pathConfig = {
-      toSpeed: 300,
-      fromSpeed: 1500,
+      toSpeed: args.toSpeed,
+      fromSpeed: args.fromSpeed,
       from: path.attr('d'),
       to: args.el.getAttribute('data-morph-active')
     };
 
     args.el.addEventListener('mouseover', function () {
-      path.animate({ 'path': pathConfig.to }, pathConfig.toSpeed, mina.easein);
+      path.animate({ 'path': pathConfig.to }, pathConfig.toSpeed, args.easeIn);
     });
 
     args.el.addEventListener('mouseout', function () {
-      path.animate({ 'path': pathConfig.from }, pathConfig.fromSpeed, mina.elastic);
+      path.animate({ 'path': pathConfig.from }, pathConfig.fromSpeed, args.easeOut);
     });
   }
 
   var snapEls = [
-    {el: document.querySelector('.arrow-up')},
-    {el: document.querySelector('.arrow-down')},
-    {el: document.querySelector('.arrow-next')},
-    {el: document.querySelector('.arrow-prev')}
+    {el: document.querySelector('.arrow-up'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
+    {el: document.querySelector('.arrow-down'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
+    {el: document.querySelector('.arrow-next'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
+    {el: document.querySelector('.arrow-prev'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500}
   ];
 
   for (var i=0; i<snapEls.length; i++) {
