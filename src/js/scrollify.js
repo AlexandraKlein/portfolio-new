@@ -75,6 +75,7 @@ $(document).on('homepageOnEnter', function() {
 
 $(document).on('homepageOnEnterCompleted', function() {
   $.scrollify(settings);
+  paginationArrowsMove();
 });
 
 $(document).on('homepageOnLeaveCompleted', function() {
