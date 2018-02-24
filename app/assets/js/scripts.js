@@ -421,31 +421,30 @@ $(document).on('homepageOnLeaveCompleted', function() {
 
 var morphEls = function() {
   function snapMorphHover(args) {
-    var s = Snap(args.target);
+    var s = Snap(args.el);
     var path = s.select('path');
 
     var pathConfig = {
       toSpeed: 300,
       fromSpeed: 1500,
       from: path.attr('d'),
-      to: args.target.getAttribute('data-morph-active')
+      to: args.el.getAttribute('data-morph-active')
     };
 
-    args.target.addEventListener('mouseenter', function () {
+    args.el.addEventListener('mouseover', function () {
       path.animate({ 'path': pathConfig.to }, pathConfig.toSpeed, mina.easein);
     });
 
-    args.target.addEventListener('mouseleave', function () {
+    args.el.addEventListener('mouseout', function () {
       path.animate({ 'path': pathConfig.from }, pathConfig.fromSpeed, mina.elastic);
-
     });
   }
 
   var snapEls = [
-    {target: document.querySelector('.arrow-up')},
-    {target: document.querySelector('.arrow-down')},
-    {target: document.querySelector('.arrow-next')},
-    {target: document.querySelector('.arrow-prev')}
+    {el: document.querySelector('.arrow-up')},
+    {el: document.querySelector('.arrow-down')},
+    {el: document.querySelector('.arrow-next')},
+    {el: document.querySelector('.arrow-prev')}
   ];
 
   for (var i=0; i<snapEls.length; i++) {

@@ -59,8 +59,9 @@
       right: 5vmin;
     }
 
-    img {
+    svg {
       width: 100%;
+      pointer-events: none;
     }
   }
 

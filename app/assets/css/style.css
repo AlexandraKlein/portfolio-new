@@ -819,7 +819,8 @@ nav ul {
       opacity: .3;
       pointer-events: none; }
     .scrollify-arrows div svg {
-      width: 100%; }
+      width: 100%;
+      pointer-events: none; }
 
 .pagination {
   position: fixed;
@@ -871,8 +872,9 @@ nav ul {
         transform: rotate(180deg); }
   .home .arrow.arrow-next {
     right: 5vmin; }
-  .home .arrow img {
-    width: 100%; }
+  .home .arrow svg {
+    width: 100%;
+    pointer-events: none; }
 
 .home .main-section.projects .circle {
   background-color: #64718C; }
