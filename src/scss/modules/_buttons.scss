@@ -3,6 +3,7 @@ $btn-height: 80px !default;
 
 @mixin button($btn-color) {
   box-sizing: border-box;
+  outline: none;
   line-height: $btn-height;
   position: relative;
   display: block;

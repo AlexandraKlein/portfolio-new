@@ -531,7 +531,7 @@ nav {
     transition: background-color .2s ease-out;
     z-index: 2; }
 
-ul {
+nav ul {
   position: absolute;
   top: 0;
   left: 24px;
@@ -544,11 +544,11 @@ ul {
       transform: scale(0.1);
   transition: transform .2s ease-out;
   z-index: 2; }
-  ul:after {
+  nav ul:after {
     content: "";
     display: table;
     clear: both; }
-  ul li {
+  nav ul li {
     display: none;
     clear: both;
     float: left;
@@ -561,7 +561,7 @@ ul {
         -ms-user-select: none;
             user-select: none;
     transition: background-color 0s .2s ease-out, margin .2s ease-out, padding .2s ease-out, opacity .2s ease-out; }
-    ul li:after {
+    nav ul li:after {
       content: '';
       position: absolute;
       bottom: 5px;
@@ -570,29 +570,29 @@ ul {
       width: 0;
       background-color: #fff;
       transition: width .2s ease-out; }
-    ul li:nth-child(n+3) {
+    nav ul li:nth-child(n+3) {
       display: block; }
-    ul li:nth-child(1) {
+    nav ul li:nth-child(1) {
       animation: bounce-out .2s ease-out; }
-    ul li:nth-child(2) {
+    nav ul li:nth-child(2) {
       animation: bounce-out .2s ease-out; }
-    ul li:nth-child(3) {
+    nav ul li:nth-child(3) {
       animation: bounce-out .2s ease-out; }
-    ul li:nth-child(4) {
+    nav ul li:nth-child(4) {
       animation: bounce-out .2s ease-out; }
-    ul li:nth-child(5) {
+    nav ul li:nth-child(5) {
       animation: bounce-out .2s ease-out; }
-    ul li:hover a {
+    nav ul li:hover a {
       color: #cccccc; }
-    ul li:hover:after {
+    nav ul li:hover:after {
       height: 4px;
       width: 100%; }
-    ul li a {
+    nav ul li a {
       color: #fff; }
-  .is-open ul {
+  .is-open nav ul {
     -ms-transform: translateY(30px) scale(1);
         transform: translateY(30px) scale(1); }
-    .is-open ul li {
+    .is-open nav ul li {
       display: block;
       padding: 12px 0;
       margin: 0;
@@ -600,15 +600,15 @@ ul {
       -ms-transform: scale(0.6);
           transform: scale(0.6);
       transition: background-color 0s ease-out, margin .2s ease-out, padding .2s ease-out, opacity .2s ease-out; }
-      .is-open ul li:nth-child(1) {
+      .is-open nav ul li:nth-child(1) {
         animation: bounce-in 1s 0.04s ease-out forwards; }
-      .is-open ul li:nth-child(2) {
+      .is-open nav ul li:nth-child(2) {
         animation: bounce-in 1s 0.08s ease-out forwards; }
-      .is-open ul li:nth-child(3) {
+      .is-open nav ul li:nth-child(3) {
         animation: bounce-in 1s 0.12s ease-out forwards; }
-      .is-open ul li:nth-child(4) {
+      .is-open nav ul li:nth-child(4) {
         animation: bounce-in 1s 0.16s ease-out forwards; }
-      .is-open ul li:nth-child(5) {
+      .is-open nav ul li:nth-child(5) {
         animation: bounce-in 1s 0.2s ease-out forwards; }
 
 .nav {
@@ -730,6 +730,7 @@ ul {
 
 .btn {
   box-sizing: border-box;
+  outline: none;
   line-height: 80px;
   position: relative;
   display: block;
@@ -803,6 +804,32 @@ ul {
 .home .transition-out .circle .me {
   animation: fadeOut .2s ease-in forwards; }
 
+.scrollify-arrows {
+  position: fixed;
+  bottom: 50px;
+  left: 50px; }
+  .scrollify-arrows div {
+    width: 2.5vw;
+    cursor: pointer;
+    margin-bottom: 20px; }
+    .scrollify-arrows div.disabled {
+      opacity: .3;
+      pointer-events: none; }
+    .scrollify-arrows div img {
+      width: 100%; }
+
+.pagination {
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  list-style: none; }
+  .pagination li {
+    margin: 20px 0; }
+    .pagination li a {
+      color: #fff; }
+      .pagination li a.active {
+        color: #64718C; }
+
 .home .carousel {
   position: absolute;
   width: 100%;
@@ -835,14 +862,12 @@ ul {
   width: 3vw;
   cursor: pointer;
   z-index: 2; }
+  .home .arrow.prev {
+    left: 5vmin; }
+  .home .arrow.next {
+    right: 5vmin; }
   .home .arrow img {
     width: 100%; }
-
-.home .prev {
-  left: 5vmin; }
-
-.home .next {
-  right: 5vmin; }
 
 .home .main-section.projects .circle {
   background-color: #64718C; }

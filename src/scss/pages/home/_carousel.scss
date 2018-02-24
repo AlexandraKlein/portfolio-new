@@ -50,17 +50,17 @@
     @extend .vertical-align;
     z-index: 2;
 
+    &.prev {
+      left: 5vmin;
+    }
+
+    &.next {
+      right: 5vmin;
+    }
+
     img {
       width: 100%;
     }
-  }
-
-  .prev {
-    left: 5vmin;
-  }
-
-  .next {
-    right: 5vmin;
   }
 
   .main-section.projects {
