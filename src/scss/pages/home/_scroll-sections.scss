@@ -24,6 +24,10 @@
     svg {
       width: 100%;
       pointer-events: none;
+
+      path {
+        pointer-events: none;
+      }
     }
   }
 }

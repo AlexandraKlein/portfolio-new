@@ -821,6 +821,8 @@ nav ul {
     .scrollify-arrows div svg {
       width: 100%;
       pointer-events: none; }
+      .scrollify-arrows div svg path {
+        pointer-events: none; }
 
 .pagination {
   position: fixed;
@@ -875,6 +877,8 @@ nav ul {
   .home .arrow svg {
     width: 100%;
     pointer-events: none; }
+    .home .arrow svg path {
+      pointer-events: none; }
 
 .home .main-section.projects .circle {
   background-color: #64718C; }
