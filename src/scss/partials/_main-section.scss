@@ -20,8 +20,24 @@
     border-radius: 100%;
     margin: auto;
     background-color: $pink;
-    animation: circleIn $duration $ease forwards $duration/1.5;
     transition: all $ease $duration;
+  }
+
+  > .circle {
+    animation: circleIn $duration $ease forwards $duration/1.5;
+  }
+
+  .active {
+    .circle {
+      animation: circleIn $duration $ease forwards $duration/1.5;
+    }
+  }
+
+  .slick-slide:not(.active) {
+    .circle {
+       width: 50vw;
+       height: 50vw;
+    }
   }
 
   .copy {
@@ -78,9 +94,12 @@
   }
 
   section.projects {
-    .circle.active {
-      background-color: $pink;
-      animation: circleOut $duration $ease forwards;
+
+    .slick-active {
+      .circle {
+        background-color: $pink;
+        animation: circleOut $duration $ease forwards;
+      }
     }
   }
 

@@ -198,9 +198,7 @@ $(document).on('homepageOnEnterCompleted', function() {
     nextArrow: $('.arrow-next')
   });
 
-  $('.btn').click(function() {
-    $(this).closest('.circle').addClass('active');
-  })
+  $('.slick-active').addClass('active');
 });
 
 var homePage = function() {
