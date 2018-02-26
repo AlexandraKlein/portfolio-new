@@ -40,31 +40,6 @@ function parallax() {
       translateTween(parallaxPropsArray[i]);
     }
   });
-  //
-  //var cursorOnDiv = false;
-  //
-  //$(document).on({
-  //    mouseenter: function(){
-  //      cursorOnDiv = true;
-  //    },
-  //    mouseleave: function(){
-  //      cursorOnDiv = false;
-  //    }
-  //  },
-  //  '.circle'
-  //);
-  //
-  //$(document).mousemove(function(e) {
-  //
-  //  if (cursorOnDiv) {
-  //    $('.custom-cursor').position({
-  //      my: 'left center',
-  //      of: e,
-  //      collision: 'none'
-  //    });
-  //  }
-  //
-  //});
 }
 
 $(document).on('homepageOnEnterCompleted', function() {
