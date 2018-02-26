@@ -461,7 +461,9 @@ var morphEls = function() {
   }
 };
 
-morphEls();
+if ($('body').hasClass('home')) {
+  morphEls();
+}
 
 $(document).on('homepageOnEnter', function() {
   morphEls();
