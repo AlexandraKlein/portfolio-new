@@ -519,17 +519,19 @@ textarea {
 
 nav {
   position: fixed;
+  top: 20px;
+  right: 20px;
   padding: 24px;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 0;
   transform: translateZ(0);
   transition: background-color .4s ease-out, height 0s .4s;
   z-index: 1; }
   .is-open nav {
-    height: 100%;
+    height: calc(100% - 40px);
     background-color: rgba(55, 74, 103, 0.85);
     transition: background-color .2s ease-out;
-    z-index: 2; }
+    z-index: 3; }
 
 nav ul {
   position: absolute;
@@ -582,8 +584,6 @@ nav ul {
       animation: bounce-out .2s ease-out; }
     nav ul li:nth-child(5) {
       animation: bounce-out .2s ease-out; }
-    nav ul li:hover a {
-      color: #cccccc; }
     nav ul li:hover:after {
       height: 4px;
       width: 100%; }
