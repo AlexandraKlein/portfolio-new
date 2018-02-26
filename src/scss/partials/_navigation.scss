@@ -5,20 +5,18 @@ $padding: 24px;
 nav {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   padding: 24px;
-  width: calc(100% - 40px);
+  width: $padding * 2;
   height: 0;
   transform: translateZ(0);
-  transition:
-    background-color .4s ease-out,
-    height 0s .4s;
+  transition: background-color .4s ease-out;
   z-index: 1;
 
   .is-open & {
     height: calc(100% - 40px);
+    width: calc(100% - 40px);
     background-color: rgba($dark-gray-blue, 0.85);
-    transition: background-color .2s ease-out;
     z-index: 3;
   }
 }
@@ -36,7 +34,7 @@ nav ul {
   z-index: 2;
 
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -55,6 +53,7 @@ nav ul {
       margin .2s ease-out,
       padding .2s ease-out,
       opacity .2s ease-out;
+
     &:after {
       content: '';
       position: absolute;
@@ -64,14 +63,17 @@ nav ul {
       background-color: $bg-menu;
       transition: width .2s ease-out;
     }
+
     &:nth-child(n+3) {
       display: block;
     }
+
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
         animation: bounce-out .2s ease-out;
       }
     }
+
     &:hover {
 
       &:after {
@@ -84,10 +86,12 @@ nav ul {
       color: $bg-menu;
     }
   }
+
   .is-open & {
     transform:
       translateY($padding + 6px)
       scale(1);
+
     li {
       display: block;
       padding: 12px 0;
@@ -99,6 +103,7 @@ nav ul {
         margin .2s ease-out,
         padding .2s ease-out,
         opacity .2s ease-out;
+
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
           animation: bounce-in 1s $i * .04s ease-out forwards;
@@ -122,6 +127,7 @@ nav ul {
   transition: opacity .2s .1s ease-out,
   transform .4s .1s ease-out;
   z-index: 3;
+
   &:before, &:after {
     content: '';
     position: absolute;
@@ -131,12 +137,15 @@ nav ul {
     height: 100%;
     background-color: $bg-menu;
   }
+
   &:before {
     transform: rotate(45deg);
   }
+
   &:after {
     transform: rotate(-45deg);
   }
+
   .is-open & {
     opacity: 1;
     transform: rotate(90deg);
@@ -146,8 +155,11 @@ nav ul {
 }
 
 body:not(.is-open) {
+
   .nav {
+
     &:hover + ul li {
+
       @for $i from 3 through 6 {
         &:nth-child(#{$i}) {
           padding: 0 110px;

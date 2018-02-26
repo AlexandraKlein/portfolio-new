@@ -20,8 +20,8 @@ var morphEls = function() {
   }
 
   var snapEls = [
-    {el: document.querySelector('.arrow-up'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
-    {el: document.querySelector('.arrow-down'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
+    {el: document.querySelector('.arrow-up'), easeIn: mina.easein, easeOut: mina.easeout, toSpeed: 300, fromSpeed: 150},
+    {el: document.querySelector('.arrow-down'), easeIn: mina.easein, easeOut: mina.easeout, toSpeed: 300, fromSpeed: 150},
     {el: document.querySelector('.arrow-next'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
     {el: document.querySelector('.arrow-prev'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500}
   ];

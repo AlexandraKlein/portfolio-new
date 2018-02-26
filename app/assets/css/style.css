@@ -520,17 +520,17 @@ textarea {
 nav {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   padding: 24px;
-  width: calc(100% - 40px);
+  width: 48px;
   height: 0;
   transform: translateZ(0);
-  transition: background-color .4s ease-out, height 0s .4s;
+  transition: background-color .4s ease-out;
   z-index: 1; }
   .is-open nav {
     height: calc(100% - 40px);
+    width: calc(100% - 40px);
     background-color: rgba(55, 74, 103, 0.85);
-    transition: background-color .2s ease-out;
     z-index: 3; }
 
 nav ul {
@@ -547,7 +547,7 @@ nav ul {
   transition: transform .2s ease-out;
   z-index: 2; }
   nav ul:after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   nav ul li {
