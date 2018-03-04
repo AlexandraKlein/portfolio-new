@@ -39,6 +39,28 @@
   }
 }
 
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes circleIn {
   0% {
     width: 120vmax;

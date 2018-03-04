@@ -77,11 +77,21 @@
     }
   }
 
-  .copy,
-  .titles,
-  .btn {
-    opacity: 0;
-    animation: fadeIn $duration/2 $ease forwards $duration;
+  &.active {
+    .copy,
+    .titles,
+    .btn {
+      opacity: 0;
+      animation: fadeInRight $duration/2 $ease forwards;
+    }
+  }
+
+  &.landing-animation {
+    .copy,
+    .titles,
+    .btn {
+      animation-delay: $duration * 1.5;
+    }
   }
 }
 

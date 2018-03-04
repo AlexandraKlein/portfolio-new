@@ -460,6 +460,22 @@ textarea {
   100% {
     opacity: 0; } }
 
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20vw);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20vw);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
 @keyframes circleIn {
   0% {
     width: 120vmax;
@@ -732,11 +748,15 @@ body:not(.is-open) .nav:hover + ul li:nth-child(6) {
     .main-section .copy a {
       margin-top: 30px;
       display: block; }
-  .main-section .copy,
-  .main-section .titles,
-  .main-section .btn {
+  .main-section.active .copy,
+  .main-section.active .titles,
+  .main-section.active .btn {
     opacity: 0;
-    animation: fadeIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 1s; }
+    animation: fadeInRight 0.5s cubic-bezier(1, 0, 0.5, 1) forwards; }
+  .main-section.landing-animation .copy,
+  .main-section.landing-animation .titles,
+  .main-section.landing-animation .btn {
+    animation-delay: 1.5s; }
 
 .transition-out section:not(.projects) .circle {
   animation: circleOut 1s cubic-bezier(1, 0, 0.5, 1) forwards; }
