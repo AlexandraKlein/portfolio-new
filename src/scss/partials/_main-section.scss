@@ -96,6 +96,10 @@
 
 .transition-out {
 
+  .circle .me {
+    animation: fadeOut .2s ease-in forwards;
+  }
+
   section:not(.projects) {
     .circle {
       animation: circleOut $duration $ease forwards;
