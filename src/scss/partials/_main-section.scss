@@ -97,7 +97,7 @@
 .transition-out {
 
   .circle .me {
-    animation: fadeOut .2s ease-in forwards;
+    animation: fadeOut .2s ease-in forwards !important;
   }
 
   section:not(.projects) {
@@ -122,5 +122,12 @@
     .btn {
       animation: fadeOut $duration/2 $ease forwards;
     }
+  }
+}
+
+body:not(.home) {
+  .copy{
+    opacity: 0;
+    animation: fadeInRight $duration/2 $ease forwards $duration*1.5;
   }
 }

@@ -34,7 +34,7 @@
   -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
 
-.align-both {
+.align-both, body.about .intro .circle video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -526,7 +526,7 @@ textarea {
   -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
 
-.align-both {
+.align-both, body.about .intro .circle video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -757,7 +757,7 @@ body:not(.is-open) .nav:hover + ul li:nth-child(6) {
     animation-delay: 1.5s; }
 
 .transition-out .circle .me {
-  animation: fadeOut .2s ease-in forwards; }
+  animation: fadeOut .2s ease-in forwards !important; }
 
 .transition-out section:not(.projects) .circle {
   animation: circleOut 1s cubic-bezier(1, 0, 0.5, 1) forwards; }
@@ -770,6 +770,10 @@ body:not(.is-open) .nav:hover + ul li:nth-child(6) {
 .transition-out .main-section .titles,
 .transition-out .main-section .btn {
   animation: fadeOut 0.5s cubic-bezier(1, 0, 0.5, 1) forwards; }
+
+body:not(.home) .copy {
+  opacity: 0;
+  animation: fadeInRight 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 1.5s; }
 
 .btn {
   box-sizing: border-box;
@@ -961,6 +965,24 @@ body:not(.is-open) .nav:hover + ul li:nth-child(6) {
 .home .transition-out .circle .devices {
   transition: opacity .2s ease-out;
   opacity: 0; }
+
+body.about .intro .video-container {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.5s; }
+
+body.about .intro .circle video {
+  position: absolute;
+  width: 100%; }
+
+body.about .transition-out .intro .video-container {
+  animation: fadeOut 0.5s forwards; }
 
 /* Slider */
 .slick-slider {
