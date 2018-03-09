@@ -10,6 +10,20 @@
       position:relative;
       width: 100vw;
       height: 100vh;
+
+      .titles > * {
+        opacity: 0;
+        transform: translateX(20vw);
+        transition: .5s;
+      }
+
+      &.animate {
+
+        .titles > * {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
     }
 
     .titles {

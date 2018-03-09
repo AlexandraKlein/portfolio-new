@@ -749,13 +749,11 @@ body:not(.is-open) .nav:hover + ul li:nth-child(6) {
       margin-top: 30px;
       display: block; }
   .main-section.active .copy,
-  .main-section.active .titles,
-  .main-section.active .btn {
+  .main-section.active .titles {
     opacity: 0;
     animation: fadeInRight 0.5s cubic-bezier(1, 0, 0.5, 1) forwards; }
   .main-section.landing-animation .copy,
-  .main-section.landing-animation .titles,
-  .main-section.landing-animation .btn {
+  .main-section.landing-animation .titles {
     animation-delay: 1.5s; }
 
 .transition-out section:not(.projects) .circle {
@@ -889,6 +887,15 @@ body:not(.is-open) .nav:hover + ul li:nth-child(6) {
     position: relative;
     width: 100vw;
     height: 100vh; }
+    .home .carousel .slide .titles > * {
+      opacity: 0;
+      -ms-transform: translateX(20vw);
+          transform: translateX(20vw);
+      transition: .5s; }
+    .home .carousel .slide.animate .titles > * {
+      opacity: 1;
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
   .home .carousel .titles {
     position: absolute;
     top: 10vw;

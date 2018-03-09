@@ -78,9 +78,9 @@
   }
 
   &.active {
+
     .copy,
-    .titles,
-    .btn {
+    .titles {
       opacity: 0;
       animation: fadeInRight $duration/2 $ease forwards;
     }
@@ -88,8 +88,7 @@
 
   &.landing-animation {
     .copy,
-    .titles,
-    .btn {
+    .titles {
       animation-delay: $duration * 1.5;
     }
   }

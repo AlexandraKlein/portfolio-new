@@ -9,3 +9,11 @@ $(document).on('homepageOnEnterCompleted', function() {
 
   $('.slick-active').addClass('active');
 });
+
+
+$('.carousel').on('afterChange', function() {
+  $(this).find('.slide.slick-active').addClass('animate')
+         .siblings().removeClass('animate');
+});
+
+$('.carousel .slide:first-of-type').addClass('animate');
