@@ -34,7 +34,7 @@
   -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
 
-.align-both, body.about .intro .circle video {
+.align-both, body.about .intro .circle video, body.projects section.main-section .img-intro {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,6 +62,10 @@ h5 {
 
 a {
   text-decoration: none; }
+
+.barba-container {
+  width: 100vw;
+  overflow: hidden; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -526,7 +530,7 @@ textarea {
   -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
 
-.align-both, body.about .intro .circle video {
+.align-both, body.about .intro .circle video, body.projects section.main-section .img-intro {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -535,8 +539,8 @@ textarea {
 
 nav {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
   padding: 24px;
   width: 48px;
   height: 0;
@@ -544,8 +548,8 @@ nav {
   transition: background-color .4s ease-out;
   z-index: 1; }
   .is-open nav {
-    height: calc(100% - 40px);
-    width: calc(100% - 40px);
+    height: 100%;
+    width: 100%;
     background-color: rgba(55, 74, 103, 0.85);
     z-index: 3; }
 
@@ -982,6 +986,78 @@ body.about .intro .circle video {
   width: 100%; }
 
 body.about .transition-out .intro .video-container {
+  animation: fadeOut 0.5s forwards; }
+
+body.projects section.main-section {
+  background-color: #64718C;
+  border-bottom: none; }
+  body.projects section.main-section .img-intro {
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1.5s; }
+  body.projects section.main-section .details {
+    display: inline-table;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 0.5s; }
+    body.projects section.main-section .details h3 {
+      position: relative;
+      font-size: 32px;
+      margin: 10px 0 0 10px;
+      color: #253246; }
+      body.projects section.main-section .details h3:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 6px;
+        height: 10px;
+        width: 100%;
+        background-color: #EFD0CA;
+        z-index: -1; }
+    body.projects section.main-section .details ul li {
+      color: #253246; }
+
+body.projects section.project {
+  background-color: #64718C;
+  border: 20px solid #fff;
+  border-top: none;
+  padding: 5vw; }
+  body.projects section.project > div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    width: 80%;
+    margin: auto; }
+    body.projects section.project > div .img {
+      position: relative;
+      width: 60%; }
+      body.projects section.project > div .img img {
+        width: 100%;
+        display: block; }
+      body.projects section.project > div .img:nth-of-type(even) {
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+      body.projects section.project > div .img:after {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 100%;
+        top: 0;
+        left: -10%;
+        background-color: #EFD0CA;
+        transition: width 0.5s cubic-bezier(1, 0, 0.5, 1); }
+      body.projects section.project > div .img:nth-of-type(even):after {
+        right: -10%;
+        left: auto; }
+      body.projects section.project > div .img.in-viewport {
+        transition: none; }
+        body.projects section.project > div .img.in-viewport:after {
+          width: 10%; }
+
+body.projects .transition-out .main-section .img-intro {
   animation: fadeOut 0.5s forwards; }
 
 /* Slider */

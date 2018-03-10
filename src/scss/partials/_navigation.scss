@@ -4,8 +4,8 @@ $padding: 24px;
 
 nav {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
   padding: 24px;
   width: $padding * 2;
   height: 0;
@@ -14,8 +14,8 @@ nav {
   z-index: 1;
 
   .is-open & {
-    height: calc(100% - 40px);
-    width: calc(100% - 40px);
+    height: 100%;
+    width: 100%;
     background-color: rgba($dark-gray-blue, 0.85);
     z-index: 3;
   }

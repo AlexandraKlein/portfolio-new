@@ -111,7 +111,12 @@ var pageTransitions = function() {
 
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus) {
 
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, speed);
+
     $($document).trigger('allPagesEnter');
+    console.log('allPagesEnter');
 
     switch (true) {
 
