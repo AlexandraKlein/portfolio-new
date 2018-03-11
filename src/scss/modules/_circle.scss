@@ -1,0 +1,80 @@
+.home {
+
+  .circle {
+    position: relative;
+
+    .me {
+      opacity: 1;
+      position: absolute;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      animation: fadeOut .2s ease-in forwards .5s;
+    }
+  }
+
+  .intro {
+    .circle {
+      .me {
+        right: -1px;
+        bottom: -1px;
+      }
+    }
+  }
+
+  .main-section {
+
+      &.active {
+
+        .circle {
+
+          .me {
+            opacity: 0;
+            animation: fadeIn .2s ease-in forwards .5s;
+          }
+        }
+      }
+
+    &.landing-animation {
+
+      .circle {
+
+        .me {
+          opacity: 0;
+          animation-delay: 1.5s;
+        }
+      }
+    }
+  }
+}
+
+.main-section {
+
+  .circle {
+    @extend .vertical-align;
+    right: -12.5vw;
+    width: 120vmax;
+    height: 120vmax;
+    border-radius: 100%;
+    margin: auto;
+    background-color: $pink;
+    transition: all $ease $duration;
+  }
+
+  > .circle {
+    animation: circleIn $duration $ease forwards $duration/1.5;
+  }
+
+  .active {
+    .circle {
+      animation: circleIn $duration $ease forwards $duration/1.5;
+    }
+  }
+
+  .slick-slide:not(.active) {
+    .circle {
+      width: 50vw;
+      height: 50vw;
+    }
+  }
+}

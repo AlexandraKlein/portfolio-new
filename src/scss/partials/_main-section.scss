@@ -12,34 +12,6 @@
     }
   }
 
-  .circle {
-    @extend .vertical-align;
-    right: -12.5vw;
-    width: 120vmax;
-    height: 120vmax;
-    border-radius: 100%;
-    margin: auto;
-    background-color: $pink;
-    transition: all $ease $duration;
-  }
-
-  > .circle {
-    animation: circleIn $duration $ease forwards $duration/1.5;
-  }
-
-  .active {
-    .circle {
-      animation: circleIn $duration $ease forwards $duration/1.5;
-    }
-  }
-
-  .slick-slide:not(.active) {
-    .circle {
-       width: 50vw;
-       height: 50vw;
-    }
-  }
-
   .copy {
     position: absolute;
     display: flex;
