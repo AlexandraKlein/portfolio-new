@@ -1,5 +1,12 @@
 .scroll-section {
-
+  &.contact {
+    .me {
+      bottom: -1px;
+      width: calc(100% + 5px);
+      right: auto;
+      @extend .horizontal-align;
+    }
+  }
 }
 
 .scrollify-arrows {

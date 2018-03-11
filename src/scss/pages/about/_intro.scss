@@ -12,6 +12,7 @@ body.about {
       overflow: hidden;
       opacity: 0;
       animation: fadeIn $duration forwards $duration*1.5;
+      mix-blend-mode: darken;
     }
     .circle {
 

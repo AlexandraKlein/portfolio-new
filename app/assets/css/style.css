@@ -28,7 +28,7 @@
   -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
 
-.horizontal-align {
+.horizontal-align, .scroll-section.contact .me {
   position: relative;
   left: 50%;
   -ms-transform: translateX(-50%);
@@ -524,7 +524,7 @@ textarea {
   -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
 
-.horizontal-align {
+.horizontal-align, .scroll-section.contact .me {
   position: relative;
   left: 50%;
   -ms-transform: translateX(-50%);
@@ -856,6 +856,11 @@ body:not(.home) .copy {
   right: -1px;
   bottom: -1px; }
 
+.scroll-section.contact .me {
+  bottom: -1px;
+  width: calc(100% + 5px);
+  right: auto; }
+
 .scrollify-arrows {
   position: fixed;
   bottom: 10px;
@@ -979,7 +984,8 @@ body.about .intro .video-container {
   border-radius: 100%;
   overflow: hidden;
   opacity: 0;
-  animation: fadeIn 1s forwards 1.5s; }
+  animation: fadeIn 1s forwards 1.5s;
+  mix-blend-mode: darken; }
 
 body.about .intro .circle video {
   position: absolute;
