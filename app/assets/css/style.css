@@ -22,7 +22,7 @@
   -ms-flex-align: start;
       align-items: flex-start; }
 
-.vertical-align, .main-section .circle, .home .arrow {
+.vertical-align, .main-section .circle, .home .arrow, body.projects section.main-section .details ul li:before {
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -518,7 +518,7 @@ textarea {
   -ms-flex-align: start;
       align-items: flex-start; }
 
-.vertical-align, .main-section .circle, .home .arrow {
+.vertical-align, .main-section .circle, .home .arrow, body.projects section.main-section .details ul li:before {
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -998,7 +998,7 @@ body.projects section.main-section {
   background-color: #64718C;
   border-bottom: none; }
   body.projects section.main-section .img-intro {
-    width: 80%;
+    width: 83%;
     opacity: 0;
     animation: fadeIn 1s forwards 1.5s; }
   body.projects section.main-section .details {
@@ -1008,20 +1008,25 @@ body.projects section.main-section {
     animation: fadeIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 0.5s; }
     body.projects section.main-section .details h3 {
       position: relative;
-      font-size: 32px;
+      font-size: 38px;
       margin: 10px 0 0 10px;
       color: #253246; }
-      body.projects section.main-section .details h3:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 6px;
-        height: 10px;
-        width: 100%;
-        background-color: #EFD0CA;
-        z-index: -1; }
-    body.projects section.main-section .details ul li {
-      color: #253246; }
+    body.projects section.main-section .details ul {
+      padding-left: 30px;
+      list-style: none; }
+      body.projects section.main-section .details ul li {
+        position: relative;
+        color: #253246;
+        font-size: 20px;
+        padding: 5px 0; }
+        body.projects section.main-section .details ul li:before {
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: #EFD0CA;
+          border-radius: 100%;
+          left: -20px; }
 
 body.projects section.project {
   background-color: #64718C;
@@ -1039,7 +1044,10 @@ body.projects section.project {
     margin: auto; }
     body.projects section.project > div .img {
       position: relative;
-      width: 60%; }
+      width: 95%; }
+      @media (min-width: 768px) {
+        body.projects section.project > div .img {
+          width: 70%; } }
       body.projects section.project > div .img img {
         width: 100%;
         display: block; }

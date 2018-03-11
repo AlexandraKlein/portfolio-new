@@ -5,7 +5,7 @@ body.projects {
     border-bottom: none;
 
     .img-intro {
-      width: 80%;
+      width: 83%;
       @extend .align-both;
       opacity: 0;
       animation: fadeIn $duration forwards $duration*1.5;
@@ -19,26 +19,31 @@ body.projects {
 
       h3 {
         position: relative;
-        font-size: 32px;
+        font-size: 38px;
         margin: 10px 0 0 10px;
         color: darken($dark-gray-blue, 10%);
-
-        &:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 6px;
-          height: 10px;
-          width: 100%;
-          background-color: $pink;
-          z-index: -1;
-        }
       }
 
       ul {
+        padding-left: 30px;
+        list-style: none;
 
         li {
+          position: relative;
           color: darken($dark-gray-blue, 10%);
+          font-size: 20px;
+          padding: 5px 0;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: $pink;
+            border-radius: 100%;
+            left: -20px;
+            @extend .vertical-align;
+          }
         }
       }
     }
@@ -59,7 +64,11 @@ body.projects {
 
       .img {
         position: relative;
-        width: 60%;
+        width: 95%;
+
+        @include tablet {
+          width: 70%;
+        }
 
         img {
           width: 100%;
