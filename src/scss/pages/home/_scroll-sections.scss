@@ -45,8 +45,17 @@
   right: 40px;
   list-style: none;
 
+  @include mobile {
+    top: 30px;
+    right: 30px;
+  }
+
   li {
     margin: 20px 0;
+
+    @include mobile {
+      font-size: 14px;
+    }
 
     a {
       color: $white;

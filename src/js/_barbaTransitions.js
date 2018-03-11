@@ -63,9 +63,29 @@ var pageTransitions = function() {
     }
   });
 
+  var Contact = Barba.BaseView.extend({
+    namespace: 'contact',
+    onEnter: function onEnter() {
+      $document.trigger('contactOnEnter');
+      $body.addClass('contact');
+      $body.attr('id', 'contact');
+    },
+    onEnterCompleted: function onEnterCompleted() {
+      $document.trigger('contactOnEnterCompleted');
+      $body.removeClass().addClass('contact');
+    },
+    onLeave: function onLeave() {
+      $document.trigger('contactOnLeave');
+    },
+    onLeaveCompleted: function onLeaveCompleted() {
+      $document.trigger('contactOnLeaveCompleted');
+    }
+  });
+
   Homepage.init();
   Projects.init();
   About.init();
+  Contact.init();
 
   Barba.Pjax.start();
   Barba.Prefetch.init();

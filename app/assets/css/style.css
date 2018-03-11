@@ -34,7 +34,7 @@
   -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
 
-.align-both, body.about .intro .circle video, body.projects section.main-section .img-intro {
+.align-both, nav ul li:before, body.about .intro .circle video, body.projects section.main-section .img-intro {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -530,7 +530,7 @@ textarea {
   -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
 
-.align-both, body.about .intro .circle video, body.projects section.main-section .img-intro {
+.align-both, nav ul li:before, body.about .intro .circle video, body.projects section.main-section .img-intro {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -541,161 +541,47 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 24px;
-  width: 48px;
-  height: 0;
-  transform: translateZ(0);
-  transition: background-color .4s ease-out;
+  padding: 20px;
   z-index: 1; }
-  .is-open nav {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(55, 74, 103, 0.85);
-    z-index: 3; }
+  nav ul {
+    list-style: none; }
+    @media (max-width: 767px) {
+      nav ul {
+        padding-left: 5px; } }
+    nav ul li {
+      position: relative;
+      display: inline-block;
+      margin: 0 10px;
+      line-height: 1; }
+      @media (max-width: 767px) {
+        nav ul li {
+          margin: 0 2.5px;
+          font-size: 14px; } }
+      nav ul li:before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: #64718C;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .2s ease-in; }
+      nav ul li a {
+        color: #fff; }
 
-nav ul {
-  position: absolute;
-  top: 0;
-  left: 24px;
-  font-size: 30px;
-  text-transform: capitalize;
-  color: #fff;
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-  -ms-transform: scale(0.1);
-      transform: scale(0.1);
-  transition: transform .2s ease-out;
-  z-index: 2; }
-  nav ul:after {
-    content: '';
-    display: table;
-    clear: both; }
-  nav ul li {
-    display: none;
-    clear: both;
-    float: left;
-    margin: 0 0 48px;
-    padding: 0 60px;
-    background-color: #fff;
-    cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    transition: background-color 0s .2s ease-out, margin .2s ease-out, padding .2s ease-out, opacity .2s ease-out; }
-    nav ul li:after {
-      content: '';
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      height: 0;
-      width: 0;
-      background-color: #fff;
-      transition: width .2s ease-out; }
-    nav ul li:nth-child(n+3) {
-      display: block; }
-    nav ul li:nth-child(1) {
-      animation: bounce-out .2s ease-out; }
-    nav ul li:nth-child(2) {
-      animation: bounce-out .2s ease-out; }
-    nav ul li:nth-child(3) {
-      animation: bounce-out .2s ease-out; }
-    nav ul li:nth-child(4) {
-      animation: bounce-out .2s ease-out; }
-    nav ul li:nth-child(5) {
-      animation: bounce-out .2s ease-out; }
-    nav ul li:hover:after {
-      height: 4px;
-      width: 100%; }
-    nav ul li a {
-      color: #fff; }
-  .is-open nav ul {
-    -ms-transform: translateY(30px) scale(1);
-        transform: translateY(30px) scale(1); }
-    .is-open nav ul li {
-      display: block;
-      padding: 12px 0;
-      margin: 0;
-      background-color: transparent;
-      -ms-transform: scale(0.6);
-          transform: scale(0.6);
-      transition: background-color 0s ease-out, margin .2s ease-out, padding .2s ease-out, opacity .2s ease-out; }
-      .is-open nav ul li:nth-child(1) {
-        animation: bounce-in 1s 0.04s ease-out forwards; }
-      .is-open nav ul li:nth-child(2) {
-        animation: bounce-in 1s 0.08s ease-out forwards; }
-      .is-open nav ul li:nth-child(3) {
-        animation: bounce-in 1s 0.12s ease-out forwards; }
-      .is-open nav ul li:nth-child(4) {
-        animation: bounce-in 1s 0.16s ease-out forwards; }
-      .is-open nav ul li:nth-child(5) {
-        animation: bounce-in 1s 0.2s ease-out forwards; }
+body.home nav ul li:first-of-type:before {
+  opacity: 1; }
 
-.nav {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  width: 30px;
-  height: 32px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity .2s .1s ease-out, transform .4s .1s ease-out;
-  z-index: 3; }
-  .nav:before, .nav:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 3px;
-    height: 100%;
-    background-color: #fff; }
-  .nav:before {
-    -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
-  .nav:after {
-    -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-  .is-open .nav {
-    opacity: 1;
-    -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-    transition: opacity .2s .1s ease-out, transform .4s .1s ease-out; }
+body.projects nav ul li:nth-of-type(2):before {
+  opacity: 1;
+  background-color: #374A67; }
 
-body:not(.is-open) .nav:hover + ul li:nth-child(3) {
-  padding: 0 110px;
-  transition-delay: 0s; }
+body.about nav ul li:nth-of-type(3):before {
+  opacity: 1; }
 
-body:not(.is-open) .nav:hover + ul li:nth-child(4) {
-  padding: 0 110px;
-  transition-delay: 0.06667s; }
-
-body:not(.is-open) .nav:hover + ul li:nth-child(5) {
-  padding: 0 110px;
-  transition-delay: 0.13333s; }
-
-body:not(.is-open) .nav:hover + ul li:nth-child(6) {
-  padding: 0 110px;
-  transition-delay: 0.2s; }
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0.8); }
-  20% {
-    transform: scale(1.1); }
-  40% {
-    transform: scale(0.9); }
-  60% {
-    transform: scale(1.05); }
-  80% {
-    transform: scale(0.96); }
-  100% {
-    transform: scale(1); } }
+body.contact nav ul li:nth-of-type(4):before {
+  opacity: 1; }
 
 .main-section {
   position: relative;
@@ -898,8 +784,15 @@ body:not(.home) .copy {
   top: 10px;
   right: 40px;
   list-style: none; }
+  @media (max-width: 767px) {
+    .pagination {
+      top: 30px;
+      right: 30px; } }
   .pagination li {
     margin: 20px 0; }
+    @media (max-width: 767px) {
+      .pagination li {
+        font-size: 14px; } }
     .pagination li a {
       color: #fff;
       transition: all .2s ease-in; }
@@ -1058,7 +951,8 @@ body.projects section.project {
     margin: auto; }
     body.projects section.project > div .img {
       position: relative;
-      width: 95%; }
+      width: 95%;
+      z-index: 1; }
       @media (min-width: 768px) {
         body.projects section.project > div .img {
           width: 70%; } }

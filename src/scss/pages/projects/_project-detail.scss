@@ -68,6 +68,7 @@ body.projects {
       .img {
         position: relative;
         width: 95%;
+        z-index: 1;
 
         @include tablet {
           width: 70%;

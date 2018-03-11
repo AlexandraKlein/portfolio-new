@@ -8,7 +8,9 @@ var homePage = function() {
     }, 2000)
   }
 
-  landingPageIntroAnimation();
+  if ($('body').hasClass('home')) {
+    landingPageIntroAnimation();
+  }
 
   $document.on('homepageOnEnter', function() {
     console.log('homepageOnEnter');

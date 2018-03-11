@@ -1,192 +1,91 @@
-$font: $body-font;
-$bg-menu: $white;
-$padding: 24px;
-
 nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 24px;
-  width: $padding * 2;
-  height: 0;
-  transform: translateZ(0);
-  transition: background-color .4s ease-out;
+  padding: 20px;
   z-index: 1;
 
-  .is-open & {
-    height: 100%;
-    width: 100%;
-    background-color: rgba($dark-gray-blue, 0.85);
-    z-index: 3;
-  }
-}
+  ul {
+    list-style: none;
 
-nav ul {
-  position: absolute;
-  top: 0;
-  left: $padding;
-  font-size: 30px;
-  text-transform: capitalize;
-  color: $bg-menu;
-  transform-origin: 0 0;
-  transform: scale(0.1);
-  transition: transform .2s ease-out;
-  z-index: 2;
-
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  li {
-    display: none;
-    clear: both;
-    float: left;
-    margin: 0 0 48px;
-    padding: 0 60px;
-    background-color: $bg-menu;
-    cursor: pointer;
-    user-select: none;
-    transition:
-      background-color 0s .2s ease-out,
-      margin .2s ease-out,
-      padding .2s ease-out,
-      opacity .2s ease-out;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 5px; left: 0;
-      height: 0;
-      width: 0;
-      background-color: $bg-menu;
-      transition: width .2s ease-out;
+    @include mobile {
+      padding-left: 5px;
     }
-
-    &:nth-child(n+3) {
-      display: block;
-    }
-
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        animation: bounce-out .2s ease-out;
-      }
-    }
-
-    &:hover {
-
-      &:after {
-        height: 4px;
-        width: 100%;
-      }
-    }
-
-    a {
-      color: $bg-menu;
-    }
-  }
-
-  .is-open & {
-    transform:
-      translateY($padding + 6px)
-      scale(1);
 
     li {
-      display: block;
-      padding: 12px 0;
-      margin: 0;
-      background-color: transparent;
-      transform: scale(0.6);
-      transition:
-        background-color 0s ease-out,
-        margin .2s ease-out,
-        padding .2s ease-out,
-        opacity .2s ease-out;
+      position: relative;
+      display: inline-block;
+      margin: 0 10px;
+      line-height: 1;
 
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          animation: bounce-in 1s $i * .04s ease-out forwards;
+      @include mobile {
+        margin: 0 2.5px;
+        font-size: 14px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        @extend .align-both;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: $gray-blue;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .2s ease-in;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+body {
+
+  &.home {
+    nav ul li {
+      &:first-of-type {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.projects {
+    nav ul li {
+      &:nth-of-type(2) {
+        &:before {
+          opacity: 1;
+          background-color: $dark-gray-blue;
+        }
+      }
+    }
+  }
+
+  &.about {
+    nav ul li {
+      &:nth-of-type(3) {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.contact {
+    nav ul li {
+      &:nth-of-type(4) {
+        &:before {
+          opacity: 1;
         }
       }
     }
   }
 }
 
-.nav {
-  position: absolute;
-  top: $padding;
-  left: $padding;
-  width: 30px;
-  height: 32px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity .2s .1s ease-out,
-  transform .4s .1s ease-out;
-  z-index: 3;
 
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    margin: auto;
-    width: 3px;
-    height: 100%;
-    background-color: $bg-menu;
-  }
 
-  &:before {
-    transform: rotate(45deg);
-  }
-
-  &:after {
-    transform: rotate(-45deg);
-  }
-
-  .is-open & {
-    opacity: 1;
-    transform: rotate(90deg);
-    transition: opacity .2s .1s ease-out,
-    transform .4s .1s ease-out;
-  }
-}
-
-body:not(.is-open) {
-
-  .nav {
-
-    &:hover + ul li {
-
-      @for $i from 3 through 6 {
-        &:nth-child(#{$i}) {
-          padding: 0 110px;
-          transition-delay: ($i - 3)/15 + s;
-        }
-      }
-    }
-  }
-}
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0.8);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  40% {
-    transform: scale(0.9);
-  }
-  60% {
-    transform: scale(1.05);
-  }
-  80% {
-    transform: scale(0.96);
-  }
-  100% {
-    transform: scale(1);
-  }
-}

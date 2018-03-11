@@ -63,9 +63,29 @@ var pageTransitions = function() {
     }
   });
 
+  var Contact = Barba.BaseView.extend({
+    namespace: 'contact',
+    onEnter: function onEnter() {
+      $document.trigger('contactOnEnter');
+      $body.addClass('contact');
+      $body.attr('id', 'contact');
+    },
+    onEnterCompleted: function onEnterCompleted() {
+      $document.trigger('contactOnEnterCompleted');
+      $body.removeClass().addClass('contact');
+    },
+    onLeave: function onLeave() {
+      $document.trigger('contactOnLeave');
+    },
+    onLeaveCompleted: function onLeaveCompleted() {
+      $document.trigger('contactOnLeaveCompleted');
+    }
+  });
+
   Homepage.init();
   Projects.init();
   About.init();
+  Contact.init();
 
   Barba.Pjax.start();
   Barba.Prefetch.init();
@@ -214,6 +234,29 @@ $(document).on('homepageOnEnterCompleted', function() {
 
 });
 
+var contact = function() {
+
+  $document.on('contactOnEnter', function() {
+    console.log('contactOnEnter');
+  });
+
+  $document.on('contactOnEnterCompleted', function() {
+    console.log('contactOnEnterCompleted');
+  });
+
+  $document.on('contactOnLeave', function() {
+    console.log('contactOnLeave');
+  });
+
+  $document.on('contactOnLeaveCompleted', function() {
+    console.log('contactOnLeaveCompleted');
+  });
+};
+
+$(function () {
+  return contact();
+});
+
 var homePage = function() {
 
   function landingPageIntroAnimation() {
@@ -224,7 +267,9 @@ var homePage = function() {
     }, 2000)
   }
 
-  landingPageIntroAnimation();
+  if ($('body').hasClass('home')) {
+    landingPageIntroAnimation();
+  }
 
   $document.on('homepageOnEnter', function() {
     console.log('homepageOnEnter');
@@ -269,29 +314,6 @@ $(window).on('scroll', function () {
   $('.project .img').each(function () {
     $(this).isOnScreen() === true ? $(this).addClass('in-viewport') : $(this).removeClass('in-viewport');
   });
-});
-
-var $body = $('body');
-var $navToggle = $('.nav');
-var $navItem = $('nav ul li a');
-
-$navToggle.on('click', function() {
-  $(this).toggleClass('is-closed');
-
-  if(!$(this).hasClass('is-closed')) {
-    $body.addClass('is-open');
-  } else {
-    $body.removeClass('is-open');
-  }
-});
-
-$navItem.on('click', function() {
-  $navToggle.toggleClass('is-closed');
-  if(!$navToggle.hasClass('is-closed')) {
-    $body.addClass('is-open');
-  } else {
-    $body.removeClass('is-open');
-  }
 });
 
 function parallax() {
