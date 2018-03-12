@@ -66,22 +66,6 @@
     animation: fadeOut .2s ease-in forwards !important;
   }
 
-  section:not(.projects) {
-    .circle {
-      animation: circleOut $duration $ease forwards;
-    }
-  }
-
-  section.projects {
-
-    .slick-active {
-      .circle {
-        background-color: $pink;
-        animation: circleOut $duration $ease forwards;
-      }
-    }
-  }
-
   .main-section {
     .copy,
     .titles,

@@ -52,22 +52,33 @@
 
   .circle {
     @extend .vertical-align;
-    right: -12.5vw;
     width: 120vmax;
     height: 120vmax;
     border-radius: 100%;
     margin: auto;
     background-color: $pink;
     transition: all $ease $duration;
+
+    @include tablet {
+      right: -12.5vw;
+    }
   }
 
   > .circle {
     animation: circleIn $duration $ease forwards $duration/1.5;
+
+    @include mobile {
+      animation: circleInMobile $duration $ease forwards $duration/1.5;
+    }
   }
 
   .active {
     .circle {
       animation: circleIn $duration $ease forwards $duration/1.5;
+
+      @include mobile {
+        animation: circleInMobile $duration $ease forwards $duration/1.5;
+      }
     }
   }
 
@@ -75,6 +86,37 @@
     .circle {
       width: 50vw;
       height: 50vw;
+
+      @include mobile {
+        width: 80vw;
+        height: 80vw;
+      }
+    }
+  }
+}
+
+.transition-out {
+  section:not(.projects) {
+    .circle {
+      animation: circleOut $duration $ease forwards;
+
+      @include mobile {
+        animation: circleOutMobile $duration $ease forwards;
+      }
+    }
+  }
+
+  section.projects {
+
+    .slick-active {
+      .circle {
+        background-color: $pink;
+        animation: circleOut $duration $ease forwards;
+
+        @include mobile {
+          animation: circleOutMobile $duration $ease forwards;
+        }
+      }
     }
   }
 }

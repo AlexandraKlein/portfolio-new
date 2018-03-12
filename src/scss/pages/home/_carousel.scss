@@ -89,6 +89,11 @@
 
     .circle {
       background-color: $gray-blue;
+
+      @include mobile {
+        left: 5vw;
+        margin: 0;
+      }
     }
 
     .devices {
