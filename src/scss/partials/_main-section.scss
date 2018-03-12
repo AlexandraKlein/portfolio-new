@@ -13,7 +13,8 @@
     align-items: flex-start;
     justify-content: center;
     left: 12.5vw;
-    top: 20vw;
+    height: 50vw;
+    @extend .vertical-align;
 
     h1,
     h2 {
@@ -84,7 +85,7 @@ body:not(.home) {
 body.home {
   .intro {
     .copy {
-      top: 30vw;
+      margin-top: 10vw;
     }
   }
 }
