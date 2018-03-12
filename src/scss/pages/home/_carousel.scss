@@ -28,8 +28,9 @@
 
     .titles {
       position: absolute;
-      top: 10vw;
-      left: -25vw;
+      left: 12.5vw;
+      top: 25vw;
+      height: 50vw;
       color: $white;
       @include textShadow($black, .3);
 

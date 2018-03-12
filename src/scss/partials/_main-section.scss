@@ -6,21 +6,15 @@
   transition: all $ease $duration;
   border: 20px solid $white;
 
-  &.intro {
-    .copy {
-      top: 20vw;
-    }
-  }
-
   .copy {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    left: 12.5vw;
     top: 10vw;
-    right: 25vw;
+    height: 50vw;
 
     h1,
     h2 {
@@ -101,5 +95,13 @@ body:not(.home) {
   .copy{
     opacity: 0;
     animation: fadeInRight $duration/2 $ease forwards $duration*1.5;
+  }
+}
+
+body.home {
+  .intro {
+    .copy {
+      top: 20vw;
+    }
   }
 }
