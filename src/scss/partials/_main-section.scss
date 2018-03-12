@@ -13,8 +13,7 @@
     align-items: flex-start;
     justify-content: center;
     left: 12.5vw;
-    top: 10vw;
-    height: 50vw;
+    top: 20vw;
 
     h1,
     h2 {
@@ -85,7 +84,7 @@ body:not(.home) {
 body.home {
   .intro {
     .copy {
-      top: 20vw;
+      top: 30vw;
     }
   }
 }

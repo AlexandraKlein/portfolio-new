@@ -617,8 +617,7 @@ body.contact nav ul li:nth-of-type(4):before {
     -ms-flex-pack: center;
         justify-content: center;
     left: 12.5vw;
-    top: 10vw;
-    height: 50vw; }
+    top: 20vw; }
     .main-section .copy h1,
     .main-section .copy h2 {
       display: inline-table;
@@ -658,7 +657,7 @@ body:not(.home) .copy {
   animation: fadeInRight 0.5s cubic-bezier(1, 0, 0.5, 1) forwards 1.5s; }
 
 body.home .intro .copy {
-  top: 20vw; }
+  top: 30vw; }
 
 .btn {
   box-sizing: border-box;
@@ -862,7 +861,7 @@ body.home .intro .copy {
   .home .carousel .titles {
     position: absolute;
     left: 12.5vw;
-    top: 25vw;
+    top: 20vw;
     height: 50vw;
     color: #fff;
     text-shadow: -10px 15px 25px rgba(0, 0, 0, 0.3); }
