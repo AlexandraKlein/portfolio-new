@@ -7,10 +7,24 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
-    sourcemaps = require('gulp-sourcemaps');
+    render = require('gulp-htmlrender'),
+    sourcemaps = require('gulp-sourcemaps'),
+    nunjucksRender = require('gulp-nunjucks-render');
 
 gulp.task('copyHtml', function() {
   gulp.src('src/*.html').pipe(gulp.dest('dist'));
+});
+
+gulp.task('html', function () {
+  return gulp
+    .src(['src/**/*.html', '!src/templates/**/*', '!src/content/**/*'], { read: false })
+    .pipe(render.render())
+    .pipe(
+        nunjucksRender({
+          path: ['src/templates/']
+      })
+    )
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('css', function () {
@@ -66,7 +80,7 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'copyHtml', 'images', 'video', 'components', 'browser-sync'], function () {
+gulp.task('default', ['css', 'js', 'html', 'images', 'video', 'components', 'browser-sync'], function () {
     gulp.watch("src/assets/scss/*/*.scss", ['css']);
     gulp.watch("src/assets/js/*.js", ['js']);
     gulp.watch("src/*.html", ['bs-reload']);
