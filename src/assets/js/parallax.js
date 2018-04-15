@@ -13,8 +13,8 @@ function parallax() {
 
   $(window).on('mousemove deviceorientation', function (event) {
     var isMobile = window.matchMedia('(max-width: 767px)').matches;
-    var pos_x = isMobile ? Math.round(event.originalEvent.gamma * 50) : event.pageX;
-    var pos_y = isMobile ? Math.round(event.originalEvent.beta * 50) : event.pageY;
+    var pos_x = isMobile ? Math.round(event.originalEvent.gamma * 10) : event.pageX;
+    var pos_y = isMobile ? Math.round(event.originalEvent.beta * 10) : event.pageY;
     var left = container_w / 2 - pos_x;
     var top = container_h / 2 - pos_y;
 
