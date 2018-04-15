@@ -24,7 +24,8 @@ gulp.task('html', function () {
           path: ['src/templates/']
       })
     )
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('css', function () {
