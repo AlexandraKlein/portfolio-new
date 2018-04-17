@@ -1,61 +1,54 @@
-<!doctype html>
-<html class="no-js">
-{% include "head.html" %}
-<body id="projects" class="projects">
-  {% include "navigation.html" %}
+{% set page_title = "Projects" %}
+{% set namespace = "projects" %}
 
-  <div id="barba-wrapper">
-    <div class="barba-container" data-namespace="projects">
+{% extends "layout.html" %}
 
-      <section class="main-section">
+{% block main %}
 
-        <div class="circle">
-          <img src="../assets/img/projects/thorn/intro.png" class="img-intro"/>
-        </div>
+  <section class="main-section">
 
-        <div class="copy">
-          <h1>We Are Thorn</h1>
-          <h2>Website Redesign</h2>
-
-          <div class="details">
-            <h3>Lead Developer</h3>
-            <ul>
-              <li>Wordpress</li>
-              <li>Salient Theme</li>
-              <li>Visual Composer</li>
-              <li>PHP</li>
-            </ul>
-          </div>
-        </div>
-
-      </section>
-
-      <section class="project">
-
-        <div>
-          <div class="img">
-            <img src="../assets/img/projects/thorn/thorn-1.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/thorn/thorn-2.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/thorn/thorn-3.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/thorn/thorn-4.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/thorn/thorn-5.jpg" alt=""/>
-          </div>
-        </div>
-
-      </section>
-
+    <div class="circle">
+      <img src="../assets/img/projects/thorn/intro.png" class="img-intro"/>
     </div>
-  </div>
 
-{% include "scripts.html" %}
+    <div class="copy">
+      <h1>We Are Thorn</h1>
+      <h2>Website Redesign</h2>
 
-</body>
-</html>
+      <div class="details">
+        <h3>Lead Developer</h3>
+        <ul>
+          <li>Wordpress</li>
+          <li>Salient Theme</li>
+          <li>Visual Composer</li>
+          <li>PHP</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="project">
+
+    <div>
+      <div class="img">
+        <img src="../assets/img/projects/thorn/thorn-1.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/thorn/thorn-2.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/thorn/thorn-3.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/thorn/thorn-4.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/thorn/thorn-5.jpg" alt=""/>
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
+

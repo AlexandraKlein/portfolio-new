@@ -1,66 +1,59 @@
-<!doctype html>
-<html class="no-js">{
-% include "head.html" %}
-<body id="projects" class="projects">
-  {% include "navigation.html" %}
+{% set page_title = "Projects" %}
+{% set namespace = "projects" %}
 
-  <div id="barba-wrapper">
-    <div class="barba-container" data-namespace="projects">
+{% extends "layout.html" %}
 
-      <section class="main-section">
+{% block main %}
 
-        <div class="circle">
-          <img src="../assets/img/projects/steelhead/intro.png" class="img-intro"/>
-        </div>
+  <section class="main-section">
 
-        <div class="copy">
-          <h1>Steelhead</h1>
-          <h2>Website</h2>
-
-          <div class="details">
-            <h3>Lead Developer</h3>
-            <ul>
-              <li>October CMS</li>
-              <li>Twig</li>
-              <li>PHP</li>
-              <li>ES6</li>
-              <li>Babel</li>
-              <li>Barba.js</li>
-            </ul>
-          </div>
-        </div>
-
-      </section>
-
-      <section class="project">
-
-        <div>
-          <div class="img">
-            <img src="../assets/img/projects/steelhead/steelhead-1.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/steelhead/steelhead-2.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/steelhead/steelhead-3.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/steelhead/steelhead-4.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/steelhead/steelhead-5.jpg" alt=""/>
-          </div>
-          <div class="img">
-            <img src="../assets/img/projects/steelhead/steelhead-6.jpg" alt=""/>
-          </div>
-        </div>
-
-      </section>
-
+    <div class="circle">
+      <img src="../assets/img/projects/steelhead/intro.png" class="img-intro"/>
     </div>
-  </div>
 
-{% include "scripts.html" %}
+    <div class="copy">
+      <h1>Steelhead</h1>
+      <h2>Website</h2>
 
-</body>
-</html>
+      <div class="details">
+        <h3>Lead Developer</h3>
+        <ul>
+          <li>October CMS</li>
+          <li>Twig</li>
+          <li>PHP</li>
+          <li>ES6</li>
+          <li>Babel</li>
+          <li>Barba.js</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="project">
+
+    <div>
+      <div class="img">
+        <img src="../assets/img/projects/steelhead/steelhead-1.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/steelhead/steelhead-2.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/steelhead/steelhead-3.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/steelhead/steelhead-4.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/steelhead/steelhead-5.jpg" alt=""/>
+      </div>
+      <div class="img">
+        <img src="../assets/img/projects/steelhead/steelhead-6.jpg" alt=""/>
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
+
