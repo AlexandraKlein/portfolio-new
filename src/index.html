@@ -1,3 +1,6 @@
+{% set page_title = "Home" %}
+{% set namespace = "home" %}
+
 {% set slides = [
     {
       "project"  : "steelhead",
@@ -68,3 +71,79 @@
 %}
 
 {% extends "layout.html" %}
+
+{% block main %}
+
+<section class="main-section scroll-section intro active" data-section-name="intro">
+
+  <div class="circle">
+    <img src="assets/img/minka-shoulder.png" class="me" alt="Ali Klein"/>
+  </div>
+
+  <div class="copy">
+    <h1>Ali Klein</h1>
+    <h2>Front-End Developer</h2>
+  </div>
+
+</section>
+
+<section class="main-section scroll-section projects" data-section-name="projects">
+
+  {% include "carousel.html" %}
+
+</section>
+
+<section class="main-section scroll-section" data-section-name="about">
+
+
+  <div class="circle">
+    <img src="assets/img/ali-about.png" class="me" alt="Ali Klein"/>
+  </div>
+  <div class="copy">
+    <h1>About</h1>
+    <h2>Me and My Work</h2>
+    <a class="btn" href="about.html">Learn More<span></span></a>
+  </div>
+
+</section>
+
+<section class="main-section scroll-section contact" data-section-name="contact">
+
+  <div class="circle">
+    <img src="assets/img/clear-cache.png" class="me" alt="Ali Klein"/>
+  </div>
+
+  <div class="copy">
+    <h1>Contact</h1>
+    <h2>Me & Say Hello</h2>
+    <a class="btn" href="contact.html">Learn More<span></span></a>
+  </div>
+
+</section>
+
+<div class="scrollify-arrows">
+  <div class="arrow-up disabled morph-shape" data-morph-active="M412-674.9L159.2-237.1h85.4l4.1-7.2h-0.1l159.3-276v868.9h8v-868.9l159.3,276h-0.2l4.2,7.2h85.5L412-674.9z
+             M412-541.2L240.5-244.1h-69.2L412-660.9l240.6,416.8h-69.1L412-541.2z">
+    <svg width="100%" height="100%"  viewBox="156 -689 512 1045" preserveAspectRatio="none">
+      <path fill="#ffffff" d="M412-404.8L159.2,6.9h85.4l5.6,0h6L408,6.4v339.5l8,0.3V7.2l157.5-0.5l5.8,0.3l0,0h85.5L412-404.8z M412,0.4
+            H240.5h-69.2l240.7-392l240.6,392h-69.1H412z"></path>
+    </svg>
+  </div>
+  <div class="arrow-down morph-shape" data-morph-active="M412-674.9L159.2-237.1h85.4l4.1-7.2h-0.1l159.3-276v868.9h8v-868.9l159.3,276h-0.2l4.2,7.2h85.5L412-674.9z
+             M412-541.2L240.5-244.1h-69.2L412-660.9l240.6,416.8h-69.1L412-541.2z">
+    <svg width="100%" height="100%"  viewBox="156 -689 512 1045" preserveAspectRatio="none">
+      <path fill="#ffffff" d="M412-404.8L159.2,6.9h85.4l5.6,0h6L408,6.4v339.5l8,0.3V7.2l157.5-0.5l5.8,0.3l0,0h85.5L412-404.8z M412,0.4
+            H240.5h-69.2l240.7-392l240.6,392h-69.1H412z"></path>
+    </svg>
+  </div>
+</div>
+
+<ul class="pagination">
+  <li><a class="active" href="#intro"><span>01</span></a></li>
+  <li><a class="" href="#projects"><span>02</span></a></li>
+  <li><a class="" href="#about"><span>03</span></a></li>
+  <li><a class="" href="#contact"><span>04</span></a></li>
+</ul>
+
+{% endblock %}
+

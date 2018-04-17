@@ -1,29 +1,25 @@
-<!doctype html>
-<html class="no-js">
-{% include "head.html" %}
-<body id="contact" class="contact">
-  {% include "navigation.html" %}
+{% set page_title = "Contact" %}
+{% set namespace = "contact" %}
 
-  <div id="barba-wrapper">
-    <div class="barba-container" data-namespace="contact">
+{% extends "layout.html" %}
 
-      <section class="main-section">
+{% block main %}
 
-        <div class="circle">
-        </div>
+  <div class="namespace" id="contact">
 
-        <div class="copy">
-          <h1>Contact</h1>
-          <h2>Me and Say Hello</h2>
-          <a class="btn" href="/">Learn More<span></span></a>
-        </div>
+    <section class="main-section">
 
-      </section>
+      <div class="circle">
+      </div>
 
-    </div>
+      <div class="copy">
+        <h1>Contact</h1>
+        <h2>Me and Say Hello</h2>
+        <a class="btn" href="/">Learn More<span></span></a>
+      </div>
+
+    </section>
+
   </div>
 
-  {% include "scripts.html" %}
-
-</body>
-</html>
+{% endblock %}
