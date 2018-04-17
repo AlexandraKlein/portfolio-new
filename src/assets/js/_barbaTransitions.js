@@ -7,7 +7,7 @@ var $barbaWrapper = $('#barba-wrapper');
 var pageTransitions = function() {
 
   var Homepage = Barba.BaseView.extend({
-    namespace: 'homepage',
+    namespace: 'home',
     onEnter: function onEnter() {
       $document.trigger('homepageOnEnter');
       $body.addClass('home');
