@@ -1,4 +1,5 @@
 .home {
+
   .carousel {
     position: absolute;
     width: 100%;
@@ -35,6 +36,10 @@
       @extend .vertical-align;
       @include textShadow($black, .3);
 
+      @include mobile {
+        margin-top: -100px;
+      }
+
       h2,
       h4 {
         margin: 0;
@@ -56,6 +61,11 @@
 
     .slick-slide {
       outline: 0;
+      transition: opacity .5s ease-in;
+
+      &:not(.slick-current) {
+        opacity: 0;
+      }
     }
   }
 
@@ -84,6 +94,13 @@
         pointer-events: none;
       }
     }
+
+    @include mobile {
+      width: 60px;
+      top: auto !important;
+      transform: none;
+      bottom: 20px;
+    }
   }
 
   .main-section.projects {
@@ -93,7 +110,7 @@
 
       @include mobile {
         left: 5vw;
-        margin: 0;
+        margin: -10% 0 0 0;
       }
     }
 
@@ -122,6 +139,10 @@
         width: 20%;
         right: 0;
         bottom: 15%;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
   }

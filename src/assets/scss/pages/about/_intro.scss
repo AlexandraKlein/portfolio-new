@@ -15,8 +15,8 @@ body.about {
       mix-blend-mode: darken;
 
       @include mobile {
-        width: 80vw;
-        height: 80vw;
+        width: 60vmax;
+        height: 60vmax;
       }
     }
     .circle {
