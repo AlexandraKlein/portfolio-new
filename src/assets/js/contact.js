@@ -1,22 +1,20 @@
-var contact = function() {
+const contact = () => {
 
-  $document.on('contactOnEnter', function() {
+  $document.on('contactOnEnter', () => {
     console.log('contactOnEnter');
   });
 
-  $document.on('contactOnEnterCompleted', function() {
+  $document.on('contactOnEnterCompleted', () => {
     console.log('contactOnEnterCompleted');
   });
 
-  $document.on('contactOnLeave', function() {
+  $document.on('contactOnLeave', () => {
     console.log('contactOnLeave');
   });
 
-  $document.on('contactOnLeaveCompleted', function() {
+  $document.on('contactOnLeaveCompleted', () => {
     console.log('contactOnLeaveCompleted');
   });
 };
 
-$(function () {
-  return contact();
-});
+$(() => contact());

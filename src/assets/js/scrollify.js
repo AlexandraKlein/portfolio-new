@@ -1,4 +1,4 @@
-var settings = {
+const settings = {
   section : '.scroll-section',
   easing: 'easeOutExpo',
   scrollSpeed: 1000,
@@ -9,11 +9,11 @@ var settings = {
   overflowScroll: true,
   updateHash: false,
   touchScroll: true,
-  before:function(i, panels) {
+  before(i, panels) {
 
-    var ref = panels[i].attr('data-section-name');
+    const ref = panels[i].attr('data-section-name');
     $('.pagination .active').removeClass('active');
-    $('.pagination').find('a[href="#' + ref + '"]').addClass('active');
+    $('.pagination').find(`a[href="#${ref}"]`).addClass('active');
 
     $('.scroll-section').eq(i)
       .removeClass('active previous next')
@@ -45,17 +45,17 @@ var settings = {
 
 function paginationArrowsMove() {
   $('.pagination a').each(function (i) {
-    $(this).click(function (e) {
+    $(this).click(e => {
       e.preventDefault();
       $.scrollify.move(i);
     });
   });
 
-  $('.arrow-down').click(function () {
+  $('.arrow-down').click(() => {
     $.scrollify.next();
   });
 
-  $('.arrow-up').click(function () {
+  $('.arrow-up').click(() => {
     $.scrollify.previous();
   });
 }
@@ -67,17 +67,17 @@ if($('body').hasClass('home')) {
   $.scrollify.move(0);
 }
 
-$(document).on('homepageOnEnter', function() {
+$(document).on('homepageOnEnter', () => {
   window.scrollTo(0, 0);
   $.scrollify.move(0);
   paginationArrowsMove();
 });
 
-$(document).on('homepageOnEnterCompleted', function() {
+$(document).on('homepageOnEnterCompleted', () => {
   $.scrollify(settings);
 });
 
-$(document).on('homepageOnLeaveCompleted', function() {
+$(document).on('homepageOnLeaveCompleted', () => {
   $.scrollify.destroy();
 });
 

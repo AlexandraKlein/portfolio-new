@@ -1,12 +1,10 @@
-'use strict';
+const $document = $(document);
+const $body = $('body');
+const $barbaWrapper = $('#barba-wrapper');
 
-var $document = $(document);
-var $body = $('body');
-var $barbaWrapper = $('#barba-wrapper');
+const pageTransitions = () => {
 
-var pageTransitions = function() {
-
-  var Homepage = Barba.BaseView.extend({
+  const Homepage = Barba.BaseView.extend({
     namespace: 'home',
     onEnter: function onEnter() {
       $document.trigger('homepageOnEnter');
@@ -25,7 +23,7 @@ var pageTransitions = function() {
     }
   });
 
-  var Projects = Barba.BaseView.extend({
+  const Projects = Barba.BaseView.extend({
     namespace: 'projects',
     onEnter: function onEnter() {
       $document.trigger('projectsOnEnter');
@@ -44,7 +42,7 @@ var pageTransitions = function() {
     }
   });
 
-  var About = Barba.BaseView.extend({
+  const About = Barba.BaseView.extend({
     namespace: 'about',
     onEnter: function onEnter() {
       $document.trigger('aboutOnEnter');
@@ -63,7 +61,7 @@ var pageTransitions = function() {
     }
   });
 
-  var Contact = Barba.BaseView.extend({
+  const Contact = Barba.BaseView.extend({
     namespace: 'contact',
     onEnter: function onEnter() {
       $document.trigger('contactOnEnter');
@@ -90,28 +88,26 @@ var pageTransitions = function() {
   Barba.Pjax.start();
   Barba.Prefetch.init();
 
-  var speed = 750;
+  const speed = 750;
 
-  var transition = Barba.BaseTransition.extend({
+  const transition = Barba.BaseTransition.extend({
     start: function start() {
       Promise.all([this.newContainerLoading, this.transitionOut()]).then(this.transitionIn.bind(this));
     },
     transitionOut: function transitionOut() {
-      var $elOld = $(this.oldContainer);
+      const $elOld = $(this.oldContainer);
 
       $elOld.removeClass('transition-in').addClass('transition-out');
 
-      setTimeout(function () {
-        return $elOld.show().promise();
-      }, speed);
+      setTimeout(() => $elOld.show().promise(), speed);
     },
     transitionIn: function transitionIn() {
-      var _this2 = this;
+      const _this2 = this;
 
-      var _this = this;
-      var $elNew = $(this.newContainer);
+      const _this = this;
+      const $elNew = $(this.newContainer);
 
-      setTimeout(function () {
+      setTimeout(() => {
         $(_this2.oldContainer).hide();
         $(_this2.oldContainer).show();
         _this.done();
@@ -125,13 +121,11 @@ var pageTransitions = function() {
     }
   });
 
-  Barba.Pjax.getTransition = function () {
-    return transition;
-  };
+  Barba.Pjax.getTransition = () => transition;
 
-  Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus) {
+  Barba.Dispatcher.on('newPageReady', (currentStatus, oldStatus) => {
 
-    setTimeout(function () {
+    setTimeout(() => {
       window.scrollTo(0, 0);
     }, speed);
 
@@ -142,14 +136,14 @@ var pageTransitions = function() {
 
       case oldStatus.namespace === 'projects' && currentStatus.namespace === 'projects':
         $barbaWrapper.addClass('tertiary-transition');
-        setTimeout(function () {
+        setTimeout(() => {
           window.scrollTo(0, 0);
         }, speed);
         break;
 
       case currentStatus.namespace === 'homepage':
         $barbaWrapper.removeClass('fade-in');
-        setTimeout(function () {
+        setTimeout(() => {
           window.scrollTo(0, 0);
           $barbaWrapper.addClass('fade-in');
         }, speed);
@@ -158,13 +152,11 @@ var pageTransitions = function() {
 
       default:
         $barbaWrapper.removeClass();
-        setTimeout(function () {
+        setTimeout(() => {
           window.scrollTo(0, 0);
         }, speed);
     }
   });
 };
 
-$(function () {
-  return pageTransitions();
-});
+$(() => pageTransitions());

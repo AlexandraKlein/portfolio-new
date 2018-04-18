@@ -1,22 +1,20 @@
-var projects = function() {
+const projects = () => {
 
-  $document.on('projectsOnEnter', function() {
+  $document.on('projectsOnEnter', () => {
     console.log('projectsOnEnter');
   });
 
-  $document.on('projectsOnEnterCompleted', function() {
+  $document.on('projectsOnEnterCompleted', () => {
     console.log('projectsOnEnterCompleted');
   });
 
-  $document.on('projectsOnLeave', function() {
+  $document.on('projectsOnLeave', () => {
     console.log('projectsOnLeave');
   });
 
-  $document.on('projectsOnLeaveCompleted', function() {
+  $document.on('projectsOnLeaveCompleted', () => {
     console.log('projectsOnLeaveCompleted');
   });
 };
 
-$(function () {
-  return projects();
-});
+$(() => projects());

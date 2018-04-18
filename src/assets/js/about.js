@@ -1,22 +1,20 @@
-var about = function() {
+const about = () => {
 
-  $document.on('aboutOnEnter', function() {
+  $document.on('aboutOnEnter', () => {
     console.log('aboutOnEnter');
   });
 
-  $document.on('aboutOnEnterCompleted', function() {
+  $document.on('aboutOnEnterCompleted', () => {
     console.log('aboutOnEnterCompleted');
   });
 
-  $document.on('aboutOnLeave', function() {
+  $document.on('aboutOnLeave', () => {
     console.log('aboutOnLeave');
   });
 
-  $document.on('aboutOnLeaveCompleted', function() {
+  $document.on('aboutOnLeaveCompleted', () => {
     console.log('aboutOnLeaveCompleted');
   });
 };
 
-$(function () {
-  return about();
-});
+$(() => about());
