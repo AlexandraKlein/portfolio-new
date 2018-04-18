@@ -1,4 +1,4 @@
-$(document).on('homepageOnEnterCompleted', function() {
+$(document).on('homepageOnEnterCompleted', () => {
   $('.carousel').slick({
     infinite: true,
     variableWidth: true,

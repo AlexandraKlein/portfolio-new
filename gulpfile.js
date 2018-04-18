@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     render = require('gulp-htmlrender'),
     sourcemaps = require('gulp-sourcemaps'),
-    nunjucksRender = require('gulp-nunjucks-render');
+    nunjucksRender = require('gulp-nunjucks-render'),
+    babel = require('gulp-babel');
 
 gulp.task('copyHtml', function() {
   gulp.src('src/*.html').pipe(gulp.dest('dist'));
@@ -47,6 +48,7 @@ gulp.task('js',function(){
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('scripts.js'))
+    .pipe(babel({ presets: ['es2015'] }))
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
