@@ -12,26 +12,27 @@ const settings = {
   before(i, panels) {
 
     const ref = panels[i].attr('data-section-name');
+    const classes = 'active previous next';
+
     $('.pagination .active').removeClass('active');
     $('.pagination').find(`a[href="#${ref}"]`).addClass('active');
 
-    $('.scroll-section').eq(i)
-      .removeClass('active previous next')
-      .addClass('active')
-      .siblings('.scroll-section')
-      .removeClass('active');
+    function removeAddClasses(args) {
+      args.el.removeClass(classes)
+        .addClass(args.classToAdd)
+        .siblings('.scroll-section')
+        .removeClass(args.classToAdd);
+    }
 
-    $('.scroll-section').eq(i - 1)
-      .removeClass('active previous next')
-      .addClass('previous')
-      .siblings('.scroll-section')
-      .removeClass('previous');
+    const removeAddClassesArray = [
+      { el: $('.scroll-section').eq(i), classToAdd: 'active'},
+      { el: $('.scroll-section').eq(i - 1), classToAdd: 'previous'},
+      { el: $('.scroll-section').eq(i + 1), classToAdd: 'next'}
+    ];
 
-    $('.scroll-section').eq(i + 1)
-      .removeClass('active previous next')
-      .addClass('next')
-      .siblings('.scroll-section')
-      .removeClass('next');
+    for (let index = 0; index < removeAddClassesArray.length; index++) {
+      removeAddClasses(removeAddClassesArray[index]);
+    }
 
     if (i === panels.length - 1) {
       $('.arrow-down').addClass('disabled');
@@ -44,8 +45,10 @@ const settings = {
 };
 
 function paginationArrowsMove() {
-  $('.pagination a').each(function (i) {
-    $(this).click(e => {
+
+  $('.pagination a').toArray().forEach((el, i) => {
+    const $el = $(el);
+    $el.click(e => {
       e.preventDefault();
       $.scrollify.move(i);
     });

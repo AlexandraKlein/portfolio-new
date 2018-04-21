@@ -13,7 +13,8 @@ $.fn.isOnScreen = function () {
 
 $(window).on('scroll', () => {
 
-  $('.project .img').each(function () {
-    $(this).isOnScreen() === true ? $(this).addClass('in-viewport') : $(this).removeClass('in-viewport');
+  $('.project .img').toArray().forEach(el => {
+    const $el = $(el);
+    $el.isOnScreen() === true ? $el.addClass('in-viewport') :$el.removeClass('in-viewport');
   });
 });
