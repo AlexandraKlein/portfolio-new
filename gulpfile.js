@@ -49,7 +49,6 @@ gulp.task('js',function(){
     .pipe(jshint.reporter('default'))
     .pipe(concat('scripts.js'))
     .pipe(babel({ presets: ['es2015'] }))
-    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write())
@@ -85,7 +84,8 @@ gulp.task('bs-reload', function () {
 
 gulp.task('default', ['css', 'js', 'html', 'images', 'video', 'components', 'browser-sync'], function () {
     gulp.watch('src/assets/scss/*/*.scss', ['css']);
-    gulp.watch(['src/assets/scss/**/*.scss', 'rc/assets/scss/**/**/*.scss'], ['css']);
+    gulp.watch(['src/assets/scss/**/*.scss', 'src/assets/scss/**/**/*.scss'], ['css']);
     gulp.watch('src/assets/js/*.js', ['js']);
     gulp.watch('src/*.html', ['bs-reload']);
+    gulp.watch(['src/*.html', 'src/**/*.html'], ['html']);
 });

@@ -9,6 +9,14 @@
           <img src="assets/img/projects/devices/laptop-{{ slide.project }}.png" class="laptop" alt="{{ slide.project }}"/>
           <img src="assets/img/projects/devices/mobile-{{ slide.project }}.png" class="mobile" alt="{{ slide.project }}"/>
         </div>
+        <div class="about">
+          <h3>{{ slide.role }}</h3>
+          <ul>
+            {% for item in slide.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       <div class="titles">
         <h2>{{ slide.headline|safe }}</h2>

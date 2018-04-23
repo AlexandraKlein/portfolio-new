@@ -76,7 +76,7 @@
 }
 
 body:not(.home) {
-  .copy{
+  .copy {
     opacity: 0;
     animation: fadeInRight $duration/2 $ease forwards $duration*1.5;
   }

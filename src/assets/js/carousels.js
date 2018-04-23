@@ -12,6 +12,8 @@ $(document).on('homepageOnEnterCompleted', () => {
   $('.carousel').on('afterChange', function() {
     $(this).find('.slide.slick-active').addClass('animate')
            .siblings().removeClass('animate');
+
+    $(this).find('.slide').removeClass('open');
   });
 
   $('.carousel .slick-active').addClass('animate');

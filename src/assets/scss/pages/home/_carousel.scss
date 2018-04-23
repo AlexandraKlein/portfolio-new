@@ -147,6 +147,41 @@
       }
     }
 
+    .about {
+      color: $white;
+      @extend .align-both;
+      opacity: 0;
+      pointer-events: none;
+
+      h3 {
+        position: relative;
+        font-size: 4vw;
+        line-height: 1;
+        margin: 0 0 20px;
+      }
+
+      ul {
+        position: relative;
+        padding-left: 35px;
+        list-style: none;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: $dark-gray-blue;
+          z-index: -1;
+        }
+
+        li {
+          font-size: calc(.5em + 1vw);
+        }
+      }
+    }
+
     .slide.open {
 
       .titles {
@@ -157,6 +192,11 @@
 
       .devices {
         opacity: 0;
+      }
+
+      .about {
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }
