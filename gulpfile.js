@@ -84,7 +84,8 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('default', ['css', 'js', 'html', 'images', 'video', 'components', 'browser-sync'], function () {
-    gulp.watch("src/assets/scss/*/*.scss", ['css']);
-    gulp.watch("src/assets/js/*.js", ['js']);
-    gulp.watch("src/*.html", ['bs-reload']);
+    gulp.watch('src/assets/scss/*/*.scss', ['css']);
+    gulp.watch(['src/assets/scss/**/*.scss', 'rc/assets/scss/**/**/*.scss'], ['css']);
+    gulp.watch('src/assets/js/*.js', ['js']);
+    gulp.watch('src/*.html', ['bs-reload']);
 });
