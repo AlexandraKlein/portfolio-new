@@ -13,7 +13,8 @@ $(document).on('homepageOnEnterCompleted', () => {
     $(this).find('.slide.slick-active').addClass('animate')
            .siblings().removeClass('animate');
 
-    $(this).find('.slide').removeClass('open');
+    $(this).find('.slide').removeClass('open')
+           .find('.btn .text').text('Learn More');
   });
 
   $('.carousel .slick-active').addClass('animate');
