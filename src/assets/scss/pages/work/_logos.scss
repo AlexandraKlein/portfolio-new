@@ -1,0 +1,50 @@
+body.work {
+  .copy.logos {
+    height: auto;
+
+    h2 {
+      margin: 0 auto 30px;
+      text-shadow: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .circle {
+    background-color: $gray-blue;
+  }
+}
+
+.client-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50vw;
+
+  @include mobile {
+    max-width:100vw;
+  }
+
+  .client {
+    height: 10vw;
+    width: 10vw;
+    max-width: 15rem;
+    max-height: 15rem;
+
+    @include mobile {
+      min-height: 10rem;
+      min-width: 10rem;
+    }
+
+    $client-tiles-names: vw target carvana tacobell fosterfarms answerfinancial zillow sevenup vanityfair cmab anthem motts canadadry deutsch;
+
+    @each $client-tile-name in $client-tiles-names {
+      &.#{$client-tile-name} {
+        background: url("../img/logos/#{$client-tile-name}-logo.svg?v=4") center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+
+  }
+}

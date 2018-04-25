@@ -3,7 +3,6 @@ const settings = {
   easing: 'easeOutExpo',
   scrollSpeed: 1000,
   offset : 0,
-  standardScrollElements: 'body:not(.home)',
   scrollbars: true,
   setHeights: true,
   overflowScroll: true,
@@ -64,24 +63,29 @@ function paginationArrowsMove() {
 }
 
 
-if($('body').hasClass('home')) {
+if($('body').hasClass('home') || $('body').hasClass('work')) {
   $.scrollify(settings);
   window.scrollTo(0, 0);
   $.scrollify.move(0);
+
+  console.log('SCROLLIFY');
 }
 
-$(document).on('homepageOnEnter', () => {
+$(document).on('homepageOnEnter workOnEnter', () => {
   window.scrollTo(0, 0);
   $.scrollify.move(0);
   paginationArrowsMove();
 });
 
-$(document).on('homepageOnEnterCompleted', () => {
+$(document).on('homepageOnEnterCompleted workOnEnterCompleted', () => {
   $.scrollify(settings);
 });
 
-$(document).on('homepageOnLeaveCompleted', () => {
-  $.scrollify.destroy();
-});
+//$(document).on('homepageOnLeaveCompleted workOnLeaveCompleted', () => {
+//  $.scrollify.destroy();
+//});
+
+
+
 
 

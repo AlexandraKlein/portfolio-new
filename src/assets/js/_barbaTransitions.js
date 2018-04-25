@@ -23,22 +23,22 @@ const pageTransitions = () => {
     }
   });
 
-  const Projects = Barba.BaseView.extend({
-    namespace: 'projects',
+  const Work = Barba.BaseView.extend({
+    namespace: 'work',
     onEnter: function onEnter() {
-      $document.trigger('projectsOnEnter');
-      $body.addClass('projects');
-      $body.attr('id', 'projects');
+      $document.trigger('workOnEnter');
+      $body.addClass('work');
+      $body.attr('id', 'work');
     },
     onEnterCompleted: function onEnterCompleted() {
-      $document.trigger('projectsOnEnterCompleted');
-      $body.removeClass().addClass('projects');
+      $document.trigger('workOnEnterCompleted');
+      $body.removeClass().addClass('work');
     },
     onLeave: function onLeave() {
-      $document.trigger('projectsOnLeave');
+      $document.trigger('workOnLeave');
     },
     onLeaveCompleted: function onLeaveCompleted() {
-      $document.trigger('projectsOnLeaveCompleted');
+      $document.trigger('workOnLeaveCompleted');
     }
   });
 
@@ -81,7 +81,7 @@ const pageTransitions = () => {
   });
 
   Homepage.init();
-  Projects.init();
+  Work.init();
   About.init();
   Contact.init();
 
@@ -134,7 +134,7 @@ const pageTransitions = () => {
 
     switch (true) {
 
-      case oldStatus.namespace === 'projects' && currentStatus.namespace === 'projects':
+      case oldStatus.namespace === 'work' && currentStatus.namespace === 'work':
         $barbaWrapper.addClass('tertiary-transition');
         setTimeout(() => {
           window.scrollTo(0, 0);

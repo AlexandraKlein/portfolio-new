@@ -1,20 +1,20 @@
-const projects = () => {
+const work = () => {
 
-  $document.on('projectsOnEnter', () => {
-    console.log('projectsOnEnter');
+  $document.on('workOnEnter', () => {
+    console.log('workOnEnter');
   });
 
-  $document.on('projectsOnEnterCompleted', () => {
-    console.log('projectsOnEnterCompleted');
+  $document.on('workOnEnterCompleted', () => {
+    console.log('workOnEnterCompleted');
   });
 
-  $document.on('projectsOnLeave', () => {
-    console.log('projectsOnLeave');
+  $document.on('workOnLeave', () => {
+    console.log('workOnLeave');
   });
 
-  $document.on('projectsOnLeaveCompleted', () => {
-    console.log('projectsOnLeaveCompleted');
+  $document.on('workOnLeaveCompleted', () => {
+    console.log('workOnLeaveCompleted');
   });
 };
 
-$(() => projects());
+$(() => work());

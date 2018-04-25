@@ -55,12 +55,11 @@ body {
     }
   }
 
-  &.projects {
+  &.work {
     nav ul li {
       &:nth-of-type(2) {
         &:before {
           opacity: 1;
-          background-color: $dark-gray-blue;
         }
       }
     }
