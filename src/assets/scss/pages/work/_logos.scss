@@ -36,7 +36,7 @@ body.work {
       min-width: 10rem;
     }
 
-    $client-tiles-names: vw target carvana tacobell fosterfarms answerfinancial zillow sevenup vanityfair cmab anthem motts canadadry deutsch;
+    $client-tiles-names: vw target carvana tacobell fosterfarms answerfinancial zillow sevenup vanityfair cmab anthem motts canadadry deutsch steelhead;
 
     @each $client-tile-name in $client-tiles-names {
       &.#{$client-tile-name} {
