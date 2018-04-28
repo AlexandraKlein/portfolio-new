@@ -198,22 +198,28 @@
           background-color: $dark-gray-blue;
           z-index: -1;
         }
+      }
 
-        li {
-          font-size: calc(.5em + 1vw);
+      li, a {
+        font-size: calc(.5em + 1vw);
 
-          @include mobile {
-            font-size: 18px;
-          }
+        @include mobile {
+          font-size: 18px;
         }
       }
     }
 
     .slide.open {
 
+      .circle {
+        z-index: 1;
+      }
+
       .titles {
+
         > *:not(.btn) {
           opacity: 0;
+          pointer-events: none;
         }
       }
 
