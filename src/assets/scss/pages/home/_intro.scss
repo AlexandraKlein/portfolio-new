@@ -24,13 +24,15 @@
 
   .main-section {
 
-    &.active {
+    &:not(.landing-animation) {
+      &.active {
 
-      .circle {
+        .circle {
 
-        .me {
-          opacity: 0;
-          animation: fadeIn .2s ease-in forwards .5s;
+          .me {
+            opacity: 0;
+            animation: fadeIn .2s ease-in forwards .5s;
+          }
         }
       }
     }
@@ -41,7 +43,7 @@
 
         .me {
           opacity: 0;
-          animation-delay: 1.5s;
+          animation: fadeIn .2s ease-in forwards 1.5s;
         }
       }
     }

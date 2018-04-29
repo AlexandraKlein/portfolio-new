@@ -65,15 +65,9 @@ function paginationArrowsMove() {
 
 if($('body').hasClass('home') || $('body').hasClass('work')) {
   $.scrollify(settings);
-  window.scrollTo(0, 0);
-  $.scrollify.move(0);
-
-  console.log('SCROLLIFY');
 }
 
 $(document).on('homepageOnEnter workOnEnter', () => {
-  window.scrollTo(0, 0);
-  $.scrollify.move(0);
   paginationArrowsMove();
 });
 
