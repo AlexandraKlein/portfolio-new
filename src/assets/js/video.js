@@ -9,6 +9,7 @@ function videoPlayer() {
   const incVolBtn = document.getElementById('volume-inc-button');
   const volumeDisplay = document.getElementById('volume');
   const muteBtn = document.getElementById('mute-button');
+  const fullscreen = document.getElementById('fullscreen-button');
 
   function togglePlayPause() {
     if (video.paused || video.ended) {
@@ -78,6 +79,28 @@ function videoPlayer() {
     changeButtonType(btn, 'play');
   }
 
+  function toggleFullScreen() {
+    if (!document.mozFullScreen && !document.webkitFullScreen) {
+      if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else {
+        video.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+      }
+    } else {
+      if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else {
+        document.webkitCancelFullScreen();
+      }
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  }, false);
+
   video.addEventListener('timeupdate', updateProgressBar, false);
   video.addEventListener('ended', onVideoEnd, false);
   video.addEventListener('click', togglePlayPause);
@@ -88,6 +111,7 @@ function videoPlayer() {
   muteBtn.addEventListener('click', toggleMute);
   replayBtn.addEventListener('click', resetPlayer);
   progress.addEventListener('click', seek);
+  fullscreen.addEventListener('click', toggleFullScreen);
 }
 
 $(document).on('workOnEnterCompleted', videoPlayer);
