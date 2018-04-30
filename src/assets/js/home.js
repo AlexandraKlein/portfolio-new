@@ -5,7 +5,9 @@ const homePage = () => {
 
     setTimeout(() => {
       $('section.intro').removeClass('landing-animation');
-    }, 2000)
+    }, 2000);
+
+    console.warn('landing animation')
   }
 
   if ($('body').hasClass('home')) {
