@@ -19,22 +19,31 @@ const morphEls = () => {
     });
   }
 
-  const snapEls = [
+  const snapElsUpDown = [
     {el: document.querySelector('.arrow-up'), easeIn: mina.easein, easeOut: mina.easeout, toSpeed: 300, fromSpeed: 150},
-    {el: document.querySelector('.arrow-down'), easeIn: mina.easein, easeOut: mina.easeout, toSpeed: 300, fromSpeed: 150},
-    {el: document.querySelector('.arrow-next'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
-    {el: document.querySelector('.arrow-prev'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500}
+    {el: document.querySelector('.arrow-down'), easeIn: mina.easein, easeOut: mina.easeout, toSpeed: 300, fromSpeed: 150}
   ];
 
-  for (let i=0; i<snapEls.length; i++) {
-    snapMorphHover(snapEls[i]);
+  const snapElsLeftRight = [
+    {el: document.querySelector('.arrow-next'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
+    {el: document.querySelector('.arrow-prev'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500}
+  ]
+
+  if ($('body').hasClass('home')) {
+    for (let i=0; i<snapElsUpDown.length; i++) {
+      snapMorphHover(snapElsUpDown[i]);
+    }
+  }
+
+  if ($('body').hasClass('work')) {
+    for (let i=0; i<snapElsLeftRight.length; i++) {
+      snapMorphHover(snapElsLeftRight[i]);
+    }
   }
 };
 
-if ($('body').hasClass('home')) {
-  morphEls();
-}
+$(() => morphEls());
 
-$(document).on('homepageOnEnter', () => {
+$(document).on('allPagesEnter', () => {
   morphEls();
 });

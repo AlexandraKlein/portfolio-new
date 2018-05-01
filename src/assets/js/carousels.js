@@ -1,4 +1,4 @@
-$(document).on('homepageOnEnterCompleted', () => {
+function slickCarousel() {
   $('.carousel').slick({
     infinite: true,
     variableWidth: true,
@@ -11,10 +11,10 @@ $(document).on('homepageOnEnterCompleted', () => {
 
   $('.carousel').on('afterChange', function() {
     $(this).find('.slide.slick-active').addClass('animate')
-           .siblings().removeClass('animate');
+      .siblings().removeClass('animate');
 
     $(this).find('.slide').removeClass('open')
-           .find('.btn .text').text('Learn More');
+      .find('.btn .text').text('Learn More');
   });
 
   $('.carousel .slick-active').addClass('animate');
@@ -29,5 +29,8 @@ $(document).on('homepageOnEnterCompleted', () => {
       $btn.find('.text').text(buttonText);
     });
   });
+}
 
+$(document).on('workOnEnter', () => {
+  slickCarousel();
 });

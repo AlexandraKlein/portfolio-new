@@ -42,6 +42,6 @@ function parallax() {
   });
 }
 
-$(document).on('homepageOnEnterCompleted', () => {
+$(document).on('workOnEnterCompleted', () => {
   parallax();
 });

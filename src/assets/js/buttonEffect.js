@@ -14,7 +14,7 @@ function directionAwareButton() {
     });
 }
 
-directionAwareButton();
+$(() => directionAwareButton());
 
 $($document).on('allPagesEnter', () => {
   directionAwareButton();
