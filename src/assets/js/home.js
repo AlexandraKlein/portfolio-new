@@ -32,7 +32,8 @@ const homePage = () => {
   });
 };
 
-
-if ($('body').hasClass('home')) {
+$(document).on('homepageEnterComplete', ()=> {
   $(() => homePage());
-}
+});
+
+$(() => homePage());
