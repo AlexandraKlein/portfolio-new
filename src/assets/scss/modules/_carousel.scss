@@ -64,7 +64,7 @@
     .btn {
       @include mobile {
         position: absolute;
-        bottom: 60px;
+        bottom: 0;
         background-color: lighten($gray-blue, 20%);
         color: $white;
       }
@@ -210,7 +210,10 @@
   .slide.open {
 
     .circle {
-      z-index: 1;
+
+      @include tablet {
+        z-index: 1;
+      }
     }
 
     .titles {

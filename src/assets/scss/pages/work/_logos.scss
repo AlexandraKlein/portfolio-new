@@ -2,6 +2,10 @@ body.work {
   .copy.logos {
     height: auto;
 
+    @include mobile {
+      left: auto;
+    }
+
     h2 {
       margin: 0 auto 30px;
       text-shadow: none;
