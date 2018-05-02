@@ -6,15 +6,28 @@ const settings = {
   scrollbars: true,
   setHeights: true,
   overflowScroll: true,
-  updateHash: false,
+  updateHash: true,
   touchScroll: true,
+  afterRender() {
+    $('.scroll-section')
+      .eq(0)
+      .addClass('active');
+
+    $('.pagination li')
+      .eq(0)
+      .addClass('active');
+  },
   before(i, panels) {
 
     const ref = panels[i].attr('data-section-name');
     const classes = 'active previous next';
 
-    $('.pagination .active').removeClass('active');
-    $('.pagination').find(`a[href="#${ref}"]`).addClass('active');
+    $('.pagination .active')
+       .removeClass('active');
+
+    $('.pagination')
+       .find(`a[href="#${ref}"]`)
+       .addClass('active');
 
     function removeAddClasses(args) {
       args.el.removeClass(classes)

@@ -157,6 +157,20 @@ const pageTransitions = () => {
         }, speed);
     }
   });
+
+  function landingAnimation() {
+    $('.barba-container').addClass('landing-animation');
+
+    setTimeout(() => {
+      $('.barba-container').removeClass('landing-animation');
+    }, 2000);
+  }
+
+  landingAnimation();
+
+  $($document).on('allPagesEnter', ()=> {
+    landingAnimation();
+  });
 };
 
 $(() => pageTransitions());

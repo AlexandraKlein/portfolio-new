@@ -45,7 +45,7 @@
 }
 
 .transition-out {
-  section:not(.projects) {
+  section {
     .circle {
       animation: circleOut $duration $ease forwards;
 

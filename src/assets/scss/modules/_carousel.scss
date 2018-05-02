@@ -232,12 +232,18 @@
   }
 }
 
+.landing-animation {
+  .devices img {
+    opacity: 0;
+    animation: fadeIn .5s ease-in forwards 1.5s;
+  }
+}
+
 .transition-in {
 
   .circle {
     .devices {
-      opacity: 0;
-      animation: fadeIn .5s ease-in forwards 1.5s;
+      opacity: 1;
     }
   }
 }
@@ -246,7 +252,6 @@
 
   .circle {
     .devices {
-      transition: opacity .2s ease-out;
       opacity: 0;
     }
   }
