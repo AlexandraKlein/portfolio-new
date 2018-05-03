@@ -25,11 +25,13 @@ const settings = {
     const btnPlayPause = $('#play-pause-button');
     const video = videoWrapper.find('video').get(0);
 
-    video.pause();
+    if (videoWrapper.length) {
+      video.pause();
 
-    if (video.paused || video.ended) {
-      videoWrapper.removeClass('playing');
-      btnPlayPause.removeClass().addClass('play').attr('title', 'play');
+      if (video.paused || video.ended) {
+        videoWrapper.removeClass('playing');
+        btnPlayPause.removeClass().addClass('play').attr('title', 'play');
+      }
     }
 
     $('.pagination .active')
@@ -69,8 +71,7 @@ const settings = {
 function paginationArrowsMove() {
 
   $('.pagination a').toArray().forEach((el, i) => {
-    const $el = $(el);
-    $el.click(e => {
+    $(el).click(e => {
       e.preventDefault();
       $.scrollify.move(i);
     });
@@ -86,22 +87,19 @@ function paginationArrowsMove() {
 }
 
 
-if($('body').hasClass('home') || $('body').hasClass('work')) {
+if ($('body').hasClass('home') || $('body').hasClass('work')) {
   $.scrollify(settings);
+  paginationArrowsMove();
 }
 
 $(document).on('homepageOnEnter workOnEnter', () => {
-  paginationArrowsMove();
+
 });
 
 $(document).on('homepageOnEnterCompleted workOnEnterCompleted', () => {
   $.scrollify(settings);
+  paginationArrowsMove();
 });
-
-//$(document).on('homepageOnLeaveCompleted workOnLeaveCompleted', () => {
-//  $.scrollify.destroy();
-//});
-
 
 
 

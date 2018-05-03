@@ -1,6 +1,19 @@
 {% set page_title = "Work" %}
 {% set namespace = "work" %}
 
+{% set paginations = [
+    {
+      "section"  : "carousel"
+    },
+    {
+      "section"  : "video-reel"
+    },
+    {
+      "section"  : "clients"
+    }
+  ]
+%}
+
 {% set slides = [
     {
       "project"  : "steelhead",
@@ -108,13 +121,13 @@
 
 {% block main %}
 
-  <section class="main-section scroll-section projects">
+  <section class="main-section scroll-section projects" data-section-name="carousel">
 
     {% include "carousel.html" %}
 
   </section>
 
-  <section class="main-section scroll-section">
+  <section class="main-section scroll-section" data-section-name="video-reel">
 
     <div class="circle"></div>
 
@@ -122,7 +135,7 @@
 
   </section>
 
-  <section class="main-section scroll-section">
+  <section class="main-section scroll-section" data-section-name="clients">
 
     <div class="circle">
     </div>
@@ -148,5 +161,7 @@
       </div>
     </div>
 </section>
+
+{% include "pagination.html" %}
 
 {% endblock %}

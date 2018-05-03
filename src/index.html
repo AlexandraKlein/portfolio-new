@@ -3,6 +3,22 @@
 
 {% extends "layout.html" %}
 
+{% set paginations = [
+    {
+      "section"  : "intro"
+    },
+    {
+      "section"  : "projects"
+    },
+    {
+      "section"  : "about"
+    },
+    {
+      "section"  : "contact"
+    }
+  ]
+%}
+
 {% block main %}
 
   <section class="main-section scroll-section intro active" data-section-name="intro">
@@ -75,12 +91,7 @@
     </div>
   </div>
 
-  <ul class="pagination">
-    <li><a class="active" href="#intro"><span>01</span></a></li>
-    <li><a class="" href="#projects"><span>02</span></a></li>
-    <li><a class="" href="#about"><span>03</span></a></li>
-    <li><a class="" href="#contact"><span>04</span></a></li>
-  </ul>
+  {% include "pagination.html" %}
 
 {% endblock %}
 
