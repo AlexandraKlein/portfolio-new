@@ -40,6 +40,20 @@ body.work {
     width: 10vw;
     max-width: 15rem;
     max-height: 15rem;
+    opacity: 0;
+    transform: translateY(5vw);
+    transition: all .2s ease-out .5s;
+
+    .active & {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @for $i from 1 to 20 {
+      &:nth-child(#{$i}) {
+        transition-delay: .5 + $i/50 + s;
+      }
+    }
 
     @include mobile {
       min-height: 7rem;
