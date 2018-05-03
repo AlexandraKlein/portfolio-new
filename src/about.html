@@ -1,29 +1,98 @@
 {% set page_title = "About" %}
 {% set namespace = "about" %}
 
+{% set paginations = [
+    {
+      "section"  : "intro"
+    },
+    {
+      "section"  : "about"
+    },
+    {
+      "section"  : "skills"
+    }
+  ]
+%}
+
 {% extends "layout.html" %}
 
 {% block main %}
 
-  <section class="main-section intro">
+<section class="main-section scroll-section intro" data-section-name="intro">
 
-    <div class="circle">
-      <div class="video-container">
-        <video autoplay muted loop playsinline>
-          <source src="assets/video/ali-cat.mp4" type="video/mp4">
-          <source src="assets/video/ali-cat.ogv" type="video/ogg">
-          <source src="assets/video/ali-cat.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+  <div class="circle">
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="assets/video/ali-cat.mp4" type="video/mp4">
+        <source src="assets/video/ali-cat.ogv" type="video/ogg">
+        <source src="assets/video/ali-cat.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="copy">
-      <h1>About</h1>
-      <h2>Me and My Work</h2>
-      <a class="btn" href="/">Learn More<span></span></a>
+  </div>
+  <div class="copy">
+    <h1>A little</h1>
+    <h2>more about me</h2>
+  </div>
+
+</section>
+
+<section class="main-section scroll-section intro" data-section-name="about">
+
+  <div class="circle">
+  </div>
+  <div class="copy">
+    <!--<h1>About</h1>-->
+    <!--<h2>Me and My Work</h2>-->
+  </div>
+
+</section>
+
+<section class="main-section scroll-section intro" data-section-name="skills">
+
+  <div class="circle">
+  </div>
+  <div class="copy skills">
+    <div class="titles">
+      <h2>Skills</h2>
     </div>
 
-  </section>
+    <div class="skill-wrapper">
+      <div class="skill angular"></div>
+      <div class="skill babel"></div>
+      <div class="skill backbone"></div>
+      <div class="skill bootstrap"></div>
+      <div class="skill css3"></div>
+      <div class="skill es6"></div>
+      <div class="skill foundation"></div>
+      <div class="skill gatsby"></div>
+      <div class="skill git"></div>
+      <div class="skill grunt"></div>
+      <div class="skill gulp"></div>
+      <div class="skill handlebars"></div>
+      <div class="skill html5"></div>
+      <div class="skill javascript"></div>
+      <div class="skill jira"></div>
+      <div class="skill laravel"></div>
+      <div class="skill less"></div>
+      <div class="skill nodejs"></div>
+      <div class="skill npm"></div>
+      <div class="skill php"></div>
+      <div class="skill react"></div>
+      <div class="skill sass"></div>
+      <div class="skill snap"></div>
+      <div class="skill svg"></div>
+      <div class="skill travis"></div>
+      <div class="skill vue"></div>
+      <div class="skill webpack"></div>
+      <div class="skill wordpress"></div>
+    </div>
+  </div>
 
+</section>
+
+{% include "arrows.html" %}
+
+{% include "pagination.html" %}
 
 {% endblock %}

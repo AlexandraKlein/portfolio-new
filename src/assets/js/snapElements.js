@@ -29,7 +29,7 @@ const morphEls = () => {
     {el: document.querySelector('.arrow-prev'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500}
   ];
 
-  if ($('body').hasClass('home') || $('body').hasClass('work')) {
+  if ($('body').hasClass('home') || $('body').hasClass('work') || $('body').hasClass('about')) {
     for (let i=0; i<snapElsUpDown.length; i++) {
       snapMorphHover(snapElsUpDown[i]);
     }

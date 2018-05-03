@@ -82,7 +82,7 @@ function paginationArrowsMove() {
   $('.arrow-up').click(() => $.scrollify.previous());
 }
 
-$(document).on('homepageOnEnterCompleted workOnEnterCompleted', () => {
+$(document).on('homepageOnEnterCompleted workOnEnterCompleted aboutOnEnterCompleted', () => {
   window.scrollTo(0, 0);
   $.scrollify.destroy();
   $.scrollify(settings);
