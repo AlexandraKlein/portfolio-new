@@ -57,7 +57,7 @@ body.about {
       min-width: 5rem;
     }
 
-    $skill-tiles-names: angular babel backbone bootstrap css3 es6 foundation gatsby git grunt gulp handlebars html5 javascript jira laravel less nodejs npm php react require sass snap svg travis vue webpack wordpress;
+    $skill-tiles-names: angular babel backbone bootstrap css3 es6 foundation gatsby git grunt gulp handlebars html5 javascript jira laravel less nodejs npm php react require sass snap svg travis vue webpack wordpress docker;
 
     @each $skill-tile-name in $skill-tiles-names {
       &.#{$skill-tile-name} {

@@ -10,8 +10,8 @@ const morphEls = () => {
       to: args.el.getAttribute('data-morph-active')
     };
 
-    args.el.addEventListener('mouseover', () => path.animate({ 'path': pathConfig.to }, pathConfig.toSpeed, args.easeIn), false);
-    args.el.addEventListener('mouseout', () => path.animate({ 'path': pathConfig.from }, pathConfig.fromSpeed, args.easeOut), false);
+    args.el.addEventListener('mouseover', () => path.animate({ 'path': pathConfig.to }, pathConfig.toSpeed, args.easeIn));
+    args.el.addEventListener('mouseout', () => path.animate({ 'path': pathConfig.from }, pathConfig.fromSpeed, args.easeOut));
   }
 
   const snapElsUpDown = [
