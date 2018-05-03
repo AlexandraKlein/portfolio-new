@@ -4,12 +4,12 @@
     position: relative;
 
     .me {
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       width: 100%;
       right: 0;
       bottom: 0;
-      //animation: fadeOut .2s ease-in forwards .5s;
+      animation: fadeOut .2s ease-in forwards 1s;
     }
   }
 
