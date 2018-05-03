@@ -37,8 +37,8 @@
 
   .slick-slide:not(.active) {
     .circle {
-      width: 50vw;
-      height: 50vw;
+      width: 45vw;
+      height: 45vw;
 
       @include mobile {
         width: 60vmax;
