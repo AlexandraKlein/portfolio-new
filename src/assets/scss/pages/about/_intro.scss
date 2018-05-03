@@ -32,7 +32,7 @@ body.about {
   .transition-out {
     .intro {
       .video-container {
-        animation: fadeOut $duration/2 forwards;
+        animation: fadeOut $duration/8 forwards;
       }
     }
   }
