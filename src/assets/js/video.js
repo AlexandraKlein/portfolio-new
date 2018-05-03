@@ -10,15 +10,19 @@ function videoPlayer() {
   const volumeDisplay = document.getElementById('volume');
   const muteBtn = document.getElementById('mute-button');
   const fullscreen = document.getElementById('fullscreen-button');
+  const videoWrapper = document.querySelector('.video-wrapper');
+
 
   function togglePlayPause() {
     if (video.paused || video.ended) {
       btn.title = 'pause';
       btn.className = 'pause';
+      videoWrapper.classList.add('playing');
       video.play();
     } else {
       btn.title = 'play';
       btn.className = 'play';
+      videoWrapper.classList.remove('playing');
       video.pause();
     }
   }
@@ -64,6 +68,7 @@ function videoPlayer() {
   function stopPlayer() {
     video.pause();
     video.currentTime = 0;
+    videoWrapper.classList.remove('playing');
     changeButtonType(btn, 'play');
   }
 

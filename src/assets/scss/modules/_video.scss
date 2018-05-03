@@ -7,6 +7,17 @@
   background-color: $dark-gray-blue;
   opacity: 0;
   animation: fadeIn .2s ease-in forwards 1.5s;
+  transition: all .2s ease-in-out;
+
+  &.playing {
+
+    @include tablet {
+      width: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+  }
 
   @include mobile {
     left: 50%;

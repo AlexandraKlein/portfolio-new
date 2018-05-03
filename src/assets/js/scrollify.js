@@ -21,6 +21,16 @@ const settings = {
 
     const ref = panels[i].attr('data-section-name');
     const classes = 'active previous next';
+    const videoWrapper = $('.video-wrapper');
+    const btnPlayPause = $('#play-pause-button');
+    const video = videoWrapper.find('video').get(0);
+
+    video.pause();
+
+    if (video.paused || video.ended) {
+      videoWrapper.removeClass('playing');
+      btnPlayPause.removeClass().addClass('play').attr('title', 'play');
+    }
 
     $('.pagination .active')
        .removeClass('active');
