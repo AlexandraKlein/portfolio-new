@@ -6,10 +6,16 @@ body.work {
       left: auto;
     }
 
-    h2 {
-      margin: 0 auto 30px;
+    .titles {
+      margin: 0 auto 10px;
       text-shadow: none;
       text-transform: uppercase;
+
+      h2 {
+        @include mobile {
+          font-size: 48px;
+        }
+      }
     }
   }
 
