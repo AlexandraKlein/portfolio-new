@@ -8,6 +8,10 @@
     margin: auto;
     background-color: $pink;
 
+    &.blue {
+      background-color: $gray-blue;
+    }
+
     @include tablet {
       right: -12.5vw;
     }
