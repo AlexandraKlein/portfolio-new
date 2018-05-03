@@ -6,7 +6,7 @@ const settings = {
   scrollbars: true,
   setHeights: true,
   overflowScroll: true,
-  updateHash: true,
+  updateHash: false,
   touchScroll: true,
   afterRender() {
     $('.scroll-section')
@@ -89,18 +89,13 @@ function paginationArrowsMove() {
 
 if ($('body').hasClass('home') || $('body').hasClass('work')) {
   $.scrollify(settings);
+  $.scrollify.move(0);
   paginationArrowsMove();
 }
 
-$(document).on('homepageOnEnter workOnEnter', () => {
-
-});
-
 $(document).on('homepageOnEnterCompleted workOnEnterCompleted', () => {
+  $.scrollify.destroy();
   $.scrollify(settings);
+  $.scrollify.move(0);
   paginationArrowsMove();
 });
-
-
-
-
