@@ -27,9 +27,9 @@ const morphEls = () => {
   const snapElsLeftRight = [
     {el: document.querySelector('.arrow-next'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500},
     {el: document.querySelector('.arrow-prev'), easeIn: mina.easein, easeOut: mina.bounce, toSpeed: 300, fromSpeed: 500}
-  ]
+  ];
 
-  if ($('body').hasClass('home')) {
+  if ($('body').hasClass('home') || $('body').hasClass('work')) {
     for (let i=0; i<snapElsUpDown.length; i++) {
       snapMorphHover(snapElsUpDown[i]);
     }
@@ -44,6 +44,6 @@ const morphEls = () => {
 
 $(() => morphEls());
 
-$(document).on('allPagesEnter', () => {
-  morphEls();
+$(document).on('allPagesEnterCompleted', () => {
+  setTimeout( ()=>  morphEls())
 });

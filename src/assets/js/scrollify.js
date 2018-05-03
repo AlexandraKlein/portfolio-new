@@ -77,23 +77,13 @@ function paginationArrowsMove() {
     });
   });
 
-  $('.arrow-down').click(() => {
-    $.scrollify.next();
-  });
+  $('.arrow-down').click(() => $.scrollify.next());
 
-  $('.arrow-up').click(() => {
-    $.scrollify.previous();
-  });
-}
-
-
-if ($('body').hasClass('home') || $('body').hasClass('work')) {
-  $.scrollify(settings);
-  $.scrollify.move(0);
-  paginationArrowsMove();
+  $('.arrow-up').click(() => $.scrollify.previous());
 }
 
 $(document).on('homepageOnEnterCompleted workOnEnterCompleted', () => {
+  window.scrollTo(0, 0);
   $.scrollify.destroy();
   $.scrollify(settings);
   $.scrollify.move(0);
