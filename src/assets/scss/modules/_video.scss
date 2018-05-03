@@ -6,16 +6,20 @@
   margin: 0;
   background-color: $dark-gray-blue;
   overflow: hidden;
-  opacity: 0;
-  animation: fadeIn .2s ease-in forwards 1.5s;
+  opacity: 1;
   transition: all .2s ease-in-out;
 
   &.playing {
     @include tablet {
       width: 70%;
-      left: 50%;
+      left: 15%;
       transform: translate(-50%, -50%);
     }
+  }
+
+  .active & {
+    opacity: 0;
+    animation: fadeInRight $duration/2 $ease forwards;
   }
 
   @include mobile {
