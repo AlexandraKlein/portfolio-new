@@ -65,8 +65,6 @@
       @include mobile {
         position: absolute;
         bottom: 0;
-        background-color: lighten($gray-blue, 20%);
-        color: $white;
       }
     }
   }

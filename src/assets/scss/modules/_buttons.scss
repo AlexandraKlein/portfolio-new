@@ -1,5 +1,7 @@
 $btn-width: 250px !default;
 $btn-height: 80px !default;
+$btn-color-desktop: lighten($gray-blue, 20%);
+$btn-color-mobile: lighten($gray-blue, 10%);
 
 @mixin button($btn-color) {
   box-sizing: border-box;
@@ -20,6 +22,8 @@ $btn-height: 80px !default;
   transition: color 0.4s ease-in-out;
 
   @include mobile {
+    background-color: $btn-color;
+    color: $white;
     line-height: 40px;
     height: 40px;
     margin-top: 15px;
@@ -53,5 +57,9 @@ $btn-height: 80px !default;
 }
 
 .btn {
-  @include button(lighten($gray-blue, 20%));
+  @include button($btn-color-desktop);
+
+  @include mobile {
+    @include  button($btn-color-mobile)
+  }
 }

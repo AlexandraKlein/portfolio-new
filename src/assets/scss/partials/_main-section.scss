@@ -16,6 +16,10 @@
     height: 50vw;
     @extend .vertical-align;
 
+    @include mobile {
+      left: 20px;
+    }
+
     h1,
     h2 {
       display: inline-table;
@@ -87,6 +91,16 @@ body.home {
     .copy {
       margin-top: 10vw;
       transition: all .2s ease .5s;
+
+      @include mobile {
+        h1 {
+          @include long-shadow(text, $gray-blue, 400, false, false, left);
+        }
+
+        h2 {
+          @include long-shadow(text, lighten($gray-blue, 5%), 400, false, false, left);
+        }
+      }
     }
   }
 }
