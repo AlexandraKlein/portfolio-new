@@ -129,38 +129,7 @@ const pageTransitions = () => {
   Barba.Pjax.getTransition = () => transition;
 
   Barba.Dispatcher.on('newPageReady', (currentStatus, oldStatus) => {
-
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, speed);
-
     $($document).trigger('allPagesEnter');
-    console.log('allPagesEnter');
-
-    switch (true) {
-
-      case oldStatus.namespace === 'work' && currentStatus.namespace === 'work':
-        $barbaWrapper.addClass('tertiary-transition');
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-        }, speed);
-        break;
-
-      case currentStatus.namespace === 'homepage':
-        $barbaWrapper.removeClass('fade-in');
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          $barbaWrapper.addClass('fade-in');
-        }, speed);
-        console.log('homepage');
-        break;
-
-      default:
-        $barbaWrapper.removeClass();
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-        }, speed);
-    }
   });
 
   function landingAnimation() {

@@ -82,10 +82,10 @@ function paginationArrowsMove() {
   $('.arrow-up').click(() => $.scrollify.previous());
 }
 
-$(document).on('homepageOnEnterCompleted workOnEnterCompleted aboutOnEnterCompleted', () => {
-  window.scrollTo(0, 0);
+$(document).on('allPagesEnterCompleted', () => {
   $.scrollify.destroy();
   $.scrollify(settings);
+  window.scrollTo(0, 0);
   $.scrollify.move(0);
   paginationArrowsMove();
 });
