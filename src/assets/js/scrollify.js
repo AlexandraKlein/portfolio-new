@@ -2,12 +2,10 @@ const settings = {
   section : '.scroll-section',
   easing: 'easeOutExpo',
   scrollSpeed: 1000,
-  offset : 0,
-  scrollbars: true,
+  scrollbars: false,
   setHeights: true,
-  overflowScroll: true,
+  overflowScroll: false,
   updateHash: false,
-  touchScroll: true,
   afterRender() {
     $('.scroll-section')
       .eq(0)

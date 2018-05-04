@@ -162,7 +162,8 @@
   }
 
   #volume-dec-button,
-  #volume-inc-button {
+  #volume-inc-button,
+  #fullscreen-button {
 
     @include mobile {
       display: none;
