@@ -10,6 +10,7 @@
   transition: all .2s ease-in-out;
 
   &.playing {
+
     @include tablet {
       width: 70%;
       left: 15%;
@@ -23,9 +24,8 @@
   }
 
   @include mobile {
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 90%;
+    left: 5%;
   }
 
   @include tablet {
