@@ -12,6 +12,7 @@ body.about {
       h2 {
         @include mobile {
           font-size: 48px;
+          text-shadow: none;
         }
       }
     }

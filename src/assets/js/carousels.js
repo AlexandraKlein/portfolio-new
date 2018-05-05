@@ -1,5 +1,6 @@
 function slickCarousel() {
   $('.carousel').slick({
+    dots: true,
     infinite: true,
     variableWidth: true,
     slidesToShow: 1,

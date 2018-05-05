@@ -81,6 +81,40 @@
   .slick-list {
     height: 100%;
   }
+
+  .slick-dots {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    @include tablet {
+      display: none;
+    }
+
+    li {
+      width: 7px;
+      height: 7px;
+      margin: 0 7px;
+      background-color: $gray-blue;
+      border-radius: 100%;
+      transition: background-color .2s ease;
+
+      &.slick-active {
+        transform: scale(1.4);
+        background-color: lighten($gray-blue, 20%);
+      }
+    }
+
+    button {
+      text-indent: -99999999px;
+      -webkit-appearance: none;
+      opacity: 0;
+    }
+  }
 }
 
 .arrow {
@@ -89,6 +123,10 @@
   cursor: pointer;
   @extend .vertical-align;
   z-index: 2;
+
+  @include mobile {
+    display: none !important;
+  }
 
   &.arrow-prev {
     left: 5vmin;
@@ -107,13 +145,6 @@
     path {
       pointer-events: none;
     }
-  }
-
-  @include mobile {
-    width: 60px;
-    top: auto !important;
-    transform: none;
-    bottom: 20px;
   }
 }
 
