@@ -27,6 +27,12 @@ body.about {
         width: 100%;
       }
     }
+
+    .copy {
+      @include mobile {
+        padding-bottom: 200px;
+      }
+    }
   }
 
   .transition-out {
