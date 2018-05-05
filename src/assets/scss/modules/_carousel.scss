@@ -87,12 +87,13 @@
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     position: absolute;
     bottom: 0;
 
     @include tablet {
-      display: none;
+      bottom: 60px;
     }
 
     li {
@@ -104,13 +105,15 @@
       transition: background-color .2s ease;
 
       &.slick-active {
-        transform: scale(1.4);
+        width: 12px;
+        height: 12px;
         background-color: lighten($gray-blue, 20%);
       }
     }
 
     button {
       text-indent: -99999999px;
+      cursor: pointer;
       -webkit-appearance: none;
       opacity: 0;
     }
