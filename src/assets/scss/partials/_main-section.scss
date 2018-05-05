@@ -52,7 +52,7 @@
     .copy,
     .titles {
       opacity: 0;
-      animation: fadeInRight $duration/2 $ease forwards;
+      animation: fadeInRight $duration/2 $ease forwards $duration/2;
     }
   }
 
