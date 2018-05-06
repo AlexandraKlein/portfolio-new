@@ -42,11 +42,11 @@ body.work {
     .active & {
       transform: translateY(0);
       opacity: 1;
-    }
 
-    @for $i from 1 to 20 {
-      &:nth-child(#{$i}) {
-        transition-delay: .5 + $i/50 + s;
+      @for $i from 1 to 20 {
+        &:nth-child(#{$i}) {
+          transition-delay: .5 + $i/50 + s;
+        }
       }
     }
 

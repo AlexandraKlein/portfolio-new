@@ -52,7 +52,7 @@
     .copy,
     .titles {
       opacity: 0;
-      animation: fadeInRight $duration/2 $ease forwards $duration/2;
+      animation: fadeInRight $duration/2 $ease forwards;
     }
   }
 
@@ -100,13 +100,6 @@
     .btn {
       animation: fadeOut $duration/2 $ease forwards;
     }
-  }
-}
-
-body:not(.home) {
-  .copy {
-    opacity: 0;
-    animation: fadeInRight $duration/2 $ease forwards $duration*1.5;
   }
 }
 

@@ -2,16 +2,21 @@ body.about {
 
   .summary {
 
+    h2 {
+      @include mobile {
+        font-size: 48px;
+      }
+    }
+
     figure {
       color: $white;
-      margin: 20px 0 0;
+      margin: 0;
 
       @include mobile {
         padding: 0 20px 0 0;
       }
 
       @include tablet {
-        margin: 45px 0 0;
         width: 50vw;
       }
 
@@ -26,12 +31,6 @@ body.about {
         transition: all .2s ease-out .5s;
         opacity: 0;
         transform: translateY(5vw);
-
-        @for $i from 1 to 10 {
-          &:nth-child(#{$i}) {
-            transition-delay: .5 + $i/20 + s;
-          }
-        }
 
         @include tablet {
           margin: 0 0 28px 0;
@@ -53,6 +52,12 @@ body.about {
     &.active figure p {
       transform: translateY(0);
       opacity: 1;
+
+      @for $i from 1 to 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: .5 + $i/20 + s;
+        }
+      }
     }
   }
 }

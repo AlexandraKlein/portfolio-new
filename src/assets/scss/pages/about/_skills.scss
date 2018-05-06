@@ -12,7 +12,6 @@ body.about {
       h2 {
         @include mobile {
           font-size: 48px;
-          text-shadow: none;
         }
       }
     }
@@ -43,11 +42,11 @@ body.about {
     .active & {
       transform: translateY(0);
       opacity: 1;
-    }
 
-    @for $i from 1 to 30 {
-      &:nth-child(#{$i}) {
-        transition-delay: .5 + $i/100 + s;
+      @for $i from 1 to 30 {
+        &:nth-child(#{$i}) {
+          transition-delay: .5 + $i/100 + s;
+        }
       }
     }
 
