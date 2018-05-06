@@ -1,0 +1,58 @@
+body.about {
+
+  .summary {
+
+    figure {
+      color: $white;
+      margin: 20px 0 0;
+
+      @include mobile {
+        padding: 0 20px 0 0;
+      }
+
+      @include tablet {
+        margin: 45px 0 0;
+        width: 50vw;
+      }
+
+      p {
+        position: relative;
+        margin: 0 0 15px 0;
+        padding: 0 0 0 100px;
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        letter-spacing: .03em;
+        transition: all .2s ease-out .5s;
+        opacity: 0;
+        transform: translateY(5vw);
+
+        @for $i from 1 to 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: .5 + $i/20 + s;
+          }
+        }
+
+        @include tablet {
+          margin: 0 0 28px 0;
+        }
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 1.3em;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+      }
+    }
+
+    &.active figure p {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

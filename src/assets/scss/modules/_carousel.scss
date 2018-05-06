@@ -32,7 +32,7 @@
     color: $white;
     margin-top: 10vw;
     @extend .vertical-align;
-    @include textShadow($black, .3);
+    //@include textShadow($black, .3);
 
     @include mobile {
       height: 60vmax;
@@ -46,7 +46,7 @@
     }
 
     h2 {
-      font-size: 10vw;
+      font-size: 8vw;
 
       @include mobile {
         font-size: 48px;
@@ -54,7 +54,7 @@
     }
 
     h4 {
-      font-size: 5vw;
+      font-size: 3vw;
 
       @include mobile {
         font-size: 22px;

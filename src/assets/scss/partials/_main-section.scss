@@ -28,7 +28,7 @@
       opacity: 0;
       color: $white;
       font-family: $header-font;
-      @include textShadow($black, .3);
+      //@include textShadow($black, .3);
       line-height: 1;
       animation: fadeIn $duration/2 $ease forwards $duration/2;
     }
