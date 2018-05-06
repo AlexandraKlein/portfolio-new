@@ -2,19 +2,18 @@ body.about {
   .copy.skills {
     height: auto;
 
-    @include mobile {
-      left: auto;
-    }
-
     .titles {
       margin: 0 auto 0;
 
       h2 {
         @include mobile {
           font-size: 48px;
-          text-shadow: none;
         }
       }
+    }
+
+    @include mobile {
+      left: auto;
     }
   }
 }

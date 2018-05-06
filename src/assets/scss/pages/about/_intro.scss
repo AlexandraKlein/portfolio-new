@@ -1,5 +1,9 @@
 body.about {
 
+  //.copy {
+  //  animation: none;
+  //}
+
   .intro {
 
     .video-container {
@@ -30,12 +34,6 @@ body.about {
 
     .copy {
 
-      h1,
-      h2 {
-        opacity: 0;
-        animation: fadeInRight $duration/2 $ease forwards $duration/2;
-        transition: all .1s $ease;
-      }
       @include mobile {
         padding-bottom: 200px;
       }

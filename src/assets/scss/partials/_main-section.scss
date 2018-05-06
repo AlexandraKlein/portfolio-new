@@ -25,7 +25,6 @@
 
     h1,
     h2 {
-      display: inline-table;
       position: relative;
       margin: 0;
       opacity: 0;
@@ -107,7 +106,7 @@
 }
 
 body:not(.home) {
-  .copy {
+  .copy:not(.copy-intro) {
     opacity: 0;
     animation: fadeInRight $duration/2 $ease forwards $duration*1.5;
   }
