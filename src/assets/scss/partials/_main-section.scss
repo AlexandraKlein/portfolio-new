@@ -15,6 +15,9 @@
     left: 12.5vw;
     height: 50vw;
     @extend .vertical-align;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all .2s ease-in-out;
 
     @include mobile {
       left: 20px;
@@ -28,7 +31,6 @@
       opacity: 0;
       color: $white;
       font-family: $header-font;
-      //@include textShadow($black, .3);
       line-height: 1;
       animation: fadeIn $duration/2 $ease forwards $duration/2;
     }
@@ -41,7 +43,7 @@
       font-size: 5.1vw;
     }
 
-    a {
+    .btn {
       margin-top: 30px;
       display: block;
     }
@@ -53,6 +55,7 @@
     .titles {
       opacity: 0;
       animation: fadeInRight $duration/2 $ease forwards $duration/2;
+      transition: all .1s $ease;
     }
   }
 
