@@ -63,4 +63,11 @@ $btn-color-mobile: lighten($gray-blue, 10%);
   @include mobile {
     @include  button($btn-color-mobile)
   }
+
+  &.dark {
+    @include mobile {
+      @include  button($dark-gray-blue);
+      display: inline-table !important;
+    }
+  }
 }
