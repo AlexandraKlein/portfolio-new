@@ -4,7 +4,10 @@
   overflow: hidden;
   background-color: $base;
   transition: all $ease $duration;
-  border: 20px solid $white;
+
+  @include tablet {
+    border: 20px solid $white;
+  }
 
   .copy {
     position: absolute;
@@ -28,7 +31,6 @@
       opacity: 0;
       color: $white;
       font-family: $header-font;
-      //@include textShadow($black, .3);
       line-height: 1;
       animation: fadeIn $duration/2 $ease forwards $duration/2;
     }

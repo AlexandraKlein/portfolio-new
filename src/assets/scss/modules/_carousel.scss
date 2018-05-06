@@ -155,13 +155,6 @@
 
   .carousel {
 
-    .circle {
-      @include mobile {
-        left: 5vw;
-        margin: -10% 0 0 0;
-      }
-    }
-
     .devices {
       position: relative;
       display: flex;
