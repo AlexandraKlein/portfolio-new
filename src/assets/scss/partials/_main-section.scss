@@ -56,7 +56,8 @@
     }
   }
 
-  &.landing-animation {
+ .landing-animation & {
+
     .copy,
     .titles {
       animation-delay: $duration * 1.5;

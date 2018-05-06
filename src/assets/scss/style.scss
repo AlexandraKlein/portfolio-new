@@ -1,8 +1,9 @@
 //----------------------------------*\
-// SCSS MIXINS
+// MIXINS/SNIPPETS
 //----------------------------------*/
 
 @import 'mixins/breakpoints';
+@import 'mixins/mixins';
 @import 'mixins/snippets';
 
 //----------------------------------*\
@@ -15,13 +16,6 @@
 @import 'modules/normalize';
 @import 'modules/animations';
 
-//----------------------------------*\
-// MIXINS/SNIPPETS
-//----------------------------------*/
-
-@import 'mixins/breakpoints';
-@import 'mixins/mixins';
-@import 'mixins/snippets';
 
 //----------------------------------*\
 // PARTIALS
