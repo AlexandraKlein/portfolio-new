@@ -52,8 +52,10 @@ const settings = {
       { el: $('.scroll-section').eq(i + 1), classToAdd: 'next'}
     ];
 
-    for (let index = 0; index < removeAddClassesArray.length; index++) {
-      removeAddClasses(removeAddClassesArray[index]);
+    if (!$('body').hasClass('contact')) {
+      for (let index = 0; index < removeAddClassesArray.length; index++) {
+        removeAddClasses(removeAddClassesArray[index]);
+      }
     }
 
     if (i === panels.length - 1) {

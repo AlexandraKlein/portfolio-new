@@ -9,27 +9,3 @@
     }
   }
 }
-
-.barba-container {
-  &:not(.landing-animation) {
-    .main-section.active {
-      .circle {
-        .me {
-          opacity: 0;
-          animation: fadeIn .2s ease-in forwards .5s;
-        }
-      }
-    }
-  }
-
-  &.landing-animation {
-    .main-section.active {
-      .circle {
-        .me {
-          opacity: 0;
-          animation: fadeIn .2s ease-in forwards 1.5s;
-        }
-      }
-    }
-  }
-}
