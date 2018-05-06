@@ -8,9 +8,14 @@
     border-radius: 100%;
     margin: auto;
     background-color: $pink;
+    transition: background-color .75s ease-in-out;
+
+    &:not(.blue) {
+      background-color: $gray-blue;
+    }
 
     &.blue {
-      background-color: $gray-blue;
+      background-color: $pink;
     }
 
     .me {
@@ -82,4 +87,28 @@
       }
     }
   }
+}
+
+.transition-in {
+
+  .circle:not(.blue) {
+    background-color: $pink;
+  }
+
+  .circle.blue {
+    background-color: $gray-blue;
+  }
+
+}
+
+.transition-out {
+
+  .circle:not(.blue) {
+    background-color: $gray-blue;
+  }
+
+  .circle.blue {
+    background-color: $pink;
+  }
+
 }

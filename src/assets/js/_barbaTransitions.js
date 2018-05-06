@@ -132,8 +132,12 @@ const pageTransitions = () => {
     $($document).trigger('allPagesEnter');
   });
 
+  Barba.Dispatcher.on('initStateChange', (currentStatus) => {
+    $($document).trigger('initStateChange');
+  });
+
   function landingAnimation() {
-    $('.barba-container').addClass('landing-animation');
+    $('.barba-container').addClass('landing-animation transition-in');
 
     setTimeout(() => {
       $('.barba-container').removeClass('landing-animation');
