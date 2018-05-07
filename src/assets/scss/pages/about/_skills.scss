@@ -34,6 +34,8 @@ body.about {
     width: 10vw;
     max-width: 10rem;
     max-height: 10rem;
+    margin-top: 2rem;
+    cursor: pointer;
     opacity: 0;
     transform: translateY(5vw);
     transition: all .2s ease-out .5s;
@@ -50,6 +52,23 @@ body.about {
       }
     }
 
+    &:after {
+      position: absolute;
+      top: -1rem;
+      color: $white;
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      transition: all .2s ease-in;
+    }
+
+    &:hover {
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
     @include mobile {
       min-height: 5rem;
       min-width: 5rem;
@@ -61,6 +80,10 @@ body.about {
       &.#{$skill-tile-name} {
         background: url("../img/skills/#{$skill-tile-name}.svg?v=4") center center no-repeat;
         background-size: 50%;
+
+        &:after {
+          content: '#{$skill-tile-name}';
+        }
       }
     }
   }

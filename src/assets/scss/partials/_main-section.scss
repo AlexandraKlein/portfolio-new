@@ -33,7 +33,10 @@
       font-family: $header-font;
       line-height: 1;
       animation: fadeIn $duration/2 $ease forwards $duration/2;
-      @include textShadow($black, .5);
+
+      @include tablet {
+        @include textShadow($black, .5);
+      }
     }
 
     h1 {
@@ -48,6 +51,11 @@
       margin-top: 30px;
       display: block;
     }
+  }
+
+  .copy,
+  .titles {
+    transform: translate(0, -50%);
   }
 
   &.active {
