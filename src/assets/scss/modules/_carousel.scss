@@ -32,7 +32,10 @@
     color: $white;
     margin-top: 10vw;
     @extend .vertical-align;
-    //@include textShadow($black, .3);
+
+    @include tablet {
+      @include textShadow($black, .5);
+    }
 
     @include mobile {
       height: 60vmax;
