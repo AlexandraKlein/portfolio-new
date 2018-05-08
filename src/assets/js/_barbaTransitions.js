@@ -82,7 +82,6 @@ const pageTransitions = () => {
 
   $document.on('homepageOnEnterCompleted workOnEnterCompleted aboutOnEnterCompleted contactOnEnterCompleted', ()=> {
     $document.trigger('allPagesEnterCompleted');
-    console.log('allPagesEnterCompleted');
   });
 
   Homepage.init();
