@@ -39,7 +39,7 @@
 
     @include mobile {
       height: 60vmax;
-      margin-top: -40px;
+      margin-top: -20px;
     }
 
     h2,
@@ -200,6 +200,7 @@
       @include mobile {
         width: 70%;
         padding-right: 10%;
+        margin-top: -10%;
       }
 
       h3 {
