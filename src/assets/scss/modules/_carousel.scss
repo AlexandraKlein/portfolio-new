@@ -39,7 +39,7 @@
     }
 
     @include mobile {
-      height: 60%;
+      height: 60vmax;
       margin-top: 0;
       animation: none !important;
       opacity: 1 !important;
