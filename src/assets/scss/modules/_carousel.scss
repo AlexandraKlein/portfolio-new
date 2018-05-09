@@ -35,7 +35,7 @@
     @extend .vertical-align;
 
     @include tablet {
-      @include textShadow($black, .5);
+      @include textShadow($dark-gray-blue, .5);
     }
 
     @include mobile {

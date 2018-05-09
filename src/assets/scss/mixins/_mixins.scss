@@ -1,6 +1,7 @@
 @mixin textShadow($color, $opacity) {
-  text-shadow: -10px 15px 25px rgba($color, $opacity);
+  text-shadow: -8px 8px 25px rgba($color, $opacity);
 }
+
 @mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
   $shadow: '';
   @if $skew == false or $type == text{

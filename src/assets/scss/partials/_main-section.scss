@@ -35,7 +35,7 @@
       animation: fadeIn $duration/2 $ease forwards $duration/2;
 
       @include tablet {
-        @include textShadow($black, .5);
+        @include textShadow($dark-gray-blue, .5);
       }
     }
 
