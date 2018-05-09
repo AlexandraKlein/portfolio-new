@@ -78,7 +78,7 @@ body.about {
 
     @each $skill-tile-name in $skill-tiles-names {
       &.#{$skill-tile-name} {
-        background: url("../img/skills/#{$skill-tile-name}.svg?v=4") center center no-repeat;
+        background: url("../img/skills/#{$skill-tile-name}.svg") center center no-repeat;
         background-size: 50%;
 
         &:after {
