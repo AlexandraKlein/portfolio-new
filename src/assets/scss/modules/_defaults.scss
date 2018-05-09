@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
   font: 300 16px $body-font;
 }
 
