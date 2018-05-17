@@ -18,8 +18,8 @@
   }
 
   .active & {
-    opacity: 0;
-    animation: fadeInRight $duration/2 $ease forwards;
+    //opacity: 0;
+    //animation: fadeInRight $duration/2 $ease forwards;
   }
 
   @include mobile {
