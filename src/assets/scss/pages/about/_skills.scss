@@ -47,7 +47,7 @@ body.about {
 
       @for $i from 1 to 30 {
         &:nth-child(#{$i}) {
-          transition-delay: .75 + $i/100 + s;
+          transition-delay: .5 + $i/100 + s;
         }
       }
     }
