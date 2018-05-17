@@ -63,28 +63,22 @@
     .copy,
     .titles {
       opacity: 0;
-      animation: fadeInRight $duration/2 $ease forwards $duration/2;
-    }
-  }
-
- .landing-animation & {
-
-    .copy,
-    .titles {
-      animation-delay: $duration * 1.5;
     }
   }
 }
 
 .barba-container {
-  &:not(.landing-animation) {
-    .main-section.active {
-      .circle {
-        .me {
-          opacity: 0;
-          animation: fadeIn .2s ease-in forwards .5s;
-        }
+  .main-section.active {
+    .circle {
+      .me {
+        opacity: 0;
+        animation: fadeIn .2s ease-in forwards .7s;
       }
+    }
+
+    .copy,
+    .titles {
+      animation: fadeInRight .2s $ease forwards .3s;
     }
   }
 
@@ -93,8 +87,13 @@
       .circle {
         .me {
           opacity: 0;
-          animation: fadeIn .2s ease-in forwards 1.5s;
+          animation: fadeIn .2s ease-in forwards 1.7s;
         }
+      }
+
+      .copy,
+      .titles {
+        animation: fadeInRight .2s $ease forwards 1.3s;
       }
     }
   }
@@ -102,15 +101,16 @@
 
 .transition-out {
 
-  .circle .me {
-    animation: fadeOut .2s ease-in forwards !important;
-  }
+  .main-section.active {
 
-  .main-section {
+    .circle .me {
+      animation: fadeOut .2s ease-in forwards !important;
+    }
+
     .copy,
     .titles,
     .btn {
-      animation: fadeOut $duration/2 $ease forwards;
+      animation: fadeOut $duration/2 $ease forwards !important;
     }
   }
 }

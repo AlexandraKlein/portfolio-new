@@ -135,18 +135,16 @@ const pageTransitions = () => {
     $($document).trigger('initStateChange');
   });
 
-  function landingAnimation() {
-    $('.barba-container').addClass('landing-animation transition-in');
-
+  function removeLandingAnimation() {
     setTimeout(() => {
       $('.barba-container').removeClass('landing-animation');
     }, 2000);
   }
 
-  landingAnimation();
+  removeLandingAnimation();
 
   $($document).on('allPagesEnter', ()=> {
-    landingAnimation();
+    removeLandingAnimation();
   });
 };
 
