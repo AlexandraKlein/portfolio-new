@@ -1,5 +1,5 @@
 function parallax() {
-  const $container = $('.devices');
+  const $container = $('.active .devices');
   const $desktop = $('img.desktop');
   const $laptop = $('img.laptop');
   const $mobile = $('img.mobile');
@@ -39,6 +39,10 @@ function parallax() {
   });
 }
 
+if ($('body').hasClass('work')) {
+  $(() => parallax());
+}
+
 $(document).on('workOnEnterCompleted', () => {
-  parallax();
+  $(() => parallax());
 });
