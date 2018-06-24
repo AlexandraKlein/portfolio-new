@@ -181,6 +181,11 @@
         width: 60%;
         left: -10%;
         bottom: 10%;
+
+        @include mobile {
+          left: 5px;
+          bottom: 15%;
+        }
       }
 
       .mobile {
@@ -189,7 +194,7 @@
         bottom: 15%;
 
         @include mobile {
-          display: none;
+          right: 10%;
         }
       }
     }
