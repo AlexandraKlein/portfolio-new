@@ -21,7 +21,7 @@
 
   div {
     position: absolute;
-    background-color: rgba($gray-blue, .5);
+    background-color: rgba(darken($dark-gray-blue, 10%), .3);
     border-radius: 100%;
     opacity: 0;
     transform: translateY(200px);
@@ -31,6 +31,13 @@
       left: 25%;
       width: 7vw;
       height: 7vw;
+
+      @include mobile {
+        top: 11%;
+        left: 25%;
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &:nth-of-type(2) {
@@ -38,6 +45,13 @@
       left: 4%;
       width: 3vw;
       height: 3vw;
+
+      @include mobile {
+        top: 20%;
+        left: 4%;
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &:nth-of-type(3) {
@@ -45,6 +59,13 @@
       right: 18%;
       width: 9vw;
       height: 9vw;
+
+      @include mobile {
+        top: 16%;
+        right: 18%;
+        width: 60px;
+        height: 60px;
+      }
     }
 
     &:nth-of-type(4) {
@@ -52,6 +73,14 @@
       right: 5%;
       width: 2vw;
       height: 2vw;
+
+      @include mobile {
+        bottom: 7%;
+        right: 5%;
+        width: 90px;
+        height: 90px;
+        top: auto;
+      }
     }
 
     &:nth-of-type(5) {
@@ -59,6 +88,14 @@
       right: 7%;
       width: 4vw;
       height: 4vw;
+
+      @include mobile {
+        bottom: auto;
+        top: 1%;
+        right: 16%;
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &:nth-of-type(6) {
@@ -66,13 +103,26 @@
       left: 5%;
       width: 8vw;
       height: 8vw;
+
+      @include mobile {
+        bottom: 8%;
+        left: 15%;
+        width: 35px;
+        height: 35px;
+      }
     }
 
     &:nth-of-type(7) {
       bottom: 5%;
-      left: 40%;
+      left: 50%;
       width: 6vw;
       height: 6vw;
+
+      @include mobile {
+        bottom: 12%;
+        width: 20px;
+        height: 20px;
+      }
     }
 
     @for $i from 1 to 30 {
