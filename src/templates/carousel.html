@@ -2,7 +2,7 @@
 
   {% for slide in slides %}
 
-    <div class="slide">
+    <div class="slide {{ slide.project }}">
       <div class="circle blue">
         <div class="devices">
           <img src="assets/img/projects/devices/desktop-{{ slide.project }}.png" class="desktop" alt="{{ slide.project }}"/>

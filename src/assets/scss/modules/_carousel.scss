@@ -23,6 +23,36 @@
         transform: translateX(0);
       }
     }
+
+    &.shakeitup {
+      .circle .devices {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          top: auto;
+          left: auto;
+          right: auto;
+          bottom: auto;
+          width: 50%;
+
+          &.desktop {
+            left: 20%;
+            z-index: 1;
+            width: 60%;
+          }
+
+          &.laptop {
+            left: 0;
+          }
+
+          &.mobile {
+            right: 0;
+          }
+        }
+      }
+    }
   }
 
 
