@@ -37,6 +37,10 @@
           bottom: auto;
           width: 50%;
 
+          @include mobile {
+            transform: none !important;
+          }
+
           &.desktop {
             left: 20%;
             z-index: 1;
@@ -44,11 +48,11 @@
           }
 
           &.laptop {
-            left: 0;
+            left: -10%;
           }
 
           &.mobile {
-            right: 0;
+            right: -10%;
           }
         }
       }
