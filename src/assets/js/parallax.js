@@ -1,8 +1,8 @@
 function parallax() {
-  const $container = $('.active .devices');
-  const $desktop = $('img.desktop');
-  const $laptop = $('img.laptop');
-  const $mobile = $('img.mobile');
+  const $container = $(".active .devices");
+  const $desktop = $("img.desktop");
+  const $laptop = $("img.laptop");
+  const $mobile = $("img.mobile");
   let container_w = $container.width();
   let container_h = $container.height();
 
@@ -11,7 +11,7 @@ function parallax() {
     container_h = $container.height();
   });
 
-  $(window).on('mousemove', event => {
+  $(window).on("mousemove", (event) => {
     const pos_x = event.pageX;
     const pos_y = event.pageY;
     const left = container_w / 2 - pos_x;
@@ -20,17 +20,19 @@ function parallax() {
     function translateTween(args) {
       TweenLite.to(args.el, 1, {
         css: {
-          transform: `translateX(${left / args.posLeft}px) translateY(${top / args.posTop}px)`
+          transform: `translateX(${left / args.posLeft}px) translateY(${
+            top / args.posTop
+          }px)`,
         },
         ease: Expo.easeOut,
-        overwrite: 'all'
+        overwrite: "all",
       });
     }
 
     const parallaxPropsArray = [
-      { el: $desktop, posLeft: 75, posTop: 35},
-      { el: $laptop, posLeft: 45, posTop: 15},
-      { el: $mobile, posLeft: 55, posTop: 25}
+      { el: $desktop, posLeft: 75, posTop: 35 },
+      { el: $laptop, posLeft: 45, posTop: 15 },
+      { el: $mobile, posLeft: 55, posTop: 25 },
     ];
 
     for (let i = 0; i < parallaxPropsArray.length; i++) {
@@ -39,10 +41,10 @@ function parallax() {
   });
 }
 
-if ($('body').hasClass('work')) {
+if ($("body").hasClass("work")) {
   $(() => parallax());
 }
 
-$(document).on('workOnEnterCompleted', () => {
+$(document).on("workOnEnterCompleted", () => {
   $(() => parallax());
 });
